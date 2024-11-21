@@ -48,7 +48,9 @@ const terms = {
       },
       {
         heading: "Your Privacy",
-        paragraphs: ["Please read our Privacy Policy."],
+        paragraphs: [
+          `Please read our <a href="/privacy-policy">Privacy Policy</a>.`,
+        ],
       },
       {
         heading: "Governing Law",

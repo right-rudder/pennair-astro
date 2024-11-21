@@ -1,6 +1,6 @@
 // CHANGE Default title
 export const SITE_TITLE =
-  "Aircraft Management Services in Pottstown, Pennsylvania | PennJet LLC";
+  "Aircraft Maintenance Services in Pottstown, Pennsylvania | Penn Air Repair";
 
 // CHANGE default meta description -> should only be used in homepage technically, but is there for a fallback in case a page is missed
 export const SITE_DESCRIPTION =
@@ -23,12 +23,12 @@ export const LOCATIONS = [
     state: "PA",
     zip: "19464 ",
     gMaps: "https://maps.app.goo.gl/q1SJrrPdmpFBcyjY7",
-    phone: "610-495-7000",
+    phone: "754-423-2159",
   },
 ];
 
 // CHANGE client business info
-export const PHONE_NUMBER = "610-495-7000";
+export const PHONE_NUMBER = "754-423-2159";
 export const ADDRESS_LINE_1 = "3310 W Ridge Pike";
 export const ADDRESS_LINE_2 = "Pottstown, Pennsylvania 19464 ";
 export const FACEBOOK_URL = null;
@@ -36,4 +36,4 @@ export const INSTAGRAM_URL = null;
 export const LINKEDIN_URL = null;
 export const YOUTUBE_URL = null;
 export const TWITTER_URL = null;
-export const EMAIL_ADDRESS = "info@pennjet.com";
+export const EMAIL_ADDRESS = "info@pennairrepair.com";

@@ -75,35 +75,35 @@ const Navbar = ({ pathname }) => {
   };
 
   return (
-    <nav className="w-full h-0 sticky inset-0 z-20 font-sans tracking-wider">
+    <nav className="w-full h-0 sticky inset-0 z-20 font-sans2 tracking-wider">
       <div
         className={`${
           navBar || openMobile
-            ? "bg-white/90 backdrop-blur-md"
+            ? "bg-white/70 backdrop-blur-md shadow-xl"
             : "bg-transparent"
         } duration-500`}
       >
         <div className="px-5 max-w-7xl mx-auto top-0">
           <div
-            className={`${navBar || openMobile ? "lg:h-20" : "lg:h-24"} relative flex h-24 align-middle justify-center transition-all`}
+            className={`${navBar || openMobile ? "lg:h-24" : "lg:h-28"} relative flex h-28 align-middle justify-center transition-all`}
             id="navbar"
           >
             <div className="flex w-full items-center justify-between">
               <a
                 href="/#top"
                 title="SunCity Aviation Academy"
-                className="hover:brightness-110 flex p-3 h-20 lg:h-24 justify-end align-middle items-center duration-200 ease-in-out w-2/3 lg:w-1/5 lg:bg-accent-700"
+                className="hover:brightness-110 flex lg:h-24 justify-center align-middle items-center duration-200 ease-in-out w-full lg:w-1/5"
               >
                 <img
-                  src="/pennjetllc.webp"
-                  alt="Elite Flight Training & Aircraft Management Logo"
-                  aria-label="Elite Flight Training & Aircraft Management Logo"
-                  title="Elite Flight Training & Aircraft Management"
+                  src="/penn-air-logo-250.webp"
+                  alt="Penn Air Repair logo"
+                  aria-label="Penn Air Repair logo"
+                  title="Penn Air Repair"
                   loading="eager"
-                  className={`${navBar || openMobile ? "h-20 lg:h-24" : "h-20 lg:h-24 mt-0"} object-contain duration-500`}
+                  className={`${navBar || openMobile ? "h-20 lg:h-20 mt-0" : "h-24 lg:h-24 mt-4"} object-contain duration-500`}
                 />
               </a>
-              <div className="hidden lg:flex justify-end lg:w-[54%]">
+              <div className="hidden lg:flex justify-end lg:w-[50%]">
                 <ul className="flex justify-between align-middle w-full items-center text-black">
                   {navbarLinks.map((item, index) => (
                     <li
@@ -116,14 +116,14 @@ const Navbar = ({ pathname }) => {
                         <a
                           href={item.link}
                           target={`${item.link.includes("http") ? "_blank" : "_self"}`}
-                          className="font-normal text-base duration-300 hover:underline decoration-yellow-400 decoration-4 underline-offset-[10px] py-12 whitespace-nowrap group-last:font-semibold group-last:tracking-wide group-last:rounded-sm group-last:bg-blue-900 group-last:py-3 group-last:px-5 group-last:hover:bg-blue-500 group-last:hover:no-underline"
+                          className="font-thin text-xl duration-300 hover:underline decoration-red-800/80 decoration-8 underline-offset-[10px] py-12 whitespace-nowrap group-last:font-normal group-last:tracking-wide group-last:rounded-xl group-last:bg-red-900 group-last:py-3 group-last:px-5 group-last:hover:bg-red-700 group-last:hover:no-underline"
                         >
-                          <span className="relative text-blue-950 group-last:text-blue-50 group-last:hover:text-yellow-100">
+                          <span className="relative text-black group-last:text-white">
                             {item.name}
                           </span>
                         </a>
                       ) : (
-                        <span className="cursor-default text-blue-950 text-lg duration-300 hover:underline decoration-accent-500 decoration-4 underline-offset-[10px] py-12 whitespace-nowrap">
+                        <span className="cursor-default text-black text-lg duration-300 hover:underline decoration-accent-500 decoration-4 underline-offset-[10px] py-12 whitespace-nowrap">
                           {item.name}
                         </span>
                       )}
@@ -197,7 +197,7 @@ const Navbar = ({ pathname }) => {
                 <span className="sr-only">Open main menu</span>
 
                 <svg
-                  className={`${openMobile ? "hidden" : "block"} h-6 w-6 text-blue-900`}
+                  className={`${openMobile ? "hidden" : "block"} h-6 w-6 text-red-900`}
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth="2.0"
@@ -213,7 +213,7 @@ const Navbar = ({ pathname }) => {
                 </svg>
 
                 <svg
-                  className={`${openMobile ? "block" : "hidden"} h-6 w-6 text-blue-900`}
+                  className={`${openMobile ? "block" : "hidden"} h-6 w-6 text-red-900`}
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth="2.0"
@@ -236,12 +236,12 @@ const Navbar = ({ pathname }) => {
       <div
         className={`${
           openMobile ? "max-h-screen" : "max-h-0"
-        } overflow-x-hidden duration-700 ease-in-out h-screen lg:hidden absolute w-full bg-gradient-to-b from-blue-950 to-blue-800 z-20 top-0`}
+        } overflow-x-hidden duration-500 ease-in-out h-screen lg:hidden absolute w-full bg-gradient-to-b from-black to-red-900 z-20 top-0`}
         id="mobile-menu"
       >
         <div className="flex justify-end pl-5 pr-[26px] py-6">
           <svg
-            className={`${openMobile ? "opacity-100" : "opacity-0"} h-6 w-6 text-blue-900 cursor-pointer z-30 text-blue-100-50 duration-300`}
+            className={`${openMobile ? "opacity-100" : "opacity-0"} h-6 w-6 text-red-900 cursor-pointer z-30 text-red-100-50 duration-300`}
             fill="none"
             viewBox="0 0 24 24"
             strokeWidth="2.5"
@@ -260,37 +260,35 @@ const Navbar = ({ pathname }) => {
 
         <a
           href="/"
-          className="z-30 relative flex justify-center items-center align-middle"
+          className="z-30 relative flex justify-center items-start align-top"
         >
           <img
-            src="/pennjetllc.webp"
-            alt="PennJet Logo"
-            aria-label="PennJet Logo"
-            title="PennJet"
-            className="object-contain h-16 w-auto drop-shadow-sm"
+            src="/penn-air-logo-250.webp"
+            alt="Penn Air Repair logo"
+            aria-label="Penn Air Repair logo"
+            title="Penn Air Repair"
+            className="object-contain h-24 w-auto drop-shadow-lg"
           />
         </a>
 
         <div
-          className={`absolute w-full h-40 bg-white top-0 z-20 duration-500 ease-in-out  ${
-            openMobile
-              ? "translate-x-0 opacity-90"
-              : "-translate-x-full opacity-0"
+          className={`absolute w-full h-48 top-0 z-20 duration-300 ease-in  ${
+            openMobile ? "translate-y-0 bg-white" : "translate-y-20 bg-red-900"
           }`}
         ></div>
 
-        <ul className="px-4 pb-3 mt-5 pt-2 flex flex-col align-middle items-center text-white">
+        <ul className="px-4 pb-3 mt-5 pt-2 flex flex-col align-middle items-center text-red-50">
           {mobileNavbarLinks.map((item, index) => (
             <li
               key={index}
-              className="relative group border-b border-primary-50/20 last:border-none w-full text-center"
+              className="relative group border-b border-red-50/20 last:border-none w-full text-center"
               onClick={() => handleItemClick(index)}
             >
               {item.link ? (
                 <a
                   href={item.link}
                   target={`${item.link.includes("http") ? "_blank" : "_self"}`}
-                  className="font-medium p-5 block text-xl duration-300 text-white whitespace-nowrap group-last:bg-yellow-500 group-last:text-blue-950 group-last:font-medium group-last:mt-12 group-last:py-4 group-last:px-8 group-last:rounded-none group-last:text-center group-last:mx-5"
+                  className="font-medium p-5 block text-xl duration-300 text-white whitespace-nowrap group-last:bg-yellow-500 group-last:text-black group-last:font-bold group-last:mt-12 group-last:py-4 group-last:px-8 group-last:rounded-none group-last:text-center group-last:mx-5"
                 >
                   {item.name}
                 </a>

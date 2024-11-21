@@ -9,6 +9,7 @@ import Content from "../components/Content.astro";
 import ContentBg from "../components/Content-bg.astro";
 import BentoGrid from "../components/BentoGrid.astro";
 import ContactForm from "../components/ContactForm.astro";
+import LogoCloudRight from "../components/LogoCloudRight.astro";
 
 const landingData = {
   features: {
@@ -23,18 +24,32 @@ const landingData = {
       text: "Contact Us",
     },
   },
-  values: {
-    id: "about-us",
-    imagePath: "/src/assets/edgar-chaparro-GAWBDB5DyC4-unsplash.jpg",
-    imageAlt: "PennJet Aircraft Management jet on runway",
-    upperheading: "Our Values & Mission",
-    heading: "Commitment to Excellence",
+  partners: {
+    id: "partners",
+    heading: "Trusted by Our Partners",
     description:
       "At PennJet, we are more than just an aircraft management company - we are your dedicated aviation partner. Founded by David and Rachael Pitcairn in 2021, our story is deeply rooted in a passion for flight and a commitment to service excellence. ",
-    paragraphs: [
-      "Located at Heritage Field (KPTW), our journey is intertwined with the rich history of this airfield, which has been a part of the aviation community since 1928. We understand the unique responsibilities that aircraft ownership entails, and our team of seasoned aviation professionals is here to support you every step of the way.",
-      "Our core values are safety, service, and support. These principles guide everything we do. Whether it's, recruiting and caring for your dedicated crew, operational support, managing fiscal responsibilities, or overseeing meticulous maintenance, our unwavering attention to detail ensures your aviation asset operates seamlessly.",
-      "We invite you to experience the difference of partnering with a team that values your safety, offers unparalleled service, and provides unwavering support.",
+    logos: [
+      {
+        imagePath: "/src/assets/penn-air-cessna.webp",
+        imageAlt: "Cessna logo",
+      },
+      {
+        imagePath: "/src/assets/penn-air-piper.webp",
+        imageAlt: "Piper logo",
+      },
+      {
+        imagePath: "/src/assets/penn-air-beechcraft.webp",
+        imageAlt: "Beechcraft logo",
+      },
+      {
+        imagePath: "/src/assets/penn-air-lycoming.webp",
+        imageAlt: "Lycoming logo",
+      },
+      {
+        imagePath: "/src/assets/penn-air-continental.webp",
+        imageAlt: "Continental logo",
+      },
     ],
   },
   charter: {
@@ -106,9 +121,6 @@ const landingData = {
 
 <BaseLayout title="Home" description="Welcome to the home page">
   <Hero />
-  <Features data={landingData.features} />
-  <Content data={landingData.values} />
-  <ContentBg data={landingData.charter} />
-  <BentoGrid data={landingData.services} />
+  <LogoCloudRight data={landingData.partners} />
   <ContactForm />
 </BaseLayout>

@@ -11,7 +11,7 @@ const { data } = terms;
 >
   <div class="h-24 w-full bg-gray-100"></div>
 
-  <section class="mt-12 font-serif flex flex-col items-center">
+  <section class="mt-12 font-sans flex flex-col items-center">
     <h1
       class="mx-auto text-center px-6 lg:px-0 text-primary-950 font-black max-w-4xl text-5xl lg:text-6xl"
       set:html={data.heading}
@@ -29,7 +29,7 @@ const { data } = terms;
             </h2>
             {part.paragraphs.map((paragraph) => (
               <p
-                class="mb-3 leading-relaxed text-muted-700 text-justify"
+                class="mb-3 leading-relaxed font-parag text-muted-700 text-justify"
                 set:html={paragraph}
               />
             ))}
