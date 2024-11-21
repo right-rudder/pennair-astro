@@ -14,6 +14,7 @@
     "@astrojs/react": "^3.6.2",
     "@astrojs/sitemap": "^3.2.1",
     "@astrojs/tailwind": "^5.1.2",
+    "@fontsource-variable/bricolage-grotesque": "^5.1.0",
     "@fontsource-variable/cabin": "^5.1.0",
     "@fontsource-variable/montserrat": "^5.1.0",
     "@fontsource-variable/public-sans": "^5.1.1",
