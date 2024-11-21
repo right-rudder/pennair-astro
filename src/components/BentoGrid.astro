@@ -1,0 +1,167 @@
+---
+import { Image } from "astro:assets";
+import ImageComp from "./ImageComp.astro";
+
+const { data } = Astro.props;
+---
+
+<section
+  class="bg-gradient-to-b from-slate-900 to-slate-700 lg:py-24 py-32"
+  id={data.id}
+>
+  <div class="mx-auto max-w-2xl lg:max-w-7xl lg:px-8">
+    <h2 class="text-base text-center font-semibold text-blue-100">
+      {data.upperheading}
+    </h2>
+    <p
+      class="mx-auto mt-2 max-w-lg text-balance text-center text-4xl font-semibold tracking-tight text-yellow-500 sm:text-5xl"
+    >
+      {data.heading}
+    </p>
+    <div class="lg:mt-10 grid gap-4 mt-16 lg:grid-cols-3 lg:grid-rows-2">
+      <div class="relative lg:row-span-2">
+        <div class="absolute inset-px rounded-lg bg-white lg:rounded-l-[2rem]">
+        </div>
+        <div
+          class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-l-[calc(2rem+1px)]"
+        >
+          <div class="px-8 pb-3 pt-8 sm:px-10 sm:pb-12 sm:pt-10">
+            <p
+              class="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center"
+            >
+              {data.cards[0].title}
+            </p>
+            {
+              data.cards[0].descriptions.map((desc) => (
+                <p class="mt-2 mx-auto max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
+                  {desc}
+                </p>
+              ))
+            }
+          </div>
+          <div class="relative min-h-[20rem] aspect-square">
+            <div class="absolute inset-x-0 bottom-0 top-10 overflow-hidden">
+              <ImageComp
+                imagePath={data.cards[0].imagePath}
+                imageAlt={data.cards[0].imageAlt}
+                styles="size-full object-cover object-top"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 lg:rounded-l-[2rem]"
+        >
+        </div>
+      </div>
+      <div class="relative max-lg:row-start-1 pb-6">
+        <div
+          class="absolute inset-px rounded-lg bg-white max-lg:rounded-t-[2rem]"
+        >
+        </div>
+        <div
+          class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)]"
+        >
+          <div class="px-8 pt-8 sm:px-10 sm:pt-10">
+            <p
+              class="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center"
+            >
+              {data.cards[1].title}
+            </p>
+            {
+              data.cards[1].descriptions.map((desc) => (
+                <p class="mt-2 mx-auto max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
+                  {desc}
+                </p>
+              ))
+            }
+          </div>
+          <!-- <div
+            class="flex flex-1 items-center justify-center px-8 max-lg:pb-12 max-lg:pt-10 sm:px-10 lg:pb-2"
+          >
+            <img
+              class="w-full max-lg:max-w-xs"
+              src="https://tailwindui.com/plus/img/component-images/bento-03-performance.png"
+              alt=""
+            />
+          </div> -->
+        </div>
+        <div
+          class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 max-lg:rounded-t-[2rem]"
+        >
+        </div>
+      </div>
+      <div class="relative max-lg:row-start-3 lg:col-start-2 lg:row-start-2">
+        <div class="absolute inset-px rounded-lg bg-white"></div>
+        <div
+          class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)]"
+        >
+          <div class="px-8 pt-8 sm:px-10 sm:pb-12 sm:pt-10">
+            <p
+              class="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center"
+            >
+              {data.cards[2].title}
+            </p>
+            {
+              data.cards[2].descriptions.map((desc) => (
+                <p class="mt-2 mx-auto max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
+                  {desc}
+                </p>
+              ))
+            }
+          </div>
+          <!-- <div
+            class="flex flex-1 items-center [container-type:inline-size] max-lg:py-6 lg:pb-2"
+          >
+            <img
+              class="h-[min(152px,40cqw)] object-cover"
+              src="https://tailwindui.com/plus/img/component-images/bento-03-security.png"
+              alt=""
+            />
+          </div> -->
+        </div>
+        <div
+          class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5"
+        >
+        </div>
+      </div>
+      <div class="relative lg:row-span-2">
+        <div
+          class="absolute inset-px rounded-lg bg-white max-lg:rounded-b-[2rem] lg:rounded-r-[2rem]"
+        >
+        </div>
+        <div
+          class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-r-[calc(2rem+1px)]"
+        >
+          <div class="relative min-h-[22rem] aspect-square">
+            <div class="absolute inset-x-0 bottom-0 top-0 overflow-hidden">
+              <ImageComp
+                imagePath={data.cards[3].imagePath}
+                imageAlt={data.cards[3].imageAlt}
+                styles="size-full object-cover object-top"
+              />
+            </div>
+          </div>
+          <div class="px-8 pb-3 pt-8 sm:px-10 sm:pb-12 sm:pt-10">
+            <p
+              class="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center"
+            >
+              {data.cards[3].title}
+            </p>
+            {
+              data.cards[3].descriptions.map((desc) => (
+                <p class="mt-2 mx-auto max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
+                  {desc}
+                </p>
+              ))
+            }
+          </div>
+        </div>
+        <div
+          class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 max-lg:rounded-b-[2rem] lg:rounded-r-[2rem]"
+        >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,172 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title: string;
+  description: string;
+  keywords: string;
+  image?: string;
+}
+
+const canonicalURL = new URL(Astro.url, Astro.site).toString();
+
+const {
+  title,
+  description,
+  keywords,
+  image,
+} = Astro.props;
+---
+
+<!-- Global Metadata -->
+<meta charset="utf-8" />
+<!-- Site Created By:    
+       _____  _       _     _     _____           _     _           
+      |  __ \(_)     | |   | |   |  __ \         | |   | |          
+      | |__) |_  __ _| |__ | |_  | |__) |   _  __| | __| | ___ _ __ 
+      |  _  /| |/ _` | '_ \| __| |  _  / | | |/ _` |/ _` |/ _ \ '__|
+      | | \ \| | (_| | | | | |_  | | \ \ |_| | (_| | (_| |  __/ |   
+      |_|  \_\_|\__, |_| |_|\__| |_|  \_\__,_|\__,_|\__,_|\___|_|   
+      |  \/  |   __/ |  | |      | | (_)                            
+      | \  / | _|___/ __| | _____| |_ _ _ __   __ _                 
+      | |\/| |/ _` | '__| |/ / _ \ __| | '_ \ / _` |                
+      | |  | | (_| | |  |   <  __/ |_| | | | | (_| |                
+      |_|  |_|\__,_|_|  |_|\_\___|\__|_|_| |_|\__, |                
+                                               __/ |                
+                                              |___/                 
+
+    Nice to see you here.  Find new student pilots with Right Rudder Marketing.  https://rightruddermarketing.com/contact-us -->
+
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="icon" type="image/svg+xml" href="/favicon/favicon.ico" />
+<meta name="generator" content={Astro.generator} />
+
+<!-- Canonical URL -->
+<link rel="canonical" href={canonicalURL} />
+
+<!-- Primary Meta Tags -->
+<title>{title}</title>
+<meta name="title" content={title} />
+<meta name="description" content={description} />
+<meta name="keywords" content={keywords} />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content={Astro.url} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={new URL(image, Astro.url)} />
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content={Astro.url} />
+<meta property="twitter:title" content={title} />
+<meta property="twitter:description" content={description} />
+<meta property="twitter:image" content={new URL(image, Astro.url)} />
+
+<link rel="sitemap" href="/sitemap-index.xml" />
+
+<!-- UPDATE GTAG PLEASE -->
+<!-- Google tag (gtag.js) -->
+<script
+  type="text/partytown"
+  async
+  src="https://www.googletagmanager.com/gtag/js?id=G-7ZWB6T5347"></script>
+<script type="text/partytown">
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+
+  gtag("config", "G-7ZWB6T5347");
+</script>
+
+<!-- NEED TO UPDATE SCHEMA -->
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "LocalBusiness",
+    "name": "PennJet Aircraft Management Services",
+    "description": "PennJet offers comprehensive aircraft ownership and management services, helping you assess whether it aligns with your goals. Our safety, service, and support ensure you fully benefit from your investment. Experience personalized aircraft management with PennJet.",
+    "keywords": "Aircraft management Pottstown PA, Private jet management Pottstown, Aircraft ownership services Pottstown, Private aviation Pottstown PA, Jet management services Heritage Field, Pottstown aircraft management, Aviation services near Pottstown PA, Heritage Field aircraft management, Jet ownership management Pottstown, Pottstown private jet services, Aircraft management PA, Private jet ownership Pottstown, Air charter Pottstown PA, Aircraft maintenance Pottstown, Private jet management near Philadelphia, Pottstown aviation management services, PA private jet services, Pennsylvania aircraft management, Aircraft management company Pennsylvania, Private jet services Philadelphia area, Heritage Field aviation, Aircraft ownership in southeastern PA, Jet fleet management Pennsylvania, Luxury jet services Pottstown, Fly private in Pottstown PA, Pottstown PA jet charter, Best aircraft management services in Pottstown PA, How to manage private jet in Pottstown PA, Full-service private aviation near Philadelphia, Reliable jet management services in southeastern PA, Comprehensive aircraft ownership management Pottstown PA",
+    "image": "/penn-jet-og-image.png",
+    "logo": "/pennjetllc.webp",
+    "telephone": "+1-610-495-7000",
+    "email": "info@pennjet.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "3310 W Ridge Pike",
+      "addressLocality": "Pottstown",
+      "addressRegion": "PA",
+      "addressCountry": "US",
+      "postalCode": "19464"
+    },
+    "currenciesAccepted": "USD",
+    "paymentAccepted": "Cash, Credit Card, Visa, Mastercard, American Express, Discover, Checks",
+    "areaServed": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": 40.24217243030569,
+        "longitude": -75.55532596753021
+      },
+      "geoRadius": 9000
+    },
+    // "aggregateRating": {
+    //   "@type": "AggregateRating",
+    //   "ratingValue": "5",
+    //   "reviewCount": "14"
+    // },
+    "url": "https://www.eliteproaviation.com/",
+    "priceRange": "$",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 40.24217243030569,
+      "longitude": -75.55532596753021
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+          "Sunday"
+        ],
+        "opens": "07:00",
+        "closes": "20:00"
+      },
+    ],
+    "makesOffer": {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "serviceType": "Aircraft Management",
+      },
+      "priceCurrency": "USD",
+      "price": "Varies"
+    },
+    "identifier": [
+      {
+        "@type": "PropertyValue",
+        "name": "IATA Code",
+        "value": "PTW"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ICAO Code",
+        "value": "KPTW"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Airport Code",
+        "value": "PTW"
+      }
+    ],
+    "hasMap": "https://maps.app.goo.gl/zCNMFJHjsZ8RvQBFA"
+  }
+</script>
