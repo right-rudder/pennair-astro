@@ -1,26 +1,22 @@
 export const footerLinks = [
   {
     name: "Home",
-    link: "#top",
+    link: "/#top",
   },
   {
-    name: "Private Charter",
-    link: "#charter",
+    name: "Partners",
+    link: "/#partners",
   },
   {
-    name: "Aircraft Management",
-    link: "#aircraft-management",
-  },
-  {
-    name: "About Us",
-    link: "#about-us",
+    name: "Our Services",
+    link: "/#our-services",
   },
   {
     name: "Blog",
-    link: "/blog",
+    link: "/blog#top",
   },
   {
     name: "Contact Us",
-    link: "#contact-us",
+    link: "/#contact-us",
   },
 ];

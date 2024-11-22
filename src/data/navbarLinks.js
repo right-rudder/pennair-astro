@@ -4,20 +4,16 @@ export const navbarLinks = [
     link: "/#top",
   },
   {
-    name: "Private Charter",
-    link: "/#charter",
+    name: "Partners",
+    link: "/#partners",
   },
   {
-    name: "Aircraft Management",
-    link: "/#aircraft-management-services",
+    name: "Our Services",
+    link: "/#our-services",
   },
   {
     name: "Blog",
-    link: "/blog",
-  },
-  {
-    name: "About Us",
-    link: "/#about-us",
+    link: "/blog#top",
   },
   {
     name: "Contact Us",

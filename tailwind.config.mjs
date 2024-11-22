@@ -4,8 +4,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Public Sans Variable", "sans-serif"],
-        sans2: ["Cabin Variable", "sans-serif"],
+        sans: ["Bricolage Grotesque Variable", "sans-serif"],
+        sans2: ["Public Sans Variable", "sans-serif"],
         parag: ["Montserrat Variable", "sans-serif"],
       },
     },
