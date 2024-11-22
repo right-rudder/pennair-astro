@@ -12,18 +12,6 @@ import ContactForm from "../components/ContactForm.astro";
 import LogoCloudRight from "../components/LogoCloudRight.astro";
 
 const landingData = {
-  features: {
-    id: "aircraft-management",
-    title: "Your Trusted Aircraft Management Partner",
-    parag1:
-      "Experience the confidence of unmatched safety, steadfast support, and exceptional service with PennJet. As your trusted aircraft management partner, we place safety at the core of our operations, ensuring meticulous care of your aviation asset.",
-    parag2:
-      "Beyond safety, our comprehensive support encompasses operational excellence and rigorous maintenance oversight. With PennJet, you're not just a client - you're our priority. We're dedicated to exceeding your service expectations. Choose a partner who is committed to your success.",
-    cta: {
-      link: "#contact-us",
-      text: "Contact Us",
-    },
-  },
   partners: {
     id: "partners",
     heading: "Trusted by Our Partners",
@@ -52,68 +40,58 @@ const landingData = {
       },
     ],
   },
-  charter: {
-    id: "charter",
-    imagePath: "/src/assets/penn-jet-header.webp",
-    imageAlt: "PennJet Aircraft Management jet on runway",
-    upperheading: "Private Charter",
-    heading: "Experience the Difference",
-    description:
-      "Our commitment to excellence extends to providing seamless and personalized private charter experiences tailored to your unique needs and preferences. Whether you're flying for business or leisure, our private charter services offer flexibility, convenience, and comfort.",
-    paragraphs: [
-      "Our experienced team handles all the details, from flight planning and logistics to in flight amenities, ensuring that your private charter experience is not only efficient but also luxurious. Whether you're traveling for a corporate meeting, a family vacation, or a special occasion.",
-      "PennJet is your trusted partner in delivering a private charter experience that exceeds your expectations.",
-      "Contact us today to learn more about our private charter",
-    ],
-    cta: {
-      link: "#contact-us",
-      text: "Contact Us",
-    },
-  },
   services: {
-    id: "aircraft-management-services",
-    upperheading: "Aircraft Management Services",
-    heading: "Your Aircraft, Our Expertise",
+    id: "our-services",
+    upperheading: "What We Do",
+    heading: "Keeping You Flying in the Air",
     cards: [
       {
-        imagePath: "/src/assets/chris-leipelt-6w_dYdazo20-unsplash.jpg",
-        imageAlt: "PennJet Aircraft Management jet on runway",
+        imagePath: "/src/assets/james-lewis-46fJyLS6jmM-unsplash.jpg",
+        imageAlt: "Penn Air Repair aircraft maintenance",
         title: "Maintenance Oversight",
         descriptions: [
-          "At PennJet, we take maintenance oversight seriously to ensure the longevity and reliability of your aviation asset. Our experienced team tracks, schedules, and oversees all required inspections and maintenance events to comply with Part 91 and Part 135 requirements.",
-          "We understand that safety and compliance are paramount in aviation, and we work tirelessly to ensure that your aircraft meets and exceeds regulatory standards.",
-          "Whether it's routine maintenance or coordinating repairs for unscheduled events and AOG situations, our commitment to excellence in maintenance oversight ensures that your aircraft is always in top condition, ready to take flight when you are.",
+          "Our maintenance technicians are ready to handle your aircraft repair and maintenance needs. From routine inspections and preventative maintenance to major repairs and pre-buy inspections, we are your one stop source for aircraft repair and maintenance. We will be happy to assist you with the following and much more.",
+          "Safety is our top priority. Our team of experienced technicians is dedicated to ensuring that your aircraft is maintained to the highest standards of safety and reliability. So you can rest assured that your aircraft is in good hands.",
+          "Your aircraft is a significant investment. Our team will work with you to develop a maintenance plan that is tailored to your aircraft's specific needs.",
         ],
       },
       {
-        imagePath: "/src/assets/chris-leipelt-6w_dYdazo20-unsplash.jpg",
-        imageAlt: "PennJet Aircraft Management jet on runway",
-        title: "Operational Support",
+        title: "Airframe and Powerplants",
         descriptions: [
-          "We understand that every aspect of aircraft management, from dispatch and flight tracking to scheduling, flight coordination, and logistics, plays a crucial role in ensuring the smooth operation of your aviation asset.",
-          "Our dedicated team of professionals is equipped with the expertise and resources to manage these critical aspects efficiently. With PennJet by your side, you can trust that your aircraft will be meticulously cared for, enabling you to focus on your aviation goals with confidence and peace of mind.",
+          "Our experience encompasses a wide range of airframes and powerplants in the aviation industry. We have a proven track record in servicing aircraft models including Cessna, Beech, Piper, and a host of other general aviation platforms. Our team's proficiency in handling these diverse airframes and powerplants is a testament to our dedication to providing comprehensive aviation maintenance solutions.",
+          "We are committed to providing the highest quality service to our customers. You can trust us to deliver the best possible service for your aircraft.",
         ],
       },
       {
-        imagePath: "/src/assets/chris-leipelt-6w_dYdazo20-unsplash.jpg",
-        imageAlt: "PennJet Aircraft Management jet on runway",
-        title: "Fiscal Management",
+        title: "Turboprop Aircraft",
         descriptions: [
-          "Our experienced team analyzes aviation expenses, providing transparent reports and strategic insights to meet your financial objectives.",
-          "We maximize cost efficiency while upholding safety and service standards. With PennJet, you can focus on your aviation goals while confidently navigating aircraft ownership finances.",
+          "We also work with and have decades of experience in the maintenance of turboprop aircraft, such as the King Air, Pilatus, and Cessna. Penn Air Repair proudly considers itself a specialist in the realm of turboprop aircraft care. We are well equipped to cater to the unique maintenance needs your aircraft. Whether it's light inspections or routine maintenance, you can trust us to deliver top tier service.",
+          "Every aircraft is unique, and we understand that. Our experienced team will work with you to develop a maintenance plan that is tailored to your aircraft's specific needs.",
         ],
       },
       {
-        imagePath: "/src/assets/caleb-woods-R2lCJwGyqPQ-unsplash.jpg",
-        imageAlt: "PennJet Aircraft Management jet on runway",
-        title: "Pilot Services",
+        imagePath: "/src/assets/penn-air-engine.webp",
+        imageAlt: "Penn Air Repair engine maintenance",
+        title: "Engine Maintenance",
         descriptions: [
-          "Recruiting and employing a skilled and dedicated aviation crew is a critical component of aircraft management.",
-          "Our commitment to excellence extends to the selection and retention of highly qualified professionals who share our dedication to safety and service.",
-          "We handle all aspects of crew management, from recruitment and training to HR administration including implementing a FAA drug and alcohol testing program.",
-          "This comprehensive approach ensures that your aircraft is operated by a team of professionals who are not only skilled but also aligned with our core values of safety and service excellence.",
+          "Penn Air Repair offers comprehensive maintenance services with a broad spectrum of capabilities. Our ability to efficiently handle your engine maintenance and inspection needs is enhanced by our strong connections with industry leading engine affiliates. Typically, engine replacements are seamlessly integrated into regular inspection cycles, ensuring minimal downtime.",
+          "Your aircraft's engine is the heart of your aircraft. Our team will inspect, repair, and maintain your engine to ensure that it is operating at peak performance.",
+          "We are committed to providing the highest quality service to our customers. You can trust us to deliver the best possible service for your aircraft.",
         ],
       },
+    ],
+  },
+  howWeDoIt: {
+    id: "how-we-do-it",
+    imagePath: "/src/assets/james-lewis-46fJyLS6jmM-unsplash.jpg",
+    imageAlt: "Penn Air Repair aircraft maintenance",
+    upperheading: "How We Do It",
+    heading: "Our Process",
+    description:
+      "Repair and Service Penn Air Repair excels in aircraft repair and maintenance. Our skilled technicians handle a broad spectrum of needs, from minor fixes to major overhauls. We prioritize swift, high-quality service to minimize aircraft downtime. Whether it's engine, airframe, or minor structural work, trust us to ensure your aircraft's safety and reliability.",
+    paragraphs: [
+      "Inspections At Penn Air Repair, we conduct FAA mandated annual aircraft inspections with precision and expertise. Our experienced technicians thoroughly examine your aircraft's systems, components, and documentation to ensure airworthiness and compliance with FAA regulations.",
+      "Parts and MRO Penn Air Repair offers a wide range of quality aircraft parts for your maintenance and repair needs. We stock consumable parts and source from reputable manufacturers, ensuring reliability and efficiency. Trust us for prompt and efficient supply of the right parts to keep your aircraft safe and operational.",
     ],
   },
 };
@@ -122,5 +100,7 @@ const landingData = {
 <BaseLayout title="Home" description="Welcome to the home page">
   <Hero />
   <LogoCloudRight data={landingData.partners} />
+  <BentoGrid data={landingData.services} />
+  <ContentBg data={landingData.howWeDoIt} />
   <ContactForm />
 </BaseLayout>

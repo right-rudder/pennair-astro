@@ -13,7 +13,7 @@ export const footerLinks = [
   },
   {
     name: "Blog",
-    link: "/blog",
+    link: "/blog#top",
   },
   {
     name: "Contact Us",

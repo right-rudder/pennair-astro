@@ -6,11 +6,9 @@ import Header from "../../components/Header.astro";
 
 const data = {
   header: {
-    imagePath: "/src/assets/caleb-woods-R2lCJwGyqPQ-unsplash.jpg",
-    imageAlt: "PennJet Aircraft Management Services",
+    imagePath: "/src/assets/penn-air-engine.webp",
+    imageAlt: "Penn Air Repair open engine",
     headerH1: "Our Blog",
-    paragraph:
-      "Get the latest insights and tips from PennJet. Stay up-to-date with the latest happenings in the world of aircraft management services.",
   },
 };
 
@@ -20,9 +18,9 @@ const posts = (await getCollection("blog")).sort(
 ---
 
 <BaseLayout
-  siteTitle="Blog | PennJet Aircraft Management Services"
-  siteDescription="Get the latest insights and tips from PennJet Aircraft Management Services. Stay up-to-date with the latest happenings in the world of Aircraft and Aviation."
-  keywords="PennJet, Aircraft Management Services, Blog, Pennsylvania, Charter Flights, Aircraft Management, Aircraft Maintenance, Aircraft Sales, Aircraft Acquisitions, Aircraft Appraisals, Aircraft Brokerage, Aircraft Consulting, Aircraft Financing, Aircraft Insurance, Aircraft Maintenance, Aircraft Management, Aircraft Sales, Aircraft Acquisitions, Aircraft Appraisals, Aircraft Brokerage, Aircraft Consulting, Aircraft Financing, Aircraft Insurance, Aircraft Maintenance, Aircraft Management, Aircraft Sales, Aircraft Acquisitions, Aircraft Appraisals, Aircraft Brokerage, Aircraft Consulting, Aircraft Financing, Aircraft Insurance"
+  siteTitle="Blog | Penn Air Repair Aircraft Maintenance & Repair Services"
+  siteDescription="Stay up-to-date with the latest happenings in the world of aircraft maintenance, repair, parts and services. Get the latest insights and tips from Penn Air Repair."
+  keywords="Penn Air Repair, Aircraft Maintenance, Aircraft Repair, Aircraft Parts, Aircraft Services, Aircraft Management Services"
 >
   <!-- Header -->
   <Header data={data.header} />
@@ -59,12 +57,13 @@ const posts = (await getCollection("blog")).sort(
     </div>
     <div class="mx-auto px-6 lg:px-8">
       <div class="mx-auto max-w-2xl text-center">
-        <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-          PennJet Articles
+        <h2 class="text-3xl font-bold tracking-tight text-red-800 sm:text-4xl">
+          Penn Air Repair Articles
         </h2>
         <p class="mt-2 text-lg leading-6 text-gray-600">
-          Get the latest insights and tips from PennJet. Stay up-to-date with
-          the latest happenings in the world of aircraft management services.
+          Stay up-to-date with the latest happenings in the world of aircraft
+          maintenance, repair, parts and services. Get the latest insights and
+          tips from Penn Air Repair.
         </p>
         <p class="text-xs text-muted-400">
           {posts.length}{posts.length > 1 ? " Articles" : " Article"}. Since{
@@ -84,8 +83,8 @@ const posts = (await getCollection("blog")).sort(
                 alt={post.data.title}
                 class="absolute inset-0 -z-10 h-full w-full object-cover group-hover:scale-110 group-hover:brightness-125 duration-200"
               />
-              <div class="absolute inset-0 -z-10 bg-gradient-to-t from-slate-950 via-slate-900/20 group-hover:bg-black/60 duration-200" />
-              <div class="absolute inset-0 -z-10 ring-1 ring-inset ring-yellow-400/10" />
+              <div class="absolute inset-0 -z-10 bg-gradient-to-t from-red-950 via-red-950/50 via-30% group-hover:bg-black/60 duration-200" />
+              <div class="absolute inset-0 -z-10 ring-1 ring-inset ring-yellow-600/10" />
 
               <div class="flex flex-wrap items-center gap-y-1 overflow-hidden text-sm leading-6 text-gray-100">
                 <time datetime="2020-03-16" class="mr-8 text-yellow-400">
@@ -98,7 +97,7 @@ const posts = (await getCollection("blog")).sort(
                   >
                     <circle cx="1" cy="1" r="1" />
                   </svg>
-                  <div class="flex font-bold text-base text-blue-200">
+                  <div class="flex font-bold text-base text-red-100">
                     {post.data.author}
                   </div>
                 </div>

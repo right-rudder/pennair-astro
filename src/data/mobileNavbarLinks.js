@@ -13,7 +13,7 @@ export const mobileNavbarLinks = [
   },
   {
     name: "Blog",
-    link: "/blog",
+    link: "/blog#top",
   },
   {
     name: "Contact Us",

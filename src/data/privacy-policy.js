@@ -1,15 +1,15 @@
 const privacyPolicies = {
   data: {
-    heading: `Privacy Policy of<br /> PennJet LLC`,
+    heading: `Privacy Policy of<br /> Penn Air Repair`,
     subheading: `Last updated: 10-24-2024`,
     content: [
       {
         heading: "Introduction",
         paragraphs: [
-          "PennJet LLC operates the https://pennjet.net/ website, which is a flight school with addresses in Pottstown, PA.",
-          "This page is used to inform website visitors regarding our policies with the collection, use, and disclosure of Personal Information if anyone decided to use our Service, the PennJet LLC website.",
+          `Penn Air Repair operates the <a href="/">https://pennairrepair.com/</a> website, which is an aircraft maintenance company with addresses in Pottstown, PA.`,
+          "This page is used to inform website visitors regarding our policies with the collection, use, and disclosure of Personal Information if anyone decided to use our Service, the Penn Air Repair website.",
           "If you choose to use our Service, then you agree to the collection and use of information in relation with this policy. The Personal Information that we collect are used for providing and improving the Service. We will not use or share your information with anyone except as described in this Privacy Policy.",
-          "The terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which is accessible at https://pennjet.net/terms-of-service, unless otherwise defined in this Privacy Policy.",
+          `The terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which is accessible at <a href="/terms-of-service">https://pennairrepair.com/terms-of-service</a>, unless otherwise defined in this Privacy Policy.`,
         ],
       },
       {
@@ -66,7 +66,7 @@ const privacyPolicies = {
       {
         heading: "Contact Us",
         paragraphs: [
-          "If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us.",
+          `If you have any questions or suggestions about our Privacy Policy, do not hesitate to <a href="/#contact-us">contact us</a>.`,
         ],
       },
     ],

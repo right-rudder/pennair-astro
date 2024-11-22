@@ -13,7 +13,7 @@ export const navbarLinks = [
   },
   {
     name: "Blog",
-    link: "/blog",
+    link: "/blog#top",
   },
   {
     name: "Contact Us",
