@@ -4,16 +4,16 @@ export const SITE_TITLE =
 
 // CHANGE default meta description -> should only be used in homepage technically, but is there for a fallback in case a page is missed
 export const SITE_DESCRIPTION =
-  "PennJet provides comprehensive aircraft ownership and management solutions tailored to your goals. With a focus on safety, exceptional service, and unwavering support, we ensure you maximize the value of your investment. Discover personalized, hassle-free aircraft management with PennJet.";
+  "Penn Air Repair specializes in providing top-notch aircraft maintenance and repair services, including engine overhauls, airframe inspections, and component replacements. Our team of experienced technicians is dedicated to ensuring the safety and reliability of your aircraft.";
 
 //SEO tip -> keyword + city 1
 //Should have between 5-10 different localities to mix and match keywords
 //typical keywords = how to become a pilot, flight school near, private pilot, discovery flight, introductory flight, instrument rating, commercial certificate, certified flight instructor, airline programs, how to become an airline pilot
 // CHANGE default keywords -> should only be used in homepage technically, but is there for a fallback in case a page is missed
 export const KEYWORDS =
-  "Aircraft management Pottstown PA, Private jet management Pottstown, Aircraft ownership services Pottstown, Private aviation Pottstown PA, Jet management services Heritage Field, Pottstown aircraft management, Aviation services near Pottstown PA, Heritage Field aircraft management, Jet ownership management Pottstown, Pottstown private jet services, Aircraft management PA, Private jet ownership Pottstown, Air charter Pottstown PA, Aircraft maintenance Pottstown, Private jet management near Philadelphia, Pottstown aviation management services, PA private jet services, Pennsylvania aircraft management, Aircraft management company Pennsylvania, Private jet services Philadelphia area, Heritage Field aviation, Aircraft ownership in southeastern PA, Jet fleet management Pennsylvania, Luxury jet services Pottstown, Fly private in Pottstown PA, Pottstown PA jet charter, Best aircraft management services in Pottstown PA, How to manage private jet in Pottstown PA, Full-service private aviation near Philadelphia, Reliable jet management services in southeastern PA, Comprehensive aircraft ownership management Pottstown PA";
+  "aircraft maintenance, aircraft repair, aircraft inspection, aircraft overhaul, aircraft parts, aviation services, turboprop maintenance, turboprop repair, turboprop inspection, turboprop overhaul, FAA certified repair station, aviation maintenance technician, aircraft engine overhaul, propeller overhaul, avionics repair, aircraft interior refurbishment, Pottstown aircraft maintenance, Pottstown aircraft repair, Pennsylvania aviation services";
 
-export const OG_IMAGE = "/penn-jet-og-image.png";
+export const OG_IMAGE = "/OG_image-PennAirRepair.webp";
 
 export const LOCATIONS = [
   {
