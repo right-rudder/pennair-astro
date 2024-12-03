@@ -23,12 +23,12 @@ export const LOCATIONS = [
     state: "PA",
     zip: "19464 ",
     gMaps: "https://maps.app.goo.gl/q1SJrrPdmpFBcyjY7",
-    phone: "754-423-2159",
+    phone: "(610) 495-3070",
   },
 ];
 
 // CHANGE client business info
-export const PHONE_NUMBER = "754-423-2159";
+export const PHONE_NUMBER = "(610) 495-3070";
 export const ADDRESS_LINE_1 = "3310 W Ridge Pike";
 export const ADDRESS_LINE_2 = "Pottstown, Pennsylvania 19464 ";
 export const FACEBOOK_URL = null;
