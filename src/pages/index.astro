@@ -12,6 +12,21 @@ import ContactForm from "../components/ContactForm.astro";
 import LogoCloudRight from "../components/LogoCloudRight.astro";
 
 const landingData = {
+  providerFor: {
+    title: "Primary maintenance provider for:",
+    logos: [
+      {
+        imagePath: "/src/assets/pennjetllc.webp",
+        imageAlt: "PennJet LLC Logo",
+        link: "https://pennjet.net/",
+      },
+      {
+        imagePath: "/src/assets/pitcairn-logo-400.webp",
+        imageAlt: "Pitcairn Flight Academy Logo",
+        link: "https://pitcairnflightacademy.com/",
+      },
+    ],
+  },
   partners: {
     id: "partners",
     heading: "Trusted by Our Clients",
@@ -99,6 +114,35 @@ const landingData = {
 
 <BaseLayout title="Home" description="Welcome to the home page">
   <Hero />
+  <section
+    class="bg-gray-50 flex justify-center items-center align-middle py-20 lg:py-12"
+  >
+    <div class="flex flex-wrap justify-center items-center w-full max-w-5xl">
+      <h3
+        class="text-pretty text-center text-lg lg:text-2xl font-thin tracking-tight text-gray-800"
+        set:html={landingData.providerFor.title}
+      />
+      <div
+        class="w-full mt-8 flex flex-wrap gap-14 justify-center items-center"
+      >
+        {
+          landingData.providerFor.logos.map((logo) => (
+            <a
+              href={logo.link}
+              target="_blank"
+              class="hover:scale-110 duration-200"
+            >
+              <ImageComp
+                imagePath={logo.imagePath}
+                imageAlt={logo.imageAlt}
+                styles="max-w-56 max-h-28 object-contain object-center"
+              />
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
   <LogoCloudRight data={landingData.partners} />
   <BentoGrid data={landingData.services} />
   <ContentBg data={landingData.howWeDoIt} />
