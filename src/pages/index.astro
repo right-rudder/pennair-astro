@@ -1,11 +1,7 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ImageComp from "../components/ImageComp.astro";
 import Hero from "../components/Hero.astro";
-import Features from "../components/Features.astro";
-import Content from "../components/Content.astro";
 import ContentBg from "../components/Content-bg.astro";
 import BentoGrid from "../components/BentoGrid.astro";
 import ContactForm from "../components/ContactForm.astro";
@@ -59,6 +55,7 @@ const landingData = {
     id: "our-services",
     upperheading: "What We Do",
     heading: "Keeping You Flying in the Air",
+    description: `Penn Air Repair provides a comprehensive range of <a href="/services" class="font-semibold text-red-800 hover:underline">aircraft maintenance services</a>, ensuring the safety and airworthiness of your aircraft. Our expertise encompasses engine overhauls, meticulous airframe inspections, and the installation of new or overhauled components. We meticulously perform <a href="/services/100-hour-inspection" class="font-semibold text-red-800 hover:underline">100-hour inspection</a> and <a href="/services/annual-inspection" class="font-semibold text-red-800 hover:underline">annual inspection</a> to adhere to FAA regulations and maintain peak aircraft performance. Our skilled technicians excel in <a href="/services/sheet-metal-work" class="font-semibold text-red-800 hover:underline">sheet metal work</a>, expertly repairing and fabricating aircraft components. Furthermore, we offer <a href="/services/light-avionics" class="font-semibold text-red-800 hover:underline">light avionics</a> services, including the installation, repair, and maintenance of essential communication, navigation, and surveillance systems.`,
     cards: [
       {
         imagePath: "/src/assets/edgar-chaparro-GAWBDB5DyC4-unsplash.jpg",
@@ -112,7 +109,7 @@ const landingData = {
 };
 ---
 
-<BaseLayout title="Home" description="Welcome to the home page">
+<BaseLayout>
   <Hero />
   <section
     class="bg-gray-50 flex justify-center items-center align-middle py-20 lg:py-12"
