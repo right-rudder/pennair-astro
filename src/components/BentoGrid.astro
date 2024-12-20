@@ -18,7 +18,11 @@ const { data } = Astro.props;
     >
       {data.heading}
     </p>
-    <div class="lg:mt-16 grid gap-4 mt-16 lg:grid-cols-3 lg:grid-rows-2">
+    <p
+      class="mt-6 mx-4 lg:mx-auto max-w-5xl text-balance text-base/6 font-parag text-gray-600 text-center"
+      set:html={data.description}
+    />
+    <div class="lg:mt-10 grid gap-4 mt-16 lg:grid-cols-3 lg:grid-rows-2">
       <div
         class="relative lg:row-span-2 flex justify-center align-middle items-center"
       >

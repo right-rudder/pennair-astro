@@ -123,18 +123,18 @@ const Navbar = ({ pathname }) => {
                           </span>
                         </a>
                       ) : (
-                        <span className="cursor-default text-black text-lg duration-300 hover:underline decoration-accent-500 decoration-4 underline-offset-[10px] py-12 whitespace-nowrap">
+                        <span className="cursor-default text-black text-lg duration-300 hover:underline decoration-red-500 decoration-4 underline-offset-[10px] py-12 whitespace-nowrap">
                           {item.name}
                         </span>
                       )}
                       {item.submenu && item.submenu.length > 0 && (
                         <ul
-                          className={`absolute top-10 bg-primary-800/95 min-w-48 text-center border-b-4 border-white/20 whitespace-nowrap text-white -left-4 duration-200 ease-out ${hoveredIndex === index ? "max-h-auto w-auto opacity-100" : "max-h-0 h-0 opacity-0 overflow-hidden"}`}
+                          className={`absolute top-12 bg-white/90 min-w-48 text-center border-gray-300 whitespace-nowrap text-gray-900 -left-4 duration-200 ease-out ${hoveredIndex === index ? "max-h-auto w-auto opacity-100" : "max-h-0 h-0 opacity-0 overflow-hidden"}`}
                         >
                           {item.submenu.map((subitem, subIndex) => (
                             <li
                               key={subIndex}
-                              className={`${isActive(subitem, pathname) ? "bg-accent-700 text-accent-100" : ""} relative font-normal hover:bg-accent-600 hover:scale-105 px-1 hover:font-semibold hover:shadow-sm drop-shadow-sm`}
+                              className={`${isActive(subitem, pathname) ? "bg-red-900 text-white" : ""} relative font-normal hover:bg-red-900/90 hover:text-white hover:scale-105 px-1 hover:font-semibold hover:shadow-sm drop-shadow-sm`}
                               onMouseEnter={() => setSubHoveredIndex(subIndex)}
                               onMouseLeave={() => setSubHoveredIndex(null)}
                             >
