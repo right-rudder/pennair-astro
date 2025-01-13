@@ -1,5 +1,5 @@
 ---
-pubDate: "January 13, 2025"
+pubDate: "February 13, 2025"
 author: Andy Landis
 title: "Essential Aircraft Maintenance Tips"
 description: "Owning an aircraft is a rewarding experience, but it also comes with significant responsibilities. Regular maintenance is key to ensuring safety, reliability, and longevity. At Penn Air Repair, we help aircraft owners at Heritage Field (KPTW) stay on top of their maintenance needs with expert guidance and services."
