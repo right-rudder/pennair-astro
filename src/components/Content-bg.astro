@@ -26,14 +26,13 @@ const { data } = Astro.props;
         >
           {data.heading}
         </p>
-        <p class="mt-3 text-lg/7 text-gray-700 font-parag">
-          {data.description}
-        </p>
-        {
-          data.paragraphs.map((parag) => (
-            <p class="mt-3 text-lg/6 text-gray-700 font-parag">{parag}</p>
-          ))
-        }
+        {data.sections.map((section) => (
+          <h4
+            class="mt-4 text-lg/7 text-gray-700 font-bold font-parag"
+            set:html={section.description}
+          />
+          <p class="mt-1 mb-4 text-lg/6 text-gray-700 font-parag">{section.paragraph}</p>
+        ))}
         {
           data.cta && (
             <div class="mt-12">

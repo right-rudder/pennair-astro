@@ -4,12 +4,26 @@ export const navbarLinks = [
     link: "/#top",
   },
   {
-    name: "Partners",
-    link: "/#partners",
-  },
-  {
     name: "Our Services",
-    link: "/#our-services",
+    link: "/services",
+    submenu: [
+      {
+        name: "100 Hour Inspection",
+        link: "/services/100-hour-inspection",
+      },
+      {
+        name: "Annual Inspection",
+        link: "/services/annual-inspection",
+      },
+      /*       {
+        name: "Sheet Metal Work",
+        link: "/services/sheet-metal-work",
+      },
+      {
+        name: "Light Avionics",
+        link: "/services/light-avionics",
+      }, */
+    ],
   },
   {
     name: "Blog",
