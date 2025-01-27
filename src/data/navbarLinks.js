@@ -15,14 +15,14 @@ export const navbarLinks = [
         name: "Annual Inspection",
         link: "/services/annual-inspection",
       },
-      {
+      /*       {
         name: "Sheet Metal Work",
         link: "/services/sheet-metal-work",
       },
       {
         name: "Light Avionics",
         link: "/services/light-avionics",
-      },
+      }, */
     ],
   },
   {
