@@ -28,7 +28,6 @@ const locationCollection = defineCollection({
     baseLocation: z.string(),
     keyPlace1: z.string(),
     keyPlace2: z.string(),
-    slug: z.string(),
   }),
 });
 
