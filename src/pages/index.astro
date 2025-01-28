@@ -12,6 +12,14 @@ import ContactForm from "../components/ContactForm.astro";
 import LogoCloudRight from "../components/LogoCloudRight.astro";
 
 const landingData = {
+  hero: {
+    heading: `Aircraft Maintenance Services`,
+    subHeading: "at Heritage Field Airport, KPTW, Pottstown, PA",
+    description: `Penn Air Repair is your one-stop shop for top-tier aircraft
+          maintenance and repair services. Our expert team is dedicated to
+          keeping your aircraft flying safely and efficiently.`,
+  },
+
   providerFor: {
     title: "Primary maintenance provider for:",
     logos: [
@@ -113,7 +121,7 @@ const landingData = {
 ---
 
 <BaseLayout title="Home" description="Welcome to the home page">
-  <Hero />
+  <Hero data={landingData.hero}/>
   <section
     class="bg-gray-50 flex justify-center items-center align-middle py-20 lg:py-12"
   >
