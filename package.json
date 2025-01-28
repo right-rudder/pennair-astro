@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "pennair-astro",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -28,6 +28,7 @@
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.15",
+    "circular-dependency-plugin": "^5.2.2",
     "prettier": "^3.3.3",
     "prettier-plugin-astro": "^0.14.1"
   }
