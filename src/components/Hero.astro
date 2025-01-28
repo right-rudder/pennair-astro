@@ -1,5 +1,7 @@
 ---
 import ImageComp from "./ImageComp.astro";
+
+const { data } = Astro.props;
 ---
 
 <div class="relative isolate overflow-hidden pt-14">
@@ -27,12 +29,10 @@ import ImageComp from "./ImageComp.astro";
         <h1
           class="text-balance text-5xl lg:text-7xl lg:leading-[3.5rem] font-bold tracking-tight text-red-900"
         >
-          Aircraft Maintenance Company
+          {data.heading}
         </h1>
         <p class="mt-8 text-pretty text-lg font-parag font-light text-gray-700">
-          Penn Air Repair is your one-stop shop for top-tier aircraft
-          maintenance and repair services. Our expert team is dedicated to
-          keeping your aircraft flying safely and efficiently.
+          {data.description}
         </p>
         <div
           class="mt-10 flex items-center justify-center lg:justify-start gap-x-6"
