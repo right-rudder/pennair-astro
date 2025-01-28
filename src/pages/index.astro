@@ -1,15 +1,11 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import ImageComp from "../components/ImageComp.astro";
 import Hero from "../components/Hero.astro";
-import Features from "../components/Features.astro";
-import Content from "../components/Content.astro";
 import ContentBg from "../components/Content-bg.astro";
 import BentoGrid from "../components/BentoGrid.astro";
 import ContactForm from "../components/ContactForm.astro";
 import LogoCloudRight from "../components/LogoCloudRight.astro";
+import ProviderFor from "../components/ProviderFor.astro";
 
 const landingData = {
   hero: {
@@ -66,14 +62,15 @@ const landingData = {
   services: {
     id: "our-services",
     upperheading: "What We Do",
-    heading: "Keeping You Flying in the Air",
+    heading: "Keep Your Aircraft Flying",
+    description: `Penn Air Repair provides a comprehensive range of <a href="/services" class="font-semibold text-red-800 hover:underline">aircraft maintenance services</a>, ensuring the safety and airworthiness of your aircraft. Our expertise encompasses engine overhauls, meticulous airframe inspections, and the installation of new or overhauled components. We meticulously perform <a href="/services/100-hour-inspection" class="font-semibold text-red-800 hover:underline">100-hour inspection</a> and <a href="/services/annual-inspection" class="font-semibold text-red-800 hover:underline">annual inspection</a> to adhere to FAA regulations and maintain peak aircraft performance.`,
     cards: [
       {
-        imagePath: "/src/assets/edgar-chaparro-GAWBDB5DyC4-unsplash.jpg",
+        imagePath: "/src/assets/DG inspecting wing repair.jpg",
         imageAlt: "Penn Air Repair aircraft maintenance",
         title: "Maintenance Oversight",
         descriptions: [
-          "Our maintenance technicians are ready to handle your aircraft repair and maintenance needs. From routine inspections and preventative maintenance to major repairs and pre-buy inspections, we are your one stop source for aircraft repair and maintenance. We will be happy to assist you with the following and much more.",
+          "Our maintenance technicians are ready to handle your aircraft repair and maintenance needs. From routine inspections and preventative maintenance to major repairs and pre-buy inspections, we are your one stop source for aircraft repair and maintenance.",
           "Safety is our top priority. Our team of experienced technicians is dedicated to ensuring that your aircraft is maintained to the highest standards of safety and reliability. So you can rest assured that your aircraft is in good hands.",
           "Your aircraft is a significant investment. Our team will work with you to develop a maintenance plan that is tailored to your aircraft's specific needs.",
         ],
@@ -88,7 +85,7 @@ const landingData = {
       {
         title: "Turboprop Aircraft",
         descriptions: [
-          "We also work with and have decades of experience in the maintenance of turboprop aircraft, such as the King Air, Pilatus, and Cessna. Penn Air Repair proudly considers itself a specialist in the realm of turboprop aircraft care. We are well equipped to cater to the unique maintenance needs your aircraft. Whether it's light inspections or routine maintenance, you can trust us to deliver top tier service.",
+          "We also work with and have decades of experience in the maintenance of turboprop aircraft, such as the King Air, Pilatus, and Cessna. Penn Air Repair proudly considers itself a specialist in the realm of turboprop aircraft care. We are well equipped to cater to the unique maintenance needs of your aircraft. Whether it's light inspections or routine maintenance, you can trust us to deliver top tier service.",
           "Every aircraft is unique, and we understand that. Our experienced team will work with you to develop a maintenance plan that is tailored to your aircraft's specific needs.",
         ],
       },
@@ -98,8 +95,7 @@ const landingData = {
         title: "Engine Maintenance",
         descriptions: [
           "Penn Air Repair offers comprehensive maintenance services with a broad spectrum of capabilities. Our ability to efficiently handle your engine maintenance and inspection needs is enhanced by our strong connections with industry leading engine affiliates. Typically, engine replacements are seamlessly integrated into regular inspection cycles, ensuring minimal downtime.",
-          "Your aircraft's engine is the heart of your aircraft. Our team will inspect, repair, and maintain your engine to ensure that it is operating at peak performance.",
-          "We are committed to providing the highest quality service to our customers. You can trust us to deliver the best possible service for your aircraft.",
+          "Your aircraft's engine is the heart of your aircraft. Our team will inspect, repair, and maintain that engine to ensure that it is operating at peak performance.",
         ],
       },
     ],
@@ -110,47 +106,30 @@ const landingData = {
     imageAlt: "Penn Air Repair aircraft maintenance",
     upperheading: "How We Do It",
     heading: "Our Process",
-    description:
-      "Repair and Service Penn Air Repair excels in aircraft repair and maintenance. Our skilled technicians handle a broad spectrum of needs, from minor fixes to major overhauls. We prioritize swift, high-quality service to minimize aircraft downtime. Whether it's engine, airframe, or minor structural work, trust us to ensure your aircraft's safety and reliability.",
-    paragraphs: [
-      "Inspections At Penn Air Repair, we conduct FAA mandated annual aircraft inspections with precision and expertise. Our experienced technicians thoroughly examine your aircraft's systems, components, and documentation to ensure airworthiness and compliance with FAA regulations.",
-      "Parts and MRO Penn Air Repair offers a wide range of quality aircraft parts for your maintenance and repair needs. We stock consumable parts and source from reputable manufacturers, ensuring reliability and efficiency. Trust us for prompt and efficient supply of the right parts to keep your aircraft safe and operational.",
+    sections: [
+      {
+        description: `Repair and Service`,
+        paragraph:
+          "Penn Air Repair excels in aircraft repair and maintenance. Our skilled technicians handle a broad spectrum of needs, from minor fixes to major overhauls. We prioritize swift, high-quality service to minimize aircraft downtime. Whether it's engine, airframe, or minor structural work, trust us to ensure your aircraft's safety and reliability.",
+      },
+      {
+        description: `Inspections`,
+        paragraph:
+          "At Penn Air Repair, we conduct FAA mandated annual aircraft inspections with precision and expertise. Our experienced technicians thoroughly examine your aircraft's systems, components, and documentation to ensure airworthiness and compliance with FAA regulations.",
+      },
+      {
+        description: `Parts and MRO`,
+        paragraph:
+          "Penn Air Repair offers a wide range of quality aircraft parts for your maintenance and repair needs. We stock consumable parts and source from reputable manufacturers, ensuring reliability and efficiency. Trust us for prompt and efficient supply of the right parts to keep your aircraft safe and operational.",
+      },
     ],
   },
 };
 ---
 
-<BaseLayout title="Home" description="Welcome to the home page">
+<BaseLayout>
   <Hero data={landingData.hero}/>
-  <section
-    class="bg-gray-50 flex justify-center items-center align-middle py-20 lg:py-12"
-  >
-    <div class="flex flex-wrap justify-center items-center w-full max-w-5xl">
-      <h3
-        class="text-pretty text-center text-lg lg:text-2xl font-thin tracking-tight text-gray-800"
-        set:html={landingData.providerFor.title}
-      />
-      <div
-        class="w-full mt-8 flex flex-wrap gap-14 justify-center items-center"
-      >
-        {
-          landingData.providerFor.logos.map((logo) => (
-            <a
-              href={logo.link}
-              target="_blank"
-              class="hover:scale-110 duration-200"
-            >
-              <ImageComp
-                imagePath={logo.imagePath}
-                imageAlt={logo.imageAlt}
-                styles="max-w-56 max-h-28 object-contain object-center"
-              />
-            </a>
-          ))
-        }
-      </div>
-    </div>
-  </section>
+  <ProviderFor data={landingData.providerFor} />
   <LogoCloudRight data={landingData.partners} />
   <BentoGrid data={landingData.services} />
   <ContentBg data={landingData.howWeDoIt} />

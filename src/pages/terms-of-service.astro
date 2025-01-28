@@ -13,14 +13,14 @@ const { data } = terms;
 
   <section class="mt-12 font-sans flex flex-col items-center">
     <h1
-      class="mx-auto text-center px-6 lg:px-0 text-primary-950 font-black max-w-4xl text-5xl lg:text-6xl"
+      class="mx-auto text-center px-6 lg:px-0 text-red-950 font-black max-w-4xl text-5xl lg:text-6xl"
       set:html={data.heading}
     />
     <p
       class="mx-auto mt-2 text-muted-400 text-center"
       set:html={data.subheading}
     />
-    <div class="w-full mt-12 lg:w-3/5 bg-slate-200 px-8 py-12 rounded-sm">
+    <div class="w-full mt-12 lg:w-3/5 bg-gray-100 px-8 py-12 rounded-sm">
       {
         data.content.map((part) => (
           <div class="mb-12">
