@@ -63,7 +63,7 @@ const landingData = {
     id: "our-services",
     upperheading: "What We Do",
     heading: "Keep Your Aircraft Flying",
-    description: `Penn Air Repair provides a comprehensive range of <a href="/services" class="font-semibold text-red-800 hover:underline">aircraft maintenance services</a>, ensuring the safety and airworthiness of your aircraft. Our expertise encompasses engine overhauls, meticulous airframe inspections, and the installation of new or overhauled components. We meticulously perform <a href="/services/100-hour-inspection" class="font-semibold text-red-800 hover:underline">100-hour inspection</a> and <a href="/services/annual-inspection" class="font-semibold text-red-800 hover:underline">annual inspection</a> to adhere to FAA regulations and maintain peak aircraft performance.`,
+    description: `Penn Air Repair provides a comprehensive range of <a href="/services" class="font-semibold text-red-800 hover:underline">aircraft maintenance services</a>, ensuring the safety and airworthiness of your aircraft. Our expertise encompasses engine overhauls, meticulous airframe inspections, and the installation of new or overhauled components. We meticulously perform <a href="/services/100-hour-inspection" class="font-semibold text-red-800 hover:underline">100-hour inspection</a> and <a href="/services/annual-inspection" class="font-semibold text-red-800 hover:underline">annual inspection</a> to adhere to FAA regulations and maintain peak aircraft performance. Aircraft new to our maintenance facility are encouraged to sign up for our <span class="font-semibold text-red-800">automated tracking system</span> if they will be using our services on a regular basis.`,
     cards: [
       {
         imagePath: "/src/assets/DG inspecting wing repair.jpg",
@@ -128,7 +128,7 @@ const landingData = {
 ---
 
 <BaseLayout>
-  <Hero data={landingData.hero}/>
+  <Hero data={landingData.hero} />
   <ProviderFor data={landingData.providerFor} />
   <LogoCloudRight data={landingData.partners} />
   <BentoGrid data={landingData.services} />
