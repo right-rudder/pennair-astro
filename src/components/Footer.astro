@@ -5,6 +5,8 @@ import { Image } from "astro:assets";
 import { SITE_DESCRIPTION } from "../consts";
 import logo from "../assets/penn-air-logo-250.webp";
 
+const actualYear = new Date().getFullYear();
+
 const links = footerLinks;
 ---
 
@@ -51,7 +53,7 @@ const links = footerLinks;
       <p>{SITE_DESCRIPTION}</p>
     </div>
     <p class="mt-6 text-center text-base font-semibold text-gray-400">
-      &copy; 2024 Penn Air Repair. All Rights Reserved.
+      &copy; {actualYear} Penn Air Repair. All Rights Reserved.
     </p>
     <a
       href="https://rightruddermarketing.com/"
