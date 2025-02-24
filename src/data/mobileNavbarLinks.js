@@ -1,22 +1,22 @@
 export const mobileNavbarLinks = [
   {
     name: "Home",
-    link: "/#top",
+    link: "https://pennairrepair.com//#top",
   },
   {
     name: "Partners",
-    link: "/#partners",
+    link: "https://pennairrepair.com//#partners",
   },
   {
     name: "Our Services",
-    link: "/#our-services",
+    link: "https://pennairrepair.com//#our-services",
   },
   {
     name: "Blog",
-    link: "/blog#top",
+    link: "https://pennairrepair.com//blog#top",
   },
   {
     name: "Contact Us",
-    link: "/#contact-us",
+    link: "https://pennairrepair.com//#contact-us",
   },
 ];

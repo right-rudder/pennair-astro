@@ -31,8 +31,14 @@ const { data } = Astro.props;
         >
           {data.heading}
         </h1>
-        <h2 class="text-balance mt-4 text-3xl lg:text-4xl lg:leading-8 font-bold tracking-tight text-yellow-600">
-          {data.subHeading}
+        <h2
+          class="text-balance mt-4 text-3xl lg:text-4xl lg:leading-8 font-bold tracking-tight text-yellow-600"
+        >
+          <a
+            href={data.sunbHeadingLink}
+            class="hover:underline hover:text-yellow-500 duration-200 ease-in-out"
+            >{data.subHeading}</a
+          >
         </h2>
         <p class="mt-8 text-pretty text-lg font-parag font-light text-gray-700">
           {data.description}

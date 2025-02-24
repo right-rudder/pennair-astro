@@ -4,6 +4,7 @@ import { FaTools } from "react-icons/fa";
 import { TbPropeller } from "react-icons/tb";
 import { GiPowerGenerator } from "react-icons/gi";
 import { PiEngineFill } from "react-icons/pi";
+import { GiTurbine } from "react-icons/gi";
 
 const { data } = Astro.props;
 ---
@@ -169,6 +170,69 @@ const { data } = Astro.props;
         </div>
         <div
           class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 max-lg:rounded-b-[2rem] lg:rounded-r-[2rem]"
+        >
+        </div>
+      </div>
+    </div>
+    <!-- Extra Cards -->
+    <div class="lg:mt-5 grid gap-4 mt-16 lg:grid-cols-2 lg:grid-rows-1">
+      <div
+        class="relative max-lg:row-start-1 flex justify-center align-middle items-center"
+      >
+        <div class="absolute inset-px rounded-r-lg bg-white rounded-l-[2rem]">
+        </div>
+        <div
+          class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)]"
+        >
+          <div class="flex justify-center items-center p-6 absolute inset-0">
+            <GiTurbine className="size-52 text-red-800/5" />
+          </div>
+          <div class="px-8 py-12 lg:py-8 sm:px-10 sm:pt-10">
+            <p
+              class="mt-2 text-2xl font-medium tracking-tight text-red-900 max-lg:text-center"
+            >
+              {data.extraCards[0].title}
+            </p>
+            {
+              data.extraCards[0].descriptions.map((desc) => (
+                <p class="mt-2 mx-auto max-w-lg font-parag text-sm/6 text-gray-600 max-lg:text-center">
+                  {desc}
+                </p>
+              ))
+            }
+          </div>
+        </div>
+        <div
+          class="pointer-events-none absolute inset-px rounded-r-lg rounded-l-[2rem] shadow ring-1 ring-black/5"
+        >
+        </div>
+      </div>
+      <div class="relative flex justify-center align-middle items-center">
+        <div class="absolute inset-px rounded-l-lg rounded-r-[2rem] bg-white">
+        </div>
+        <div
+          class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)]"
+        >
+          <div class="flex justify-center items-center p-6 absolute inset-0">
+            <PiEngineFill className="size-52 text-red-800/5" />
+          </div>
+          <div class="px-8 py-12 lg:py-8 sm:px-10 sm:pb-12 sm:pt-10">
+            <p
+              class="mt-2 text-2xl font-medium tracking-tight text-red-900 max-lg:text-center"
+            >
+              {data.extraCards[1].title}
+            </p>
+            {
+              data.extraCards[1].descriptions.map((desc) => (
+                <p class="mt-2 mx-auto font-parag max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
+                  {desc}
+                </p>
+              ))
+            }
+          </div>
+        </div>
+        <div
+          class="pointer-events-none absolute inset-px rounded-l-lg rounded-r-[2rem] shadow ring-1 ring-black/5"
         >
         </div>
       </div>

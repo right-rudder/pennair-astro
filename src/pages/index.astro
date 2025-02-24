@@ -6,11 +6,13 @@ import BentoGrid from "../components/BentoGrid.astro";
 import ContactForm from "../components/ContactForm.astro";
 import LogoCloudRight from "../components/LogoCloudRight.astro";
 import ProviderFor from "../components/ProviderFor.astro";
+import SimpleCTA from "../components/SimpleCTA.astro";
 
 const landingData = {
   hero: {
     heading: `Aircraft Maintenance Services`,
     subHeading: "at Heritage Field Airport, KPTW, Pottstown, PA",
+    sunbHeadingLink: "/kptw-info",
     description: `Penn Air Repair is your one-stop shop for top-tier aircraft
           maintenance and repair services. Our expert team is dedicated to
           keeping your aircraft flying safely and efficiently.`,
@@ -99,6 +101,26 @@ const landingData = {
         ],
       },
     ],
+    extraCards: [
+      {
+        imagePath: "/src/assets/DG inspecting wing repair.jpg",
+        imageAlt: "Penn Air Repair aircraft maintenance",
+        title: "Turbine Maintenance",
+        descriptions: [
+          "We provide heavy and light maintenance for turbine engines and their respective airframes. We service high and low bypass turbofans, turboprops, and turboshaft aircraft. With over 30 years of service in the industry, yoy know your jet or turboprop is in good hands.",
+          "Our team of experienced technicians is dedicated to ensuring that your aircraft is maintained to the highest standards of safety and reliability.",
+        ],
+      },
+      {
+        imagePath: "/src/assets/DG inspecting wing repair.jpg",
+        imageAlt: "Penn Air Repair aircraft maintenance",
+        title: "Piston Maintenance",
+        descriptions: [
+          "We provide everything from basic preventative maintenance to total engine overhaul for your piston driven aircraft. We also provide minor and major structural repairs and alterations.",
+          "With over 30 years in the industry, it's no wonder our clients trust us with everything from basic annual inspections to emergency airworthiness directives.",
+        ],
+      },
+    ],
   },
   howWeDoIt: {
     id: "how-we-do-it",
@@ -124,6 +146,14 @@ const landingData = {
       },
     ],
   },
+  airfield: {
+    title: "Visit Us at Heritage Field Airport",
+    description: `Penn Air Repair is conveniently located at Heritage Field Airport (KPTW) in Pottstown, PA. Our facility is equipped with state-of-the-art tools and equipment to provide top-tier aircraft maintenance services. Visit us today to experience our exceptional service and expertise.`,
+    btnText: "KPTW Airfield Info",
+    btnLink: "/kptw-info",
+    imagePath: "/src/assets/runway 28-10.webp",
+    imageAlt: "Heritage Field Airport",
+  },
 };
 ---
 
@@ -133,5 +163,6 @@ const landingData = {
   <LogoCloudRight data={landingData.partners} />
   <BentoGrid data={landingData.services} />
   <ContentBg data={landingData.howWeDoIt} />
+  <SimpleCTA data={landingData.airfield} />
   <ContactForm />
 </BaseLayout>

@@ -8,7 +8,6 @@ import ContactForm from "../../components/ContactForm.astro";
 import LogoCloudRight from "../../components/LogoCloudRight.astro";
 import ProviderFor from "../../components/ProviderFor.astro";
 
-
 export async function getStaticPaths() {
   const locations = await getCollection("location");
   return locations.map((location) => ({
@@ -76,39 +75,60 @@ const landingData = {
   services: {
     id: "our-services",
     upperheading: "What We Do",
-    heading: `Aircraft Maintenance near ${locationCity}, ${locationStateShort}`,
+    heading: "Keep Your Aircraft Flying",
+    description: `Penn Air Repair provides a comprehensive range of <a href="/services" class="font-semibold text-red-800 hover:underline">aircraft maintenance services</a>, ensuring the safety and airworthiness of your aircraft. Our expertise encompasses engine overhauls, meticulous airframe inspections, and the installation of new or overhauled components. We meticulously perform <a href="/services/100-hour-inspection" class="font-semibold text-red-800 hover:underline">100-hour inspection</a> and <a href="/services/annual-inspection" class="font-semibold text-red-800 hover:underline">annual inspection</a> to adhere to FAA regulations and maintain peak aircraft performance. Aircraft new to our maintenance facility are encouraged to sign up for our <span class="font-semibold text-red-800">automated tracking system</span> if they will be using our services on a regular basis.`,
     cards: [
       {
-        imagePath: "/src/assets/edgar-chaparro-GAWBDB5DyC4-unsplash.jpg",
-        imageAlt: "Aircraft undergoing maintenance",
+        imagePath: "/src/assets/DG inspecting wing repair.jpg",
+        imageAlt: "Penn Air Repair aircraft maintenance",
         title: "Maintenance Oversight",
         descriptions: [
-          `Our maintenance technicians near ${locationCity} are ready to handle your aircraft repair and maintenance needs. From routine inspections and preventative maintenance to major repairs and pre-buy inspections, we are your one-stop source for aircraft repair and maintenance in ${locationStateShort}.`,
-          "Safety is our top priority. Our team of experienced technicians is dedicated to ensuring that your aircraft is maintained to the highest standards of safety and reliability.",
-          "Your aircraft is a significant investment. Our team will work with you to develop a maintenance plan tailored to your aircraft's specific needs.",
+          "Our maintenance technicians are ready to handle your aircraft repair and maintenance needs. From routine inspections and preventative maintenance to major repairs and pre-buy inspections, we are your one stop source for aircraft repair and maintenance.",
+          "Safety is our top priority. Our team of experienced technicians is dedicated to ensuring that your aircraft is maintained to the highest standards of safety and reliability. So you can rest assured that your aircraft is in good hands.",
+          "Your aircraft is a significant investment. Our team will work with you to develop a maintenance plan that is tailored to your aircraft's specific needs.",
         ],
       },
       {
         title: "Airframe and Powerplants",
         descriptions: [
-          `Our experience encompasses a wide range of airframes and powerplants in the aviation industry. We have a proven track record in servicing aircraft models including Cessna, Beech, Piper, and other general aviation platforms in ${locationCity}, ${locationStateShort}.`,
-          "We are committed to providing the highest quality service to our customers. You can trust us to deliver exceptional care for your aircraft.",
+          "Our experience encompasses a wide range of airframes and powerplants in the aviation industry. We have a proven track record in servicing aircraft models including Cessna, Beech, Piper, and a host of other general aviation platforms. Our team's proficiency in handling these diverse airframes and powerplants is a testament to our dedication to providing comprehensive aviation maintenance solutions.",
+          "We are committed to providing the highest quality service to our customers. You can trust us to deliver the best possible service for your aircraft.",
         ],
       },
       {
         title: "Turboprop Aircraft",
         descriptions: [
-          `We also work with and have decades of experience in the maintenance of turboprop aircraft, such as the King Air, Pilatus, and Cessna. Our location near ${locationCity} proudly specializes in turboprop aircraft care.`,
-          "Every aircraft is unique. Our experienced team will work with you to develop a maintenance plan that meets your aircraft's specific needs.",
+          "We also work with and have decades of experience in the maintenance of turboprop aircraft, such as the King Air, Pilatus, and Cessna. Penn Air Repair proudly considers itself a specialist in the realm of turboprop aircraft care. We are well equipped to cater to the unique maintenance needs of your aircraft. Whether it's light inspections or routine maintenance, you can trust us to deliver top tier service.",
+          "Every aircraft is unique, and we understand that. Our experienced team will work with you to develop a maintenance plan that is tailored to your aircraft's specific needs.",
         ],
       },
       {
         imagePath: "/src/assets/penn-air-engine.webp",
-        imageAlt: "Aircraft engine being maintained",
+        imageAlt: "Penn Air Repair engine maintenance",
         title: "Engine Maintenance",
         descriptions: [
-          `Penn Air Repair near ${locationCity}, ${locationStateLong}, offers comprehensive maintenance services with a broad spectrum of capabilities. Our ability to efficiently handle your engine maintenance and inspection needs is enhanced by our strong connections with industry-leading engine affiliates.`,
-          "Your aircraft's engine is the heart of your aircraft. Our team will inspect, repair, and maintain your engine to ensure peak performance.",
+          "Penn Air Repair offers comprehensive maintenance services with a broad spectrum of capabilities. Our ability to efficiently handle your engine maintenance and inspection needs is enhanced by our strong connections with industry leading engine affiliates. Typically, engine replacements are seamlessly integrated into regular inspection cycles, ensuring minimal downtime.",
+          "Your aircraft's engine is the heart of your aircraft. Our team will inspect, repair, and maintain that engine to ensure that it is operating at peak performance.",
+        ],
+      },
+    ],
+    extraCards: [
+      {
+        imagePath: "/src/assets/DG inspecting wing repair.jpg",
+        imageAlt: "Penn Air Repair aircraft maintenance",
+        title: "Turbine Maintenance",
+        descriptions: [
+          "We provide heavy and light maintenance for turbine engines and their respective airframes. We service high and low bypass turbofans, turboprops, and turboshaft aircraft. With over 30 years of service in the industry, yoy know your jet or turboprop is in good hands.",
+          "Our team of experienced technicians is dedicated to ensuring that your aircraft is maintained to the highest standards of safety and reliability.",
+        ],
+      },
+      {
+        imagePath: "/src/assets/DG inspecting wing repair.jpg",
+        imageAlt: "Penn Air Repair aircraft maintenance",
+        title: "Piston Maintenance",
+        descriptions: [
+          "We provide everything from basic preventative maintenance to total engine overhaul for your piston driven aircraft. We also provide minor and major structural repairs and alterations.",
+          "With over 30 years in the industry, it's no wonder our clients trust us with everything from basic annual inspections to emergency airworthiness directives.",
         ],
       },
     ],
@@ -140,12 +160,12 @@ const landingData = {
 };
 ---
 
-<BaseLayout 
-  siteTitle={`Aircraft Maintenance Services in ${locationCity}, ${locationStateLong} | Penn Air Repair`} 
-  siteDescription={`Penn Air Repair specializes in providing top-notch aircraft maintenance and repair services in ${locationCity}, ${locationStateLong}.`} 
+<BaseLayout
+  siteTitle={`Aircraft Maintenance Services in ${locationCity}, ${locationStateLong} | Penn Air Repair`}
+  siteDescription={`Penn Air Repair specializes in providing top-notch aircraft maintenance and repair services in ${locationCity}, ${locationStateLong}.`}
   keywords={`aircraft maintenance, aircraft repair, ${locationCity} aviation services, ${locationStateShort} aircraft services`}
 >
-  <Hero data={landingData.hero}/>
+  <Hero data={landingData.hero} />
   <ProviderFor data={landingData.providerFor} />
   <LogoCloudRight data={landingData.partners} />
   <BentoGrid data={landingData.services} />

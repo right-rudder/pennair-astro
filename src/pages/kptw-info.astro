@@ -1,0 +1,25 @@
+---
+import DescriptionList from "../components/DescriptionList.astro";
+import Hero2 from "../components/Hero2.astro";
+import ServicesCard from "../components/ServicesCard.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const servicesData = {
+  hero: {
+    imagePath: "/src/assets/kai-oberhauser-ELCSOhGi73M-unsplash.jpg",
+    imageAlt: "Airfield runway lights",
+    heading: "KPTW Airfield Information",
+    description:
+      "Heritage Field is a public use airport in Montgomery County, Pennsylvania, United States. It is located three nautical miles east of Pottstown, in Limerick Township.",
+  },
+};
+---
+
+<BaseLayout
+  siteTitle="Our Services | Penn Air Repair"
+  siteDescription="Penn Air Repair is your one-stop shop for top-tier aircraft maintenance and repair services. Our expert team is dedicated to keeping your aircraft flying safely and efficiently."
+  siteKeywords="aircraft maintenance, aircraft repair, aircraft inspection, aircraft engine overhaul"
+>
+  <Hero2 data={servicesData.hero} />
+  <DescriptionList />
+</BaseLayout>

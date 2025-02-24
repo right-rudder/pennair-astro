@@ -34,6 +34,34 @@
   .swiper-button-prev {
     @apply bg-gray-100 opacity-20 hover:opacity-70 duration-300 ease-in-out px-8 py-9;
   }
+
+  table {
+    @apply w-full my-8 overflow-x-auto;
+  }
+
+  tr {
+    @apply border-b border-gray-200 h-10;
+  }
+
+  tr:hover {
+    @apply bg-yellow-50;
+  }
+
+  td {
+    @apply text-center;
+  }
+
+  td > a {
+    @apply text-red-700 mr-3;
+  }
+
+  td > a:hover {
+    @apply text-red-800 underline;
+  }
+
+  td:first-child {
+    @apply text-left uppercase font-bold;
+  }
 }
 
 .outlined-text {
