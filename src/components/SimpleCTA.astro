@@ -1,0 +1,31 @@
+---
+import ImageComp from "./ImageComp.astro";
+
+const { data } = Astro.props;
+---
+
+<section class="bg-gray-200 py-16 lg:py-24">
+  <div class="mx-auto max-w-7xl px-6 lg:flex lg:items-center lg:justify-around">
+    <div class="lg:w-1/2">
+      <h2
+        class="max-w-2xl mb-6 text-4xl font-semibold tracking-tight text-red-900 sm:text-5xl"
+        set:html={data.title}
+      />
+      <p class="text-pretty mb-3" set:html={data.description} />
+      <a
+        href={data.btnLink}
+        class="text-lg font-semibold text-yellow-700 hover:underline hover:text-red-700 duration-300"
+        >{data.btnText} <span aria-hidden="true">→</span></a
+      >
+    </div>
+    <div
+      class="lg:w-2/5 bg-white ring-1 ring-gray-300 rounded-xl shadow-lg overflow-hidden"
+    >
+      <ImageComp
+        imagePath={data.imagePath}
+        imageAlt={data.imageAlt}
+        styles="object-contain w-full h-full"
+      />
+    </div>
+  </div>
+</section>
