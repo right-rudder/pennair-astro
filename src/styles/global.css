@@ -36,7 +36,7 @@
   }
 
   table {
-    @apply w-full border-collapse my-12;
+    @apply w-full my-8 overflow-x-auto;
   }
 
   tr {
