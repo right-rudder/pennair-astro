@@ -287,7 +287,7 @@ const Navbar = ({ pathname }) => {
               {item.link ? (
                 <a
                   href={item.link}
-                  target={`${item.link.includes("http") ? "_blank" : "_self"}`}
+                  target={`${item.link.includes("http") ? "_self" : "_self"}`}
                   className="font-medium p-5 block text-xl duration-300 text-white whitespace-nowrap group-last:bg-yellow-500 group-last:text-black group-last:font-bold group-last:mt-12 group-last:py-4 group-last:px-8 group-last:rounded-none group-last:text-center group-last:mx-5"
                 >
                   {item.name}
