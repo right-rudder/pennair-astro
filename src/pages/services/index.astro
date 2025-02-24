@@ -60,7 +60,10 @@ const servicesData = {
   <Hero2 data={servicesData.hero} />
 
   <section class="mx-auto max-w-6xl py-16 lg:py-24">
-    <ul role="list" class="flex flex-wrap gap-4 justify-center">
+    <ul
+      role="list"
+      class="flex flex-wrap gap-4 justify-center animate-fade-from-bottom"
+    >
       {
         servicesData.services.map((program) => (
           <ServicesCard

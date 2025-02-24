@@ -8,13 +8,13 @@ const { data } = Astro.props;
   <ImageComp
     imagePath="/src/assets/penn-air-bg.webp"
     imageAlt="adsf"
-    styles="absolute inset-0 -z-10 size-full object-cover object-right lg:object-center"
+    styles="absolute inset-0 -z-10 size-full object-cover object-right lg:object-center animate-slow-zoom"
   />
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
     <div class="mx-auto lg:mx-0 max-w-2xl py-28">
       <div class="mb-8 flex justify-center lg:justify-start">
         <div
-          class="relative rounded-full px-3 py-1 text-sm/6 text-black ring-1 font-bold bg-red-300/10 ring-red-900 hover:ring-red-500/90 hover:scale-105 duration-150"
+          class="relative rounded-full px-3 py-1 text-sm/6 text-black ring-1 font-bold bg-red-300/10 ring-red-900 hover:ring-red-500/90 hover:scale-105 duration-150 animate-fade-from-top"
         >
           Our Maintenance Process. <a
             href="#how-we-do-it"
@@ -27,28 +27,30 @@ const { data } = Astro.props;
       </div>
       <div class="text-center lg:text-left">
         <h1
-          class="text-balance text-5xl lg:text-7xl lg:leading-[3.5rem] font-bold tracking-tight text-red-900"
+          class="text-balance text-5xl lg:text-7xl lg:leading-[3.5rem] font-bold tracking-tight text-red-900 animate-fade-from-right"
         >
           {data.heading}
         </h1>
         <h2
-          class="text-balance mt-4 text-3xl lg:text-4xl lg:leading-8 font-bold tracking-tight text-yellow-600"
+          class="text-balance mt-4 text-3xl lg:text-4xl lg:leading-8 font-bold tracking-tight text-yellow-600 animate-fade-from-right"
         >
           <a
-            href={data.sunbHeadingLink}
+            href={data.subHeadingLink}
             class="hover:underline hover:text-yellow-500 duration-200 ease-in-out"
             >{data.subHeading}</a
           >
         </h2>
-        <p class="mt-8 text-pretty text-lg font-parag font-light text-gray-700">
+        <p
+          class="mt-8 text-pretty text-lg font-parag font-light text-gray-700 animate-fade-from-bottom"
+        >
           {data.description}
         </p>
         <div
-          class="mt-10 flex items-center justify-center lg:justify-start gap-x-6"
+          class="mt-6 flex items-center justify-center lg:justify-start gap-x-6 animate-fade-in"
         >
           <a
             href="#contact-us"
-            class="rounded-md bg-red-800 duration-200 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-red-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400"
+            class="rounded-md bg-red-800 duration-200 px-3.5 py-2.5 text-base font-semibold text-white shadow-sm hover:bg-red-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400"
             >Contact Us</a
           >
         </div>
