@@ -10,22 +10,24 @@ const { data } = Astro.props;
   <ImageComp
     imagePath={data.imagePath}
     imageAlt={data.imageAlt}
-    styles="absolute inset-0 -z-10 size-full object-cover saturate-0"
+    styles="absolute inset-0 -z-10 size-full object-cover saturate-0 animate-fade-in"
   />
   <div class="mx-auto">
     <div class="max-w-3xl">
       <div class="text-center">
         <h1
-          class="text-balance text-5xl lg:text-7xl lg:leading-[3.5rem] font-bold tracking-tight text-red-900"
+          class="text-balance text-5xl lg:text-7xl lg:leading-[3.5rem] font-bold tracking-tight text-red-900 animate-fade-from-top"
         >
           {data.heading}
         </h1>
-        <p class="mt-4 text-pretty text-lg font-parag font-light text-gray-700">
+        <p
+          class="mt-4 text-pretty text-lg font-parag font-light text-gray-700 animate-fade-from-bottom"
+        >
           {data.description}
         </p>
         {
           data.btnLink && data.btnText && (
-            <div class="mt-10 flex items-center justify-center gap-x-6">
+            <div class="mt-10 flex items-center justify-center gap-x-6 animate-fade-in">
               <a
                 href={data.btnLink}
                 class="rounded-md bg-red-800 duration-200 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-red-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400"

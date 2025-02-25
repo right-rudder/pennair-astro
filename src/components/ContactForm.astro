@@ -4,6 +4,7 @@ import {
   EMAIL_ADDRESS,
   ADDRESS_LINE_1,
   ADDRESS_LINE_2,
+  LOCATIONS,
 } from "../consts";
 
 const GHL_CONTACT_FORM_WEBHOOK_URL =
@@ -89,7 +90,13 @@ const confirmText = `I agree to <a href="/terms-of-service" target="_blank" clas
                 ></path>
               </svg>
             </dt>
-            <dd>{ADDRESS_LINE_1}<br />{ADDRESS_LINE_2}</dd>
+            <dd>
+              <a
+                class="hover:text-black hover:underline"
+                href={LOCATIONS[0].gMaps}
+                >{ADDRESS_LINE_1}<br />{ADDRESS_LINE_2}</a
+              >
+            </dd>
           </div>
           <div class="flex gap-x-4">
             <dt class="flex-none">
@@ -111,8 +118,9 @@ const confirmText = `I agree to <a href="/terms-of-service" target="_blank" clas
               </svg>
             </dt>
             <dd>
-              <a class="hover:text-black" href=`tel:+1-${PHONE_NUMBER}`
-                >+1-{PHONE_NUMBER}</a
+              <a
+                class="hover:text-black hover:underline"
+                href=`tel:+1-${PHONE_NUMBER}`>+1-{PHONE_NUMBER}</a
               >
             </dd>
           </div>
@@ -136,8 +144,9 @@ const confirmText = `I agree to <a href="/terms-of-service" target="_blank" clas
               </svg>
             </dt>
             <dd>
-              <a class="hover:text-black" href=`mailto:${EMAIL_ADDRESS}`
-                >{EMAIL_ADDRESS}</a
+              <a
+                class="hover:text-black hover:underline"
+                href=`mailto:${EMAIL_ADDRESS}`>{EMAIL_ADDRESS}</a
               >
             </dd>
           </div>

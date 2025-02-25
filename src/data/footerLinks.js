@@ -12,6 +12,10 @@ export const footerLinks = [
     link: "/blog#top",
   },
   {
+    name: "KPTW",
+    link: "/kptw-info",
+  },
+  {
     name: "Contact Us",
     link: "/#contact-us",
   },
