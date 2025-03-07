@@ -9,11 +9,15 @@ export const mobileNavbarLinks = [
   },
   {
     name: "Our Services",
-    link: "https://pennairrepair.com/#our-services",
+    link: "/services",
+  },
+  {
+    name: "Service Areas",
+    link: "/locations",
   },
   {
     name: "Blog",
-    link: "https://pennairrepair.com/blog#top",
+    link: "/blog",
   },
   {
     name: "Contact Us",
