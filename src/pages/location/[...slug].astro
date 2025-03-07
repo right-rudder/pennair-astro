@@ -1,0 +1,182 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { SITE_TITLE, PHONE_NUMBER, ADDRESS_LINE_1, ADDRESS_LINE_2, EMAIL_ADDRESS } from '../../consts';
+import SimpleCTA from '../../components/SimpleCTA.astro';
+import ContactForm from '../../components/ContactForm.astro';
+import Hero2 from '../../components/Hero2.astro';
+
+// Get all locations
+export async function getStaticPaths() {
+  const locations = await getCollection('location');
+  return locations.map((location) => ({
+    params: { slug: location.slug },
+    props: { location },
+  }));
+}
+
+const { location } = Astro.props;
+const { city, stateShort, stateLong, description, baseLocation, keyPlace1, keyPlace2 } = location.data;
+
+// SEO metadata
+const title = `Aircraft Maintenance & Repair Services in ${city}, ${stateShort} | Penn Air Repair`;
+const metaDescription = `Trusted aircraft maintenance & repair services for ${city}, ${stateShort} pilots and owners. Located at Heritage Field Airport (KPTW), serving all of ${stateLong} with FAA-certified technicians.`;
+const keywords = `aircraft maintenance ${city}, airplane repair ${city}, aircraft inspection ${city}, aviation service ${stateShort}, aircraft maintenance near ${city}, ${stateLong} aircraft maintenance, turboprop maintenance ${city}, piston engine repair ${city}, FAA inspections ${city}, airplane mechanic ${stateShort}`;
+const canonical = `https://pennairrepair.com/location/${location.id}`;
+
+// Geo region meta tags
+const geoRegion = `US-${stateShort}`;
+const geoPlacename = `${city}, ${stateShort}`;
+
+const locationsData = {
+  hero: {
+    imagePath: "/src/assets/eduardo-buscariolli-znKUv5-vadk-unsplash.jpg",
+    imageAlt: "adsf",
+    heading: `Aircraft Maintenance in ${city}, ${stateShort}`,
+    description:
+      `Penn Air Repair proudly serves aircraft owners and pilots across ${stateLong}. Based at Heritage Field Airport (KPTW) in Pottstown, PA, our expert maintenance team provides top-quality service to the entire region.`,
+  },
+};
+---
+
+<BaseLayout 
+  title={title} 
+  description={metaDescription} 
+  keywords={keywords} 
+  canonical={canonical}
+  geoRegion={geoRegion}
+  geoPlacename={geoPlacename}
+>
+<Hero2 data={locationsData.hero} />
+
+  <div class="py-16 md:py-24 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-3xl mx-auto">
+        <h1 class="text-4xl md:text-5xl font-bold text-center mb-8"></h1>
+        
+        <div class="bg-gray-50 p-6 md:p-8 rounded-lg shadow-md mb-12">
+          <h2 class="text-2xl font-semibold mb-4">Serving {city} and Surrounding Areas</h2>
+          <p class="paragraph mb-4">
+            Penn Air Repair provides expert aircraft maintenance and repair services to pilots and aircraft owners in {city}, {stateLong} and the surrounding {baseLocation} area. Just a short flight from {keyPlace1} and {keyPlace2}, our skilled technicians are ready to address all your aviation maintenance needs.
+          </p>
+          <p class="paragraph mb-4">
+            {description} Whether you fly for business or pleasure, our team ensures your aircraft remains in peak condition with our comprehensive maintenance services.
+          </p>
+          <p class="paragraph">
+            Based at Heritage Field Airport (KPTW) in Pottstown, PA, we proudly serve the entire {stateLong} region with professional aircraft maintenance, inspections, and repairs. Call us today at {PHONE_NUMBER} to schedule your next service.
+          </p>
+        </div>
+
+        <div class="bg-gray-50 p-6 md:p-8 rounded-lg shadow-md mb-12">
+          <h2 class="text-2xl font-semibold mb-4">Our Services for {city} Pilots</h2>
+          <ul class="list-disc pl-5 space-y-2 paragraph">
+            <li>FAA-required annual inspections</li>
+            <li>100-hour inspections</li>
+            <li>Routine maintenance and preventative care</li>
+            <li>Airframe and power plant repairs</li>
+            <li>Turboprop and piston engine maintenance</li>
+            <li>Component replacement and repair</li>
+            <li>Avionics troubleshooting</li>
+          </ul>
+        </div>
+
+        <div class="bg-gray-50 p-6 md:p-8 rounded-lg shadow-md mb-12">
+          <h2 class="text-2xl font-semibold mb-4">Why {city} Pilots Choose Penn Air Repair</h2>
+          <ul class="list-disc pl-5 space-y-2 paragraph">
+            <li>Experienced, FAA-certified technicians</li>
+            <li>Comprehensive aircraft maintenance services</li>
+            <li>Convenient location at Heritage Field Airport</li>
+            <li>Expertise with various aircraft makes and models</li>
+            <li>Commitment to safety and quality workmanship</li>
+            <li>Competitive rates and excellent customer service</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <SimpleCTA 
+    data={{
+      title: `Ready to Schedule Service?<br>We Serve All of ${stateLong}`,
+      description: `Contact Penn Air Repair today to discuss your aircraft maintenance needs. Our team is ready to provide the highest quality service for pilots in ${city}, ${stateShort} and throughout ${stateLong}. We're just a short flight away at Heritage Field Airport (KPTW).`,
+      btnText: "Contact Us Today",
+      btnLink: "/#contact-us",
+      imagePath: "/src/assets/runway 28-10.webp",
+      imageAlt: "Heritage Field Airport runway"
+    }} 
+  />
+  
+  <ContactForm />
+  
+  <!-- Location-specific Schema.org structured data -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": `https://pennairrepair.com/location/${location.id}`,
+    "name": "Penn Air Repair",
+    "description": `Aircraft maintenance and repair services in ${city}, ${stateShort}`,
+    "image": "/penn-air-logo-250.webp",
+    "telephone": PHONE_NUMBER,
+    "email": EMAIL_ADDRESS,
+    "url": canonical,
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": ADDRESS_LINE_1,
+      "addressLocality": "Pottstown",
+      "addressRegion": "PA",
+      "postalCode": "19464",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "40.24217243030569",
+      "longitude": "-75.55532596753021"
+    },
+    "serviceArea": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": "40.24217243030569",
+        "longitude": "-75.55532596753021"
+      },
+      "geoRadius": "320000"
+    },
+    "areaServed": {
+      "@type": "State",
+      "name": stateLong
+    },
+    "sameAs": [
+      "https://pennairrepair.com/",
+      "https://pennairrepair.com/locations"
+    ],
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
+      ],
+      "opens": "07:00",
+      "closes": "20:00"
+    },
+    "priceRange": "$$$",
+    "currenciesAccepted": "USD",
+    "paymentAccepted": "Cash, Credit Card",
+    "makesOffer": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Aircraft Maintenance in " + city + ", " + stateShort,
+          "description": "Professional aircraft maintenance and repair services for aircraft owners in " + city + " and throughout " + stateLong
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "FAA Inspections in " + city + ", " + stateShort,
+          "description": "Annual and 100-hour inspections for aircraft in " + city + ", " + stateShort
+        }
+      }
+    ]
+  })} />
+</BaseLayout>
