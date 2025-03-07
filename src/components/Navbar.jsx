@@ -129,7 +129,7 @@ const Navbar = ({ pathname }) => {
                       )}
                       {item.submenu && item.submenu.length > 0 && (
                         <ul
-                          className={`absolute top-12 bg-white/90 min-w-48 text-center border-gray-300 whitespace-nowrap text-gray-900 -left-4 duration-200 ease-out ${hoveredIndex === index ? "max-h-auto w-auto opacity-100" : "max-h-0 h-0 opacity-0 overflow-hidden"}`}
+                          className={`absolute top-12 bg-gray-100/95 min-w-48 text-center border-gray-300 whitespace-nowrap text-gray-900 -left-4 duration-200 ease-out ${hoveredIndex === index ? "max-h-auto w-auto opacity-100" : "max-h-0 h-0 opacity-0 overflow-hidden"}`}
                         >
                           {item.submenu.map((subitem, subIndex) => (
                             <li
@@ -155,7 +155,7 @@ const Navbar = ({ pathname }) => {
                               {subitem.subsubmenu &&
                                 subitem.subsubmenu.length > 0 && (
                                   <ul
-                                    className={`absolute z-20 top-0 bg-primary-400 whitespace-nowrap left-full duration-500 ${subHoveredIndex === subIndex ? "max-h-auto w-auto opacity-100" : "max-h-0 w-0 opacity-0 overflow-hidden"}`}
+                                    className={`absolute z-20 top-0 bg-gray-400 whitespace-nowrap left-full duration-500 ${subHoveredIndex === subIndex ? "max-h-auto w-auto opacity-100" : "max-h-0 w-0 opacity-0 overflow-hidden"}`}
                                   >
                                     {subitem.subsubmenu.map(
                                       (subsubitem, subsubIndex) => (
