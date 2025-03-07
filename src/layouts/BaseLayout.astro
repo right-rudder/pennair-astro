@@ -12,18 +12,31 @@ import ChatWidget from "../components/ChatWidget.astro";
 import Banner from "../components/Banner.astro";
 
 const { pathname } = Astro.url;
-const { siteTitle, siteDescription, keywords } = Astro.props;
+const { 
+  title, 
+  description, 
+  keywords,
+  image,
+  canonical,
+  geoRegion,
+  geoPlacename
+} = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en" class="scroll-smooth">
   <head>
     <BaseHead
-      title={siteTitle || SITE_TITLE}
-      description={siteDescription || SITE_DESCRIPTION}
-      keywords={keywords + KEYWORDS}
-      image={OG_IMAGE}
+      title={title || SITE_TITLE}
+      description={description || SITE_DESCRIPTION}
+      keywords={keywords ? keywords + ", " + KEYWORDS : KEYWORDS}
+      image={image || OG_IMAGE}
+      canonical={canonical}
     />
+    {geoRegion && <meta name="geo.region" content={geoRegion} />}
+    {geoPlacename && <meta name="geo.placename" content={geoPlacename} />}
+    {geoRegion && <meta name="ICBM" content="40.24217243030569, -75.55532596753021" />}
+    {geoRegion && <meta name="geo.position" content="40.24217243030569;-75.55532596753021" />}
   </head>
   <body class="font-sans">
     <Banner />
