@@ -16,7 +16,7 @@ const {
   description,
   keywords,
   image,
-  canonical = defaultCanonicalURL
+  canonical = defaultCanonicalURL,
 } = Astro.props;
 ---
 
@@ -29,17 +29,10 @@ const {
       |  _  /| |/ _` | '_ \| __| |  _  / | | |/ _` |/ _` |/ _ \ '__|
       | | \ \| | (_| | | | | |_  | | \ \ |_| | (_| | (_| |  __/ |   
       |_|  \_\_|\__, |_| |_|\__| |_|  \_\__,_|\__,_|\__,_|\___|_|   
-      |  \/  |   __/ |  | |      | | (_)                            
-      | \  / | _|___/ __| | _____| |_ _ _ __   __ _                 
-      | |\/| |/ _` | '__| |/ / _ \ __| | '_ \ / _` |                
-      | |  | | (_| | |  |   <  __/ |_| | | | | (_| |                
-      |_|  |_|\__,_|_|  |_|\_\___|\__|_|_| |_|\__, |                
-                                               __/ |                
-                                              |___/                 
-
-    Nice to see you here.  Find new student pilots with Right Rudder Marketing.  https://rightruddermarketing.com/contact-us -->
-
-<meta name="viewport" content="width=device-width,initial-scale=1" />
+                 __/ |                                              
+                |___/                                               
+-->
+<meta name="viewport" content="width=device-width" />
 <link rel="icon" type="image/svg+xml" href="/penn-air-logo-250.webp" />
 <meta name="generator" content={Astro.generator} />
 
@@ -71,15 +64,19 @@ const {
 <!-- UPDATE GTAG PLEASE -->
 
 <!-- Google tag (gtag.js) -->
-<script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-N0P0G2LMD3"></script>
+<script
+  type="text/partytown"
+  async
+  src="https://www.googletagmanager.com/gtag/js?id=G-N0P0G2LMD3"></script>
 <script type="text/partytown">
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
 
-  gtag('config', 'G-N0P0G2LMD3');
+  gtag("config", "G-N0P0G2LMD3");
 </script>
-
 
 <!-- NEED TO UPDATE SCHEMA -->
 <script type="application/ld+json">
@@ -87,8 +84,8 @@ const {
     "@context": "http://schema.org",
     "@type": "LocalBusiness",
     "name": "Penn Air Repair",
-    "description": "Trusted by aircraft owners across PA, NJ, NY, MD, and DE, Penn Air Repair delivers expert aircraft maintenance, repair, and inspection services. Our FAA-certified technicians specialize in turboprop, piston engine, and avionics for Cessna, Piper, Beechcraft, and more.",
-    "keywords": "aircraft maintenance, aircraft repair, aircraft inspection, aircraft overhaul, aircraft parts, aviation services, turboprop maintenance, turboprop repair, turboprop inspection, turboprop overhaul, FAA certified repair station, aviation maintenance technician, aircraft engine overhaul, propeller overhaul, avionics repair, aircraft interior refurbishment, Pottstown aircraft maintenance, multi-state aircraft maintenance, Pennsylvania aviation services, New Jersey aircraft maintenance, New York aircraft repair, Maryland aircraft services, Delaware aircraft repair",
+    "description": "Trusted by turboprop and aircraft owners across PA, NJ, NY, MD, and DE, Penn Air Repair delivers expert aircraft maintenance, repair, and inspection services. Our FAA-certified technicians specialize in Beechcraft King Air 90/200/350, Pilatus PC-12/PC-24, Cessna 208/208B Caravan, TBM 700/850/900/910/940, PT6A engines, piston engines, and avionics maintenance.",
+    "keywords": "aircraft maintenance, aircraft repair, aircraft inspection, aircraft overhaul, aircraft parts, aviation services, turboprop maintenance, King Air 90 maintenance, King Air 200 maintenance, King Air 350 maintenance, Pilatus PC-12 maintenance, Pilatus PC-12 NG maintenance, Pilatus PC-24 maintenance, Cessna 208 Caravan maintenance, Cessna 208B Grand Caravan maintenance, TBM 700 maintenance, TBM 850 maintenance, TBM 900 maintenance, TBM 910 maintenance, TBM 940 maintenance, Twin Commander maintenance, PT6A-21 engine maintenance, PT6A-42 engine maintenance, PT6A-60A engine maintenance, PT6A-67P engine maintenance, turboprop repair, turboprop inspection, turboprop overhaul, FAA certified repair station, aviation maintenance technician, aircraft engine overhaul, propeller overhaul, avionics repair, aircraft interior refurbishment, Pottstown aircraft maintenance, multi-state aircraft maintenance, Pennsylvania aviation services, New Jersey aircraft maintenance, New York aircraft repair, Maryland aircraft services, Delaware aircraft repair",
     "image": "/OG_image-PennAirRepair.webp",
     "logo": "/penn-air-logo-250.webp",
     "telephone": "+1-(610) 495-3070",
@@ -158,9 +155,31 @@ const {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
+          "serviceType": "Turboprop Maintenance",
+          "name": "Turboprop Maintenance Services",
+          "description": "Specialized maintenance for Beechcraft King Air 90/200/350, Pilatus PC-12/PC-24, Cessna 208/208B Caravan, TBM 700/850/900/910/940, and Twin Commander turboprop aircraft, including PT6A engine service and support"
+        },
+        "priceCurrency": "USD",
+        "price": "Varies"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "serviceType": "PT6 Engine Service",
+          "name": "PT6 Engine Maintenance",
+          "description": "Expert maintenance, repair, and overhaul services for Pratt & Whitney PT6A engines including PT6A-21, PT6A-42, PT6A-60A, and PT6A-67P variants used in King Air, Pilatus, and Cessna turboprop aircraft"
+        },
+        "priceCurrency": "USD",
+        "price": "Varies"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
           "serviceType": "Aircraft Maintenance",
           "name": "Aircraft Maintenance Services",
-          "description": "Comprehensive aircraft maintenance services including 100-hour inspections, annual inspections, and routine maintenance"
+          "description": "Comprehensive aircraft maintenance services including 100-hour inspections, annual inspections, and routine maintenance for turboprop and piston aircraft"
         },
         "priceCurrency": "USD",
         "price": "Varies"
@@ -171,48 +190,61 @@ const {
           "@type": "Service",
           "serviceType": "Aircraft Repair",
           "name": "Aircraft Repair Services",
-          "description": "Expert repair services for airframes, engines, avionics, and components for various aircraft types"
-        },
-        "priceCurrency": "USD",
-        "price": "Varies"
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "serviceType": "Engine Overhaul",
-          "name": "Aircraft Engine Overhaul",
-          "description": "Complete engine overhaul and maintenance for Lycoming, Continental, and turboprop engines"
+          "description": "Expert repair services for airframes, engines, avionics, and components for various aircraft types including turboprops and piston aircraft"
         },
         "priceCurrency": "USD",
         "price": "Varies"
       }
-    ],
-    "identifier": [
-      {
-        "@type": "PropertyValue",
-        "name": "IATA Code",
-        "value": "PTW"
-      },
-      {
-        "@type": "PropertyValue",
-        "name": "ICAO Code",
-        "value": "KPTW"
-      },
-      {
-        "@type": "PropertyValue",
-        "name": "Airport Code",
-        "value": "PTW"
-      }
-    ],
-    "serviceArea": {
-      "@type": "GeoCircle",
-      "geoMidpoint": {
-        "@type": "GeoCoordinates",
-        "latitude": 40.24217243030569,
-        "longitude": -75.55532596753021
-      },
-      "geoRadius": 320000
+    ]
+  }
+</script>
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Penn Air Repair",
+    "url": "https://pennairrepair.com",
+    "logo": "/penn-air-logo-250.webp",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-(610) 495-3070",
+      "contactType": "customer service",
+      "areaServed": [
+        "Pennsylvania",
+        "New Jersey",
+        "New York",
+        "Maryland",
+        "Delaware"
+      ],
+      "availableLanguage": "English"
+    },
+    "sameAs": []
+  }
+</script>
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "url": "https://pennairrepair.com/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://pennairrepair.com/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
     }
+  }
+</script>
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 40.24217243030569,
+      "longitude": -75.55532596753021
+    },
+    "geoRadius": 320000
   }
 </script>
