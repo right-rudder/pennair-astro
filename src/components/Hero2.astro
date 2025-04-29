@@ -22,9 +22,8 @@ const { data } = Astro.props;
         </h1>
         <p
           class="mt-4 text-pretty text-lg font-parag font-light text-gray-700 animate-fade-from-bottom"
-        >
-          {data.description}
-        </p>
+          set:html={data.description}
+        />
         {
           data.btnLink && data.btnText && (
             <div class="mt-10 flex items-center justify-center gap-x-6 animate-fade-in">
