@@ -21,7 +21,7 @@ export const navbarLinks = [
       }, */
     ],
   },
-  {
+  /* {
     name: "Service Areas",
     link: "/locations",
     submenu: [
@@ -50,7 +50,7 @@ export const navbarLinks = [
         link: "/locations#Pennsylvania",
       },
     ],
-  },
+  }, */
   {
     name: "Blog",
     link: "/blog#top",
