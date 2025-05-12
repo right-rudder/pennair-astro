@@ -1,0 +1,337 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import {
+  SITE_TITLE,
+  PHONE_NUMBER,
+  ADDRESS_LINE_1,
+  ADDRESS_LINE_2,
+  EMAIL_ADDRESS,
+} from "../../consts";
+import SimpleCTA from "../../components/SimpleCTA.astro";
+import ContactForm from "../../components/ContactForm.astro";
+import Hero2 from "../../components/Hero2.astro";
+
+// Get all locations
+export async function getStaticPaths() {
+  const locations = await getCollection("location");
+  return locations.map((location) => ({
+    params: { slug: location.slug },
+    props: { location },
+  }));
+}
+
+const { location } = Astro.props;
+const {
+  city,
+  stateShort,
+  stateLong,
+  description,
+  baseLocation,
+  keyPlace1,
+  keyPlace2,
+} = location.data;
+
+// SEO metadata
+const randomTitle =
+  Math.random() > 0.5
+    ? `Aircraft Maintenance for ${city}, ${stateShort} Aircraft Owners | Penn Air Repair Pottstown, PA`
+    : `Fly from ${city}, ${stateShort} to get the best Aircraft Maintenance in the Northwest | Penn Air Repair Pottstown, PA`;
+const metaDescription = `Fly from ${city}, ${stateLong} to KPTW Heritage Field Airport in Pottstown, PA. Our trusted maintenance for King Air 90/200/350, Pilatus PC-12/PC-24, Cessna 208/208B Caravan, and TBM turboprop aircraft in ${city}, ${stateShort}. Our FAA-certified technicians at Heritage Field Airport (KPTW) service all of ${stateLong} with PT6A engine expertise.`;
+const keywords = `turboprop maintenance ${city}, King Air 90 maintenance ${city}, King Air 200 maintenance ${city}, King Air 350 maintenance ${city}, Pilatus PC-12 maintenance ${city}, Cessna Caravan maintenance ${city}, TBM maintenance ${city}, PT6A engine service ${city}, PT6A-21 engine ${city}, PT6A-42 engine ${city}, PT6A-60A engine ${city}, PT6A-67P engine ${city}, aircraft maintenance ${city}, airplane repair ${city}, aircraft inspection ${city}, aviation service ${stateShort}, aircraft maintenance near ${city}, ${stateLong} aircraft maintenance, piston engine repair ${city}, FAA inspections ${city}, airplane mechanic ${stateShort}`;
+const canonical = `https://pennairrepair.com/location/${location.id}`;
+
+// Geo region meta tags
+const geoRegion = `US-${stateShort}`;
+const geoPlacename = `${city}, ${stateShort}`;
+
+const randomHeading =
+  Math.random() > 0.5
+    ? `Aircraft Maintenance for ${city}, ${stateShort} Aircraft Owners`
+    : `Fly from ${city}, ${stateShort} to get the best Aircraft Maintenance in the Northwest`;
+
+const locationsData = {
+  hero: {
+    imagePath:
+      "/src/assets/Penn-Air-Repair-KPTW-Heritage-Field-Pottstown-PA.jpg",
+    imageAlt: "Turboprop aircraft maintenance services",
+    heading: `${randomHeading}`,
+    description: `Penn Air Repair is proud to serve general aviation and turboprop owners in <strong>${city}, ${stateLong}</strong>. All services are performed at our facility at <strong>Heritage Field Airport (KPTW) in Pottstown, Pennsylvania</strong>. Pilots from Delaware routinely fly in for expert service, competitive pricing, and a hassle-free experience.`,
+  },
+};
+---
+
+<BaseLayout
+  title={randomTitle}
+  description={metaDescription}
+  keywords={keywords}
+  canonical={canonical}
+  geoRegion={geoRegion}
+  geoPlacename={geoPlacename}
+>
+  <Hero2 data={locationsData.hero} />
+
+  <div class="py-16 md:py-24 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-3xl mx-auto">
+        <h1 class="text-4xl md:text-5xl font-bold text-center mb-8"></h1>
+
+        <div class="bg-gray-50 p-6 md:p-8 rounded-lg shadow-md mb-12">
+          <h2 class="text-2xl font-semibold mb-4">
+            Serving {city} and Surrounding Areas
+          </h2>
+          <p class="paragraph mb-4">
+            Penn Air Repair provides expert turboprop and aircraft maintenance
+            services to pilots and aircraft owners in {city}, {stateLong} and the
+            surrounding {baseLocation} area. Just a short flight from {
+              keyPlace1
+            } and {keyPlace2}, our skilled technicians are ready to address all
+            your aviation maintenance needs.
+          </p>
+          <p class="paragraph mb-4">
+            {description} Whether you fly a Beechcraft King Air 90/200/350, Pilatus
+            PC-12/PC-24, Cessna 208/208B Caravan, TBM series, or other aircraft for
+            business or pleasure, our team ensures your aircraft remains in peak
+            condition with our comprehensive maintenance services.
+          </p>
+          <p class="paragraph">
+            Based at Heritage Field Airport (KPTW) in Pottstown, PA, we proudly
+            serve the entire {stateLong} region with professional turboprop and aircraft
+            maintenance, inspections, and repairs. Call us today at {
+              PHONE_NUMBER
+            } to schedule your next service.
+          </p>
+        </div>
+
+        <div class="bg-gray-100 p-6 md:p-8 rounded-lg shadow-md mb-12">
+          <h2 class="text-2xl font-semibold mb-4">
+            Our Turboprop & Aircraft Services for {city} Pilots
+          </h2>
+          <ul class="list-disc pl-5 space-y-2 paragraph">
+            <li>FAA-required annual inspections</li>
+            <li>100-hour inspections</li>
+            <li>Routine maintenance and preventative care</li>
+            <li>Airframe and power plant repairs</li>
+            <li>
+              PT6A engine maintenance and service (PT6A-21, PT6A-42, PT6A-60A,
+              PT6A-67P)
+            </li>
+            <li>King Air 90/200/350 turboprop expertise</li>
+            <li>Pilatus PC-12/PC-24 maintenance</li>
+            <li>Cessna 208/208B Caravan service</li>
+            <li>TBM 700/850/900/910/940 maintenance</li>
+            <li>Twin Commander turboprop service</li>
+            <li>Component replacement and repair</li>
+            <li>Avionics troubleshooting</li>
+          </ul>
+        </div>
+
+        <div class="bg-gray-50 p-6 md:p-8 rounded-lg shadow-md mb-12">
+          <h2 class="text-2xl font-semibold mb-4">
+            Why {city} Aircraft Owners Choose Penn Air Repair
+          </h2>
+          <ul class="list-disc pl-5 space-y-2 paragraph">
+            <li>
+              <strong>Competitive Pricing</strong> 💰 Transparent, fair labor rates
+              and parts pricing
+            </li>
+            <li>
+              <strong>Quick Turnaround</strong> ⚙️ Most inspections completed in
+              2–3 business days
+            </li>
+            <li>
+              <strong>Courtesy Vehicle Available</strong> 🛻 A small pickup truck
+              is available for local errands (when not booked)
+            </li>
+            <li>
+              <strong>Friendly, Professional Staff</strong> 😎 You’ll work directly
+              with experienced technicians
+            </li>
+            <li>
+              <strong>Great Location</strong> 🛬 KPTW is close to shopping, food,
+              and entertainment
+            </li>
+          </ul>
+          <h3 class="mt-6 font-semibold text-lg">
+            While your aircraft is in for service, you’re minutes away from:
+          </h3>
+          <ul class="list-disc mt-3 pl-5 space-y-2 paragraph">
+            <li>
+              <strong>Philadelphia Premium Outlets 🛍️</strong>
+            </li>
+            <li>
+              <strong>Costco Wholesale 🛒</strong>
+            </li>
+            <li>
+              <strong
+                >Linfield National Golf Club (18 holes, driving range, and mini
+                golf) ⛳</strong
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="bg-gray-100 p-6 md:p-8 rounded-lg shadow-md mb-12">
+          <h2 class="text-2xl font-semibold mb-4">📍 Flying In from {city}</h2>
+          <p>
+            Whether you’re coming from {baseLocation} or anywhere in {
+              stateLong
+            }, we’ll help coordinate your arrival and inspection window. Our
+            team will walk you through everything before you depart and keep you
+            updated through each step of the job.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <SimpleCTA
+      data={{
+        title: `Ready to Schedule Turboprop Service?<br>We Serve All of ${stateLong}`,
+        description: `Visit Penn Air Repair today to discuss your King Air, Pilatus, Cessna Caravan, TBM, or other aircraft maintenance needs. Our team of turboprop specialists is ready to provide the highest quality service for pilots in ${city}, ${stateShort} and throughout ${stateLong}. We're just a short flight away at Heritage Field Airport (KPTW).`,
+        btnText: "Visit Us Today",
+        btnLink: "/kptw-info",
+        imagePath: "/src/assets/runway 28-10.webp",
+        imageAlt: "Heritage Field Airport runway",
+      }}
+    />
+
+    <ContactForm />
+
+    <!-- Location-specific Schema.org structured data -->
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "@id": `https://pennairrepair.com/location/${location.id}`,
+        name: "Penn Air Repair",
+        description: `Turboprop and aircraft maintenance and repair services in ${city}, ${stateShort}, specializing in King Air, Pilatus PC-12, Cessna Caravan, and TBM turboprop aircraft`,
+        image: "/penn-air-logo-250.webp",
+        telephone: PHONE_NUMBER,
+        email: EMAIL_ADDRESS,
+        url: canonical,
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: ADDRESS_LINE_1,
+          addressLocality: "Pottstown",
+          addressRegion: "PA",
+          postalCode: "19464",
+          addressCountry: "US",
+        },
+        geo: {
+          "@type": "GeoCoordinates",
+          latitude: "40.24217243030569",
+          longitude: "-75.55532596753021",
+        },
+        serviceArea: {
+          "@type": "GeoCircle",
+          geoMidpoint: {
+            "@type": "GeoCoordinates",
+            latitude: "40.24217243030569",
+            longitude: "-75.55532596753021",
+          },
+          geoRadius: "320000",
+        },
+        areaServed: {
+          "@type": "State",
+          name: stateLong,
+        },
+        sameAs: [
+          "https://pennairrepair.com/",
+          "https://pennairrepair.com/locations",
+        ],
+        openingHoursSpecification: {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday",
+          ],
+          opens: "07:00",
+          closes: "20:00",
+        },
+        priceRange: "$$$",
+        currenciesAccepted: "USD",
+        paymentAccepted: "Cash, Credit Card",
+        makesOffer: [
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name:
+                "King Air Turboprop Maintenance in " + city + ", " + stateShort,
+              description:
+                "Expert maintenance and repair services for Beechcraft King Air 90, 200, and 350 turboprop aircraft in " +
+                city +
+                " and throughout " +
+                stateLong,
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Pilatus PC-12 Maintenance in " + city + ", " + stateShort,
+              description:
+                "Specialized maintenance services for Pilatus PC-12 and PC-24 aircraft in " +
+                city +
+                " and throughout " +
+                stateLong,
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Cessna Caravan Maintenance in " + city + ", " + stateShort,
+              description:
+                "Professional maintenance for Cessna 208 and 208B Grand Caravan aircraft in " +
+                city +
+                " and throughout " +
+                stateLong,
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "PT6A Engine Service in " + city + ", " + stateShort,
+              description:
+                "Expert PT6A engine maintenance and overhaul services for turboprop aircraft in " +
+                city +
+                " and throughout " +
+                stateLong,
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Aircraft Maintenance in " + city + ", " + stateShort,
+              description:
+                "Professional aircraft maintenance and repair services for aircraft owners in " +
+                city +
+                " and throughout " +
+                stateLong,
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "FAA Inspections in " + city + ", " + stateShort,
+              description:
+                "Annual and 100-hour inspections for aircraft in " +
+                city +
+                ", " +
+                stateShort,
+            },
+          },
+        ],
+      })}
+    />
+  </div>
+</BaseLayout>

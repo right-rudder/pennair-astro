@@ -1,0 +1,238 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Hero2 from "../../components/Hero2.astro";
+import ContactForm from "../../components/ContactForm.astro";
+import {
+  PHONE_NUMBER,
+  EMAIL_ADDRESS,
+  ADDRESS_LINE_1,
+  ADDRESS_LINE_2,
+} from "../../consts";
+
+// Get all location content entries
+const allLocations = await getCollection("location");
+
+// Group locations by state
+const stateGroups = {};
+allLocations.forEach((location) => {
+  const state = location.data.stateLong;
+  if (!stateGroups[state]) {
+    stateGroups[state] = [];
+  }
+  stateGroups[state].push(location);
+});
+
+// Sort locations within each state alphabetically by city name
+Object.keys(stateGroups).forEach((state) => {
+  stateGroups[state].sort((a, b) => a.data.city.localeCompare(b.data.city));
+});
+
+// Get array of sorted state names
+const sortedStates = Object.keys(stateGroups).sort();
+
+const locationsData = {
+  hero: {
+    imagePath:
+      "/src/assets/Penn-Air-Repair-KPTW-Heritage-Field-Pottstown-PA.jpg",
+    imageAlt:
+      "Penn Air Repair aircraft maintenance for King Air, Pilatus, and Cessna turboprop aircraft",
+    heading: "Our Turboprop Service Areas",
+    description:
+      "Penn Air Repair proudly serves turboprop and aircraft owners across Pennsylvania, New Jersey, New York, Maryland, and Delaware. Based at Heritage Field Airport (KPTW) in Pottstown, PA, our expert maintenance team specializes in Beechcraft King Air 90/200/350, Pilatus PC-12/PC-24, Cessna 208/208B Caravan, and TBM 700/850/900/910/940 turboprop maintenance throughout the region. Whether you're looking for PT6A engine maintenance, routine inspections, or comprehensive turboprop care, we're here to keep your aircraft safe, reliable, and airworthy.",
+  },
+};
+
+const title =
+  "Turboprop & Aircraft Maintenance Service Areas | Penn Air Repair";
+const description =
+  "Penn Air Repair provides specialized turboprop maintenance services for Beechcraft King Air 90/200/350, Pilatus PC-12/PC-24, Cessna 208/208B Caravan, and TBM aircraft throughout Pennsylvania, New Jersey, New York, Maryland, and Delaware. Find your local service area.";
+const keywords =
+  "turboprop maintenance service areas, King Air 90 maintenance Pennsylvania, King Air 200 maintenance New Jersey, King Air 350 maintenance New York, Pilatus PC-12 maintenance Maryland, Pilatus PC-12 NG maintenance Delaware, Cessna 208 Caravan maintenance, Cessna 208B Grand Caravan service, TBM 700 maintenance, TBM 850 maintenance, TBM 900 maintenance, PT6A engine service, PT6A-21 engine maintenance, PT6A-42 engine maintenance, PT6A-60A engine service, PT6A-67P engine overhaul, turboprop repair, aircraft maintenance, FAA inspections, annual inspections, 100-hour inspections, regional aviation services";
+---
+
+<BaseLayout title={title} description={description} keywords={keywords}>
+  <Hero2 data={locationsData.hero} />
+
+  <div class="py-16 md:py-24 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="bg-gray-50 p-6 md:p-8 rounded-lg shadow-md mb-12">
+          <h2
+            class="text-4xl mt-4 mb-8 text-center font-bold"
+            id="find-your-location"
+          >
+            Find Your Location
+          </h2>
+
+          {
+            sortedStates.map((state) => (
+              <div class="mb-10" id={state}>
+                <h3 class="text-2xl font-semibold mb-4 pb-2 border-b border-gray-200">
+                  {state}
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {stateGroups[state].map((location) => (
+                    <a
+                      href={`/location/${location.slug}`}
+                      class="p-4 hover:bg-red-50 rounded-md transition duration-300 flex items-center"
+                    >
+                      <span class="text-lg text-red-900 hover:text-red-700 hover:underline">
+                        {location.data.city}
+                      </span>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            ))
+          }
+        </div>
+
+        <div class="bg-gray-50 p-6 md:p-8 rounded-lg shadow-md">
+          <h2 class="text-2xl font-semibold mb-4">
+            Why Choose Penn Air Repair for Your Turboprop Maintenance
+          </h2>
+          <ul class="list-disc pl-5 space-y-2 paragraph mb-4">
+            <li>Strategic location at Heritage Field Airport (KPTW)</li>
+            <li>
+              FAA-certified maintenance technicians with turboprop expertise
+            </li>
+            <li>
+              Specialized maintenance for Beechcraft King Air 90/200/350 series
+              turboprops
+            </li>
+            <li>Pilatus PC-12 and PC-24 maintenance specialists</li>
+            <li>Cessna 208 Caravan and 208B Grand Caravan service expertise</li>
+            <li>TBM 700/850/900/910/940 maintenance capabilities</li>
+            <li>
+              PT6A engine maintenance specialists (PT6A-21, PT6A-42, PT6A-60A,
+              PT6A-67P)
+            </li>
+            <li>Comprehensive service for turboprop and piston aircraft</li>
+            <li>
+              Annual inspections, 100-hour inspections, and routine maintenance
+            </li>
+            <li>Engine overhaul and component repair services</li>
+          </ul>
+          <p class="paragraph">
+            Don't see your specific location listed? Contact us anyway - we
+            serve the entire region and can discuss your turboprop or aircraft
+            maintenance needs no matter where you're based.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ContactForm />
+
+  <!-- Schema.org structured data for the service areas page -->
+  <script
+    type="application/ld+json"
+    set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": "https://pennairrepair.com/locations",
+      name: "Penn Air Repair - Multi-State Turboprop & Aircraft Maintenance",
+      description:
+        "Professional turboprop and aircraft maintenance services specializing in Beechcraft King Air 90/200/350, Pilatus PC-12/PC-24, Cessna 208/208B Caravan, and TBM series throughout Pennsylvania, New Jersey, New York, Maryland, and Delaware",
+      image: "/penn-air-logo-250.webp",
+      telephone: PHONE_NUMBER,
+      email: EMAIL_ADDRESS,
+      url: "https://pennairrepair.com/locations",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: ADDRESS_LINE_1,
+        addressLocality: "Pottstown",
+        addressRegion: "PA",
+        postalCode: "19464",
+        addressCountry: "US",
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: "40.24217243030569",
+        longitude: "-75.55532596753021",
+      },
+      areaServed: [
+        {
+          "@type": "State",
+          name: "Pennsylvania",
+        },
+        {
+          "@type": "State",
+          name: "New Jersey",
+        },
+        {
+          "@type": "State",
+          name: "New York",
+        },
+        {
+          "@type": "State",
+          name: "Maryland",
+        },
+        {
+          "@type": "State",
+          name: "Delaware",
+        },
+      ],
+      hasMap: "https://goo.gl/maps/bmxZCk894cJ2xogr7",
+      sameAs: ["https://pennairrepair.com/"],
+      openingHoursSpecification: {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        opens: "07:00",
+        closes: "20:00",
+      },
+      priceRange: "$$$",
+      currenciesAccepted: "USD",
+      paymentAccepted: "Cash, Credit Card",
+      makesOffer: [
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "King Air Turboprop Maintenance",
+            description:
+              "Expert maintenance for Beechcraft King Air 90/200/350 turboprop aircraft throughout the Northeast",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Pilatus Aircraft Maintenance",
+            description:
+              "Specialized maintenance for Pilatus PC-12 and PC-24 aircraft across five states",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Cessna Caravan Maintenance",
+            description:
+              "Professional service for Cessna 208 and 208B Grand Caravan turboprops throughout the region",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "PT6A Engine Service",
+            description:
+              "Specialized maintenance for PT6A engines including PT6A-21, PT6A-42, PT6A-60A, and PT6A-67P variants",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Multi-State Aircraft Maintenance",
+            description:
+              "FAA-certified aircraft maintenance services across five states in the Northeast",
+          },
+        },
+      ],
+    })}
+  />
+</BaseLayout>

@@ -1,0 +1,35 @@
+---
+import ImageComp from "./ImageComp.astro";
+
+const { data } = Astro.props;
+const { title, description, states } = data;
+---
+
+<section class="bg-gray-50 py-12 md:py-20">
+  <div class="container mx-auto px-4">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-8" set:html={title} />
+      
+      <p class="paragraph text-center max-w-3xl mx-auto mb-12" set:html={description} />
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+        {states.map((state) => (
+          <div class="bg-white rounded-lg shadow-md p-6 flex flex-col items-center text-center hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+            <div class="bg-red-50 rounded-full w-20 h-20 mb-4 overflow-hidden">
+              <ImageComp imagePath={state.icon} imageAlt={state.name + " icon"} styles="object-cover w-full h-full" />
+            </div>
+            <h3 class="text-xl font-bold mb-2">{state.name}</h3>
+            <p class="text-gray-600 mb-4">{state.description}</p>
+            <a href={state.link} class="mt-auto text-red-800 font-medium hover:underline">View Locations</a>
+          </div>
+        ))}
+      </div>
+      
+      <div class="text-center">
+        <a href="/locations" class="inline-block bg-red-800 hover:bg-red-700 text-white py-3 px-8 rounded-md transition duration-300 font-medium">
+          View All Service Areas
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

@@ -21,6 +21,36 @@ export const navbarLinks = [
       }, */
     ],
   },
+  /* {
+    name: "Service Areas",
+    link: "/locations",
+    submenu: [
+      {
+        name: "All Locations",
+        link: "/locations",
+      },
+      {
+        name: "Delaware",
+        link: "/locations#Delaware",
+      },
+      {
+        name: "New Jersey",
+        link: "/locations#New%20Jersey",
+      },
+      {
+        name: "New York",
+        link: "/locations#New%20York",
+      },
+      {
+        name: "Maryland",
+        link: "/locations#Maryland",
+      },
+      {
+        name: "Pennsylvania",
+        link: "/locations#Pennsylvania",
+      },
+    ],
+  }, */
   {
     name: "Blog",
     link: "/blog#top",

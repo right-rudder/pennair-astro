@@ -8,6 +8,10 @@ export const footerLinks = [
     link: "/services",
   },
   {
+    name: "Service Areas",
+    link: "/locations",
+  },
+  {
     name: "Blog",
     link: "/blog#top",
   },
