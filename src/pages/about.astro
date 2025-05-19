@@ -1,0 +1,22 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import about from "../data/about";
+import HeaderCollage from "../components/HeaderCollage.astro";
+import Content3 from "../components/Content3.astro";
+
+const { data } = about;
+---
+
+<BaseLayout
+  siteTitle={data.pageTitle}
+  siteDescription={data.pageDescription}
+  keywords={data.pageKeywords}
+>
+  <!-- HEADER -->
+  <HeaderCollage data={data.header} />
+
+  <Content3 data={data.ourMission} />
+
+  <!-- CTA ContactUs -->
+
+</BaseLayout>

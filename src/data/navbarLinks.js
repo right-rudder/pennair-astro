@@ -60,6 +60,10 @@ export const navbarLinks = [
     link: "/kptw-info",
   },
   {
+    name: "About",
+    link: "/about#top",
+  },
+  {
     name: "Contact Us",
     link: "/#contact-us",
   },
