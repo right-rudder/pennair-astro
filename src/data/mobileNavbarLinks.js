@@ -20,6 +20,10 @@ export const mobileNavbarLinks = [
     link: "/blog",
   },
   {
+    name: "About",
+    link: "/about",
+  },
+  {
     name: "Contact Us",
     link: "https://pennairrepair.com/#contact-us",
   },
