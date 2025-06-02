@@ -53,7 +53,7 @@ export const navbarLinks = [
   }, */
   {
     name: "Blog",
-    link: "/blog#top",
+    link: "/blog",
   },
   {
     name: "KPTW",
@@ -61,8 +61,9 @@ export const navbarLinks = [
   },
   {
     name: "About",
-    link: "/about#top",
+    link: "/about",
   },
+
   {
     name: "Contact Us",
     link: "/#contact-us",

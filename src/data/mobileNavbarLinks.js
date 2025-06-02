@@ -21,7 +21,7 @@ export const mobileNavbarLinks = [
   },
   {
     name: "About",
-    link: "/about#top",
+    link: "/about",
   },
   {
     name: "Contact Us",
