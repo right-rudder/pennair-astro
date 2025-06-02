@@ -55,7 +55,7 @@ const about = {
             `Maintenance isn’t just a checklist — it’s our commitment to detail, transparency, and decades of trusted experience.`,
         },
         {
-          title: " Confidence Through Compliance",
+          title: "Confidence Through Compliance",
           description:
             `We ensure your aircraft is safe, airworthy, and FAA-compliant — always.`,
         },
