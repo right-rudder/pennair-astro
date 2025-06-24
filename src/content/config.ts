@@ -31,7 +31,15 @@ const locationCollection = defineCollection({
   }),
 });
 
+const aircraftCollection = defineCollection({
+  type: "content",
+  schema: z.object({
+    model: z.string(),
+  }),
+});
+
 export const collections = {
   blog: blogCollection,
   location: locationCollection,
+  aircraft: aircraftCollection,
 };
