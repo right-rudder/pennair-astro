@@ -1,10 +1,10 @@
----
-import Content from "../../components/Content.astro";
-import Hero2 from "../../components/Hero2.astro";
-import ServicesCard from "../../components/ServicesCard.astro";
-import BaseLayout from "../../layouts/BaseLayout.astro";
-
-const servicesData = {
+const oneHundredHourInspection = {
+  slug: "100-hour-inspection",
+  siteTitle: "100 Hour Inspection | Our Services | Penn Air Repair",
+  siteDescription:
+    "Penn Air Repair is your one-stop shop for top-tier aircraft maintenance and repair services. Our expert team is dedicated to keeping your aircraft flying safely and efficiently.",
+  siteKeywords:
+    "aircraft maintenance, aircraft repair, aircraft inspection, aircraft engine overhaul",
   hero: {
     imagePath:
       "/src/assets/Penn-Air-Repair-KPTW-Heritage-Field-Pottstown-PA-Propeller.jpg",
@@ -79,13 +79,5 @@ const servicesData = {
     },
   },
 };
----
 
-<BaseLayout
-  siteTitle="100 Hour Inspection | Our Services | Penn Air Repair"
-  siteDescription="Penn Air Repair is your one-stop shop for top-tier aircraft maintenance and repair services. Our expert team is dedicated to keeping your aircraft flying safely and efficiently."
-  siteKeywords="aircraft maintenance, aircraft repair, aircraft inspection, aircraft engine overhaul"
->
-  <Hero2 data={servicesData.hero} />
-  <Content data={servicesData.content} />
-</BaseLayout>
+export default oneHundredHourInspection;

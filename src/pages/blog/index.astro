@@ -13,13 +13,13 @@ const data = {
 };
 
 const posts = (await getCollection("blog")).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 ---
 
 <BaseLayout
-  siteTitle="Blog | Penn Air Repair Aircraft Maintenance & Repair Services"
-  siteDescription="Stay up-to-date with the latest happenings in the world of aircraft maintenance, repair, parts and services. Get the latest insights and tips from Penn Air Repair."
+  title="Blog | Penn Air Repair Aircraft Maintenance & Repair Services"
+  description="Stay up-to-date with the latest happenings in the world of aircraft maintenance, repair, parts and services. Get the latest insights and tips from Penn Air Repair."
   keywords="Penn Air Repair, Aircraft Maintenance, Aircraft Repair, Aircraft Parts, Aircraft Services, Aircraft Management Services"
 >
   <!-- Header -->
