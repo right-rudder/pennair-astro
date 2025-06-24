@@ -91,7 +91,7 @@ const Navbar = ({ pathname }) => {
             <div className="flex w-full items-center justify-between">
               <a
                 href="/#top"
-                title="SunCity Aviation Academy"
+                title="Penn Air Repair"
                 className="hover:brightness-110 flex lg:h-24 justify-center align-middle items-center duration-200 ease-in-out w-full lg:w-1/5"
               >
                 <img

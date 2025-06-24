@@ -2,12 +2,12 @@
 import Hero2 from "../../components/Hero2.astro";
 import ServicesCard from "../../components/ServicesCard.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-
+import services from "../../data/services";
 const servicesData = {
   hero: {
     imagePath:
       "/src/assets/Penn-Air-Repair-KPTW-Heritage-Field-Pottstown-PA.jpg",
-    imageAlt: "adsf",
+    imageAlt: "PennAir Repair aircraft maintenance hangar",
     heading: "Our Services",
     description:
       "Your aircraft is in good hands with Penn Air Repair. Our expert team is dedicated to keeping your aircraft flying safely and efficiently. From inspections to engine overhauls, we offer a wide range of top-tier maintenance and repair services.",
@@ -55,9 +55,9 @@ const servicesData = {
 ---
 
 <BaseLayout
-  siteTitle="Our Services | Penn Air Repair"
-  siteDescription="Penn Air Repair is your one-stop shop for top-tier aircraft maintenance and repair services. Our expert team is dedicated to keeping your aircraft flying safely and efficiently."
-  siteKeywords="aircraft maintenance, aircraft repair, aircraft inspection, aircraft engine overhaul"
+  title="Our Services | Penn Air Repair"
+  description="Penn Air Repair is your one-stop shop for top-tier aircraft maintenance and repair services. Our expert team is dedicated to keeping your aircraft flying safely and efficiently."
+  keywords="aircraft maintenance, aircraft repair, aircraft inspection, aircraft engine overhaul"
 >
   <Hero2 data={servicesData.hero} />
 
@@ -67,13 +67,13 @@ const servicesData = {
       class="flex flex-wrap gap-4 justify-center animate-fade-from-bottom"
     >
       {
-        servicesData.services.map((program) => (
+        services.map((service) => (
           <ServicesCard
-            title={program.title}
-            imagePath={program.imagePath}
-            imageAlt={program.imageAlt}
-            link={program.link}
-            description={program.description}
+            title={service.name}
+            imagePath={service.card.imagePath}
+            imageAlt={service.card.imageAlt}
+            link={service.link}
+            description={service.card.description}
           />
         ))
       }

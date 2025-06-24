@@ -1,0 +1,27 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Content from "../../components/Content.astro";
+import Hero2 from "../../components/Hero2.astro";
+import services from "../../data/services";
+export function getStaticPaths() {
+  return services.map((service) => {
+    return {
+      params: { slug: service.slug },
+      props: {
+        service,
+      },
+    };
+  });
+}
+
+const { service } = Astro.props;
+---
+
+<BaseLayout
+  title={service.siteTitle}
+  description={service.siteDescription}
+  keywords={service.siteKeywords}
+>
+  <Hero2 data={service.hero} />
+  <Content data={service.content} />
+</BaseLayout>
