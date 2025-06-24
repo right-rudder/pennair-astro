@@ -1,17 +1,13 @@
+import services from "./services";
 export const navbarLinks = [
   {
     name: "Our Services",
     link: "/services",
-    submenu: [
-      {
-        name: "100 Hour Inspection",
-        link: "/services/100-hour-inspection",
-      },
-      {
-        name: "Annual Inspection",
-        link: "/services/annual-inspection",
-      },
-      /*       {
+    submenu: services.map((service) => ({
+      name: service.name,
+      link: service.link,
+    })),
+    /*       {
         name: "Sheet Metal Work",
         link: "/services/sheet-metal-work",
       },
@@ -19,7 +15,6 @@ export const navbarLinks = [
         name: "Light Avionics",
         link: "/services/light-avionics",
       }, */
-    ],
   },
   /* {
     name: "Service Areas",

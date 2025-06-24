@@ -1,10 +1,18 @@
 const oneHundredHourInspection = {
   slug: "100-hour-inspection",
+  name: "100 Hour Inspection",
+  link: "/services/100-hour-inspection",
   siteTitle: "100 Hour Inspection | Our Services | Penn Air Repair",
   siteDescription:
     "Penn Air Repair is your one-stop shop for top-tier aircraft maintenance and repair services. Our expert team is dedicated to keeping your aircraft flying safely and efficiently.",
   siteKeywords:
     "aircraft maintenance, aircraft repair, aircraft inspection, aircraft engine overhaul",
+  card: {
+    imagePath: "/src/assets/DG inspecting wing repair.jpg",
+    imageAlt: "Aircraft engine being inspected by a Penn Air Repair technician",
+    description:
+      "Meticulous examination of your aircraft's airframe, engine, and systems every 100 flight hours to ensure continued airworthiness and safety.",
+  },
   hero: {
     imagePath:
       "/src/assets/Penn-Air-Repair-KPTW-Heritage-Field-Pottstown-PA-Propeller.jpg",

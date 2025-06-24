@@ -1,10 +1,19 @@
 const annualInspection = {
   slug: "annual-inspection",
+  name: "Annual Inspection",
+  link: "/services/annual-inspection",
   siteTitle: "Annual Inspection | Our Services | Penn Air Repair",
   siteDescription:
     "Penn Air Repair is your one-stop shop for top-tier aircraft maintenance and repair services. Our expert team is dedicated to keeping your aircraft flying safely and efficiently.",
   siteKeywords:
     "aircraft maintenance, aircraft repair, aircraft inspection, aircraft engine overhaul",
+  card: {
+    imagePath:
+      "/src/assets/Penn-Air-Repair-KPTW-Heritage-Field-Pottstown-PA-Geo-Kyle repairing wing.jpg",
+    imageAlt: "Aircraft engine being inspected by a Penn Air Repair technician",
+    description:
+      "Comprehensive assessment of your aircraft's overall condition, including airframe, engine, systems, and avionics, to meet FAA regulations and maintain peak performance.",
+  },
   hero: {
     imagePath:
       "/src/assets/Penn-Air-Repair-KPTW-Heritage-Field-Pottstown-PA.jpg",
