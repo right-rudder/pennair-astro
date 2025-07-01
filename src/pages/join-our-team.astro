@@ -1,0 +1,57 @@
+---
+import Application from "../components/Application.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import {COMPANY_NICKNAME, COMPANY_NAME, ADDRESS_CITY, ADDRESS_STATE} from "../consts";
+
+const jobCards = [
+  {
+    title: "Aircraft Maintenance Technician",
+    description: "Penn Air Repair, LLC (PAR) is seeking a skilled Aircraft Maintenance Technician (AMT) to inspect, maintain, troubleshoot, and repair aircraft systems and components.",
+    hiring: true,
+    link: "/files/Aircraft Maintenance Technician.pdf",
+  },
+];
+---
+
+<BaseLayout
+  siteTitle=`Join the Team | ${COMPANY_NAME}`
+  siteDescription=`Explore career opportunities at ${COMPANY_NAME} in ${ADDRESS_CITY}, ${ADDRESS_STATE}. We’re hiring passionate aviation professionals to join our maintenance team.`
+  keywords=""
+>
+  <section class="relative mt-28 z-10 bg-checkered bg-fixed text-accent-800 scroll-my-20 lg:scroll-my-28 pt-36 pb-8">
+    <div class="max-w-7xl mx-auto px-6">
+      <h1 class="text-center text-4xl lg:text-6xl font-sans2 -skew-x-12 font-bold mb-12">Career Opportunities at {COMPANY_NICKNAME}</h1>
+      <div class="grid gap-10 md:grid-cols-3">
+        {jobCards.map((card) => (
+          <div class="bg-accent-900 p-6 rounded-lg shadow-md flex flex-col justify-between">
+            <div>
+              <h2 class="text-2xl font-semibold mb-2 text-white">{card.title}</h2>
+              <p class="mb-8 text-sm text-white">{card.description}</p>
+            </div>
+            <div class="mt-auto flex flex-col gap-2">
+              <span
+                class={`inline-block w-max text-white text-xs px-3 py-1 rounded-full ${
+                  card.hiring ? "bg-yellow-600" : "bg-gray-400"
+                }`}
+              >
+                {card.hiring ? "Now Hiring" : "Not Hiring"}
+              </span>
+
+              {card.hiring && (
+                <a
+                  href={card.link}
+                  target="_blank"
+                  class="text-primary-300 hover:underline text-sm"
+                >
+                  Download Job Description
+                </a>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <Application />
+</BaseLayout>
