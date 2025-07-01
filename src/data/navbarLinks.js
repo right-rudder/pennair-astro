@@ -57,6 +57,16 @@ export const navbarLinks = [
   {
     name: "About",
     link: "/about",
+    submenu: [
+      {
+        name: "About",
+        link: "/about",
+      },
+      {
+        name: "Careers",
+        link: "/join-our-team",
+      }
+    ],
   },
 
   {
