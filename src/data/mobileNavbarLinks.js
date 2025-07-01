@@ -21,7 +21,17 @@ export const mobileNavbarLinks = [
   },
   {
     name: "About",
-    link: "/about",
+    link: null,
+    submenu: [
+      {
+        name: "About",
+        link: "/about",
+      },
+      {
+        name: "Careers",
+        link: "/join-our-team",
+      }
+    ],
   },
   {
     name: "Contact Us",
