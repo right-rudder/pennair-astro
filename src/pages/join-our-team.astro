@@ -21,14 +21,9 @@ const jobCards = [
   <section class="relative mt-28 z-10 bg-checkered bg-fixed text-accent-800 scroll-my-20 lg:scroll-my-28 pt-36 pb-8">
     <div class="max-w-7xl mx-auto px-6">
       <h1 class="text-center text-4xl lg:text-6xl font-sans2 -skew-x-12 font-bold mb-12">Career Opportunities at {COMPANY_NICKNAME}</h1>
-      <div class="grid gap-10 md:grid-cols-3">
+      <div class="flex flex-wrap justify-center items-center gap-10">
         {jobCards.map((card) => (
-          <div class="bg-accent-900 p-6 rounded-lg shadow-md flex flex-col justify-between">
-            <div>
-              <h2 class="text-2xl font-semibold mb-2 text-white">{card.title}</h2>
-              <p class="mb-8 text-sm text-white">{card.description}</p>
-            </div>
-            <div class="mt-auto flex flex-col gap-2">
+          <div class="bg-accent-900 p-6 gap-3 rounded-lg shadow-md flex flex-col justify-between max-w-md">
               <span
                 class={`inline-block w-max text-white text-xs px-3 py-1 rounded-full ${
                   card.hiring ? "bg-yellow-600" : "bg-gray-400"
@@ -36,12 +31,14 @@ const jobCards = [
               >
                 {card.hiring ? "Now Hiring" : "Not Hiring"}
               </span>
-
+              <h2 class="text-xl/5 font-semibold mb-2 text-white  ">{card.title}</h2>
+              <p class="mb-8 text-sm text-white">{card.description}</p>
+            <div class="mt-auto flex items-center flex-col gap-2">
               {card.hiring && (
                 <a
                   href={card.link}
                   target="_blank"
-                  class="text-primary-300 hover:underline text-sm"
+                  class="text-white text-sm bg-yellow-700 rounded-md py-2 px-4 hover:bg-yellow-600"
                 >
                   Download Job Description
                 </a>
