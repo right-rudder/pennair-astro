@@ -2,7 +2,10 @@
 import Hero2 from "../../components/Hero2.astro";
 import ServicesCard from "../../components/ServicesCard.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import FAQ from "../../components/FAQ.astro";
 import services from "../../data/services";
+import { maintenanceFAQs } from "../../data/faqs.js";
 const servicesData = {
   hero: {
     imagePath:
@@ -52,6 +55,12 @@ const servicesData = {
     }, */
   ],
 };
+
+// Breadcrumb data
+const breadcrumbs = [
+  { name: "Home", href: "/" },
+  { name: "Services", href: "/services" },
+];
 ---
 
 <BaseLayout
@@ -60,7 +69,11 @@ const servicesData = {
   keywords="aircraft maintenance, aircraft repair, aircraft inspection, aircraft engine overhaul"
 >
   <Hero2 data={servicesData.hero} />
-
+  <div class="bg-white py-4">
+    <div class="container mx-auto px-4">
+      <Breadcrumbs items={breadcrumbs} />
+    </div>
+  </div>
   <section class="mx-auto max-w-6xl py-16 lg:py-24">
     <ul
       role="list"
@@ -79,4 +92,6 @@ const servicesData = {
       }
     </ul>
   </section>
+
+  <FAQ items={maintenanceFAQs} />
 </BaseLayout>

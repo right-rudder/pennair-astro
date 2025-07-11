@@ -1,0 +1,111 @@
+---
+interface Props {
+  type?: "website" | "article" | "service" | "location";
+  articleSchema?: any;
+  serviceSchema?: any;
+  locationSchema?: any;
+  faqSchema?: any;
+  breadcrumbSchema?: any;
+}
+
+const {
+  type = "website",
+  articleSchema,
+  serviceSchema,
+  locationSchema,
+  faqSchema,
+  breadcrumbSchema,
+} = Astro.props;
+
+// Get current page URL
+const currentUrl = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!-- Additional Schema Markup based on page type -->{
+  type === "article" && articleSchema && (
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(articleSchema)}
+    />
+  )
+}
+
+{
+  type === "service" && serviceSchema && (
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(serviceSchema)}
+    />
+  )
+}
+
+{
+  type === "location" && locationSchema && (
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(locationSchema)}
+    />
+  )
+}
+
+{
+  faqSchema && (
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  )
+}
+
+{
+  breadcrumbSchema && (
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(breadcrumbSchema)}
+    />
+  )
+}
+
+<!-- Additional SEO meta tags -->
+<meta
+  name="robots"
+  content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+/>
+<meta name="googlebot" content="index, follow" />
+
+<!-- Preconnect to external domains -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preconnect" href="https://www.googletagmanager.com" />
+
+<!-- DNS prefetch for performance -->
+<link rel="dns-prefetch" href="//www.google-analytics.com" />
+
+<!-- Structured data for enhanced search results -->
+<meta name="theme-color" content="#7F1D1D" />
+<meta name="msapplication-TileColor" content="#7F1D1D" />
+
+<!-- Additional Open Graph tags -->
+<meta property="og:site_name" content="Penn Air Repair" />
+<meta property="og:locale" content="en_US" />
+
+<!-- Additional Twitter Card tags -->
+<meta name="twitter:site" content="@pennairrepair" />
+<meta name="twitter:creator" content="@pennairrepair" />
+
+<!-- Article specific meta tags -->
+{
+  type === "article" && (
+    <>
+      <meta property="article:publisher" content="Penn Air Repair" />
+      <meta property="article:section" content="Aircraft Maintenance" />
+    </>
+  )
+}
+
+<!-- Business specific tags -->
+<meta name="geo.region" content="US-PA" />
+<meta name="geo.placename" content="Pottstown" />
+<meta name="geo.position" content="40.24217243030569;-75.55532596753021" />
+<meta name="ICBM" content="40.24217243030569, -75.55532596753021" />
+
+<!-- Verification tags (add when available) -->
+<!-- <meta name="google-site-verification" content="VERIFICATION_CODE" /> -->
+<!-- <meta name="bing-site-verification" content="VERIFICATION_CODE" /> -->

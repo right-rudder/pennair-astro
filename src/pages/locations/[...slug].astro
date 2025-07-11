@@ -7,6 +7,9 @@ import BentoGrid from "../../components/BentoGrid.astro";
 import ContactForm from "../../components/ContactForm.astro";
 import LogoCloudRight from "../../components/LogoCloudRight.astro";
 import ProviderFor from "../../components/ProviderFor.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import FAQ from "../../components/FAQ.astro";
+import { locationFAQs } from "../../data/faqs.js";
 
 export async function getStaticPaths() {
   const locations = await getCollection("location");
@@ -164,14 +167,30 @@ const landingData = {
 const title = `Turboprop & Aircraft Maintenance in ${locationCity}, ${locationStateLong} | King Air, Pilatus & Cessna Specialists`;
 const description = `Expert turboprop maintenance for King Air, Pilatus PC-12, Cessna Caravan, and TBM aircraft in ${locationCity}, ${locationStateLong}. PT6A engine specialists serving ${locationStateShort} aircraft owners with FAA-certified maintenance at Heritage Field Airport (KPTW).`;
 const keywords = `turboprop maintenance ${locationCity}, King Air 90 maintenance ${locationStateShort}, King Air 200 maintenance ${locationStateShort}, King Air 350 maintenance ${locationStateShort}, Pilatus PC-12 maintenance ${locationCity}, Pilatus PC-24 service ${locationStateShort}, Cessna Caravan maintenance ${locationStateShort}, TBM maintenance ${locationCity}, PT6A engine service ${locationStateShort}, PT6A-67P maintenance ${locationCity}, aircraft maintenance ${locationCity}, airplane repair ${locationStateShort}, FAA inspections ${locationCity}, annual aircraft inspection ${locationStateLong}`;
+
+// Breadcrumb data
+const breadcrumbs = [
+  { name: "Home", href: "/" },
+  { name: "Service Areas", href: "/locations" },
+  {
+    name: `${locationCity}, ${locationStateShort}`,
+    href: `/location/${location.slug}`,
+  },
+];
 ---
 
 <BaseLayout title={title} description={description} keywords={keywords}>
+  <div class="bg-white py-4">
+    <div class="container mx-auto px-4">
+      <Breadcrumbs items={breadcrumbs} />
+    </div>
+  </div>
   <Hero data={landingData.hero} />
   <ProviderFor data={landingData.providerFor} />
   <LogoCloudRight data={landingData.partners} />
   <BentoGrid data={landingData.services} />
   <ContentBg data={landingData.howWeDoIt} />
+  <FAQ items={locationFAQs} />
   <ContactForm />
 
   <!-- Location Schema.org structured data -->

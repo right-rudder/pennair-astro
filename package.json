@@ -7,7 +7,9 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "seo-check": "node src/scripts/seo-check.js",
+    "build:seo": "npm run build && npm run seo-check"
   },
   "dependencies": {
     "@astrojs/partytown": "2.1.4",

@@ -1,0 +1,66 @@
+---
+interface ServiceOfferProps {
+  name: string;
+  description: string;
+  url?: string;
+  category?: string;
+  provider?: string;
+  areaServed?: string[];
+  priceRange?: string;
+}
+
+interface Props {
+  service: ServiceOfferProps;
+}
+
+const { service } = Astro.props;
+
+// Generate Service Schema
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: service.name,
+  description: service.description,
+  provider: {
+    "@type": "LocalBusiness",
+    name: service.provider || "Penn Air Repair",
+    url: "https://pennairrepair.com",
+    telephone: "+1-610-495-3070",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "3310 W Ridge Pike",
+      addressLocality: "Pottstown",
+      addressRegion: "PA",
+      postalCode: "19464",
+      addressCountry: "US",
+    },
+  },
+  serviceType: service.category || "Aircraft Maintenance",
+  areaServed: service.areaServed || [
+    {
+      "@type": "State",
+      name: "Pennsylvania",
+    },
+    {
+      "@type": "State",
+      name: "New Jersey",
+    },
+    {
+      "@type": "State",
+      name: "New York",
+    },
+    {
+      "@type": "State",
+      name: "Maryland",
+    },
+    {
+      "@type": "State",
+      name: "Delaware",
+    },
+  ],
+  url: service.url || `https://pennairrepair.com/services`,
+  priceRange: service.priceRange || "$$",
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />

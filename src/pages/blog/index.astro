@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 import FormattedDate from "../../components/FormattedDate.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Header from "../../components/Header.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
 
 const data = {
   header: {
@@ -13,8 +14,14 @@ const data = {
 };
 
 const posts = (await getCollection("blog")).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
+
+// Breadcrumb data
+const breadcrumbs = [
+  { name: "Home", href: "/" },
+  { name: "Blog", href: "/blog" },
+];
 ---
 
 <BaseLayout
@@ -24,6 +31,12 @@ const posts = (await getCollection("blog")).sort(
 >
   <!-- Header -->
   <Header data={data.header} />
+
+  <div class="bg-white py-4">
+    <div class="container mx-auto px-4">
+      <Breadcrumbs items={breadcrumbs} />
+    </div>
+  </div>
 
   <section class="relative isolate overflow-hidden bg-white py-24 sm:py-32">
     <div class="absolute inset-0 -z-10 overflow-hidden">

@@ -8,6 +8,8 @@ import LogoCloudRight from "../components/LogoCloudRight.astro";
 import ProviderFor from "../components/ProviderFor.astro";
 import SimpleCTA from "../components/SimpleCTA.astro";
 import RegionalService from "../components/RegionalService.astro";
+import FAQ from "../components/FAQ.astro";
+import { generalFAQs } from "../data/faqs.js";
 
 const landingData = {
   hero: {
@@ -203,5 +205,6 @@ const landingData = {
   <RegionalService data={landingData.regionalServices} />
   <ContentBg data={landingData.howWeDoIt} />
   <SimpleCTA data={landingData.airfield} />
+  <FAQ items={generalFAQs} />
   <ContactForm />
 </BaseLayout>
