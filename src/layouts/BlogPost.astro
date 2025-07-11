@@ -2,6 +2,7 @@
 import type { CollectionEntry } from "astro:content";
 import FormattedDate from "../components/FormattedDate.astro";
 import BaseLayout from "./BaseLayout.astro";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
 import { KEYWORDS } from "../consts";
 
 type Props = CollectionEntry<"blog">["data"];
@@ -17,6 +18,45 @@ const {
   tags,
   keywords,
 } = Astro.props;
+
+// Breadcrumb data
+const breadcrumbs = [
+  { name: "Home", href: "/" },
+  { name: "Blog", href: "/blog" },
+  { name: title, href: Astro.url.pathname },
+];
+
+// Article Schema
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: title,
+  description: description,
+  author: {
+    "@type": "Organization",
+    name: author,
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Penn Air Repair",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://pennairrepair.com/penn-air-logo-250.webp",
+    },
+  },
+  datePublished: pubDate.toISOString(),
+  dateModified: (updatedDate || pubDate).toISOString(),
+  image: heroImage
+    ? `https://pennairrepair.com${heroImage}`
+    : "https://pennairrepair.com/penn-air-logo-250.webp",
+  url: `https://pennairrepair.com${Astro.url.pathname}`,
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": `https://pennairrepair.com${Astro.url.pathname}`,
+  },
+  articleSection: category,
+  keywords: tags.join(", "),
+};
 ---
 
 <BaseLayout
@@ -25,7 +65,16 @@ const {
   keywords={category + ", " + tags.join(", ") + keywords ? keywords : KEYWORDS}
   image={heroImage}
 >
+  <!-- Article Schema -->
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+
   <div class="h-32 w-full bg-white"></div>
+
+  <div class="bg-white py-4">
+    <div class="container mx-auto px-4">
+      <Breadcrumbs items={breadcrumbs} />
+    </div>
+  </div>
 
   <section
     class="flex justify-center pt-2 bg-gradient-to-b from-white via-yellow-50 to-red-50"

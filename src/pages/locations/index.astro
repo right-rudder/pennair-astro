@@ -2,6 +2,9 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Hero2 from "../../components/Hero2.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import FAQ from "../../components/FAQ.astro";
+import { locationFAQs } from "../../data/faqs.js";
 import ContactForm from "../../components/ContactForm.astro";
 import {
   PHONE_NUMBER,
@@ -49,9 +52,20 @@ const description =
   "Penn Air Repair provides specialized turboprop maintenance services for Beechcraft King Air 90/200/350, Pilatus PC-12/PC-24, Cessna 208/208B Caravan, and TBM aircraft throughout Pennsylvania, New Jersey, New York, Maryland, and Delaware. Find your local service area.";
 const keywords =
   "turboprop maintenance service areas, King Air 90 maintenance Pennsylvania, King Air 200 maintenance New Jersey, King Air 350 maintenance New York, Pilatus PC-12 maintenance Maryland, Pilatus PC-12 NG maintenance Delaware, Cessna 208 Caravan maintenance, Cessna 208B Grand Caravan service, TBM 700 maintenance, TBM 850 maintenance, TBM 900 maintenance, PT6A engine service, PT6A-21 engine maintenance, PT6A-42 engine maintenance, PT6A-60A engine service, PT6A-67P engine overhaul, turboprop repair, aircraft maintenance, FAA inspections, annual inspections, 100-hour inspections, regional aviation services";
+
+// Breadcrumb data
+const breadcrumbs = [
+  { name: "Home", href: "/" },
+  { name: "Service Areas", href: "/locations" },
+];
 ---
 
 <BaseLayout title={title} description={description} keywords={keywords}>
+  <div class="bg-white py-4">
+    <div class="container mx-auto px-4">
+      <Breadcrumbs items={breadcrumbs} />
+    </div>
+  </div>
   <Hero2 data={locationsData.hero} />
 
   <div class="py-16 md:py-24 bg-white">
@@ -235,4 +249,6 @@ const keywords =
       ],
     })}
   />
+
+  <FAQ items={locationFAQs} />
 </BaseLayout>

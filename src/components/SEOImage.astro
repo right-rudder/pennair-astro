@@ -1,0 +1,61 @@
+---
+interface Props {
+  src: string;
+  alt: string;
+  title?: string;
+  className?: string;
+  width?: number;
+  height?: number;
+  loading?: "lazy" | "eager";
+  decoding?: "async" | "sync" | "auto";
+  fetchpriority?: "high" | "low" | "auto";
+}
+
+const {
+  src,
+  alt,
+  title,
+  className = "",
+  width,
+  height,
+  loading = "lazy",
+  decoding = "async",
+  fetchpriority = "auto",
+} = Astro.props;
+
+// Enhance alt text if it's too generic
+const enhancedAlt =
+  alt.toLowerCase().includes("image") ||
+  alt.toLowerCase().includes("photo") ||
+  alt.toLowerCase().includes("picture")
+    ? `${alt} - Penn Air Repair aircraft maintenance services`
+    : alt;
+
+// Generate structured data for the image
+const imageSchema: any = {
+  "@context": "https://schema.org",
+  "@type": "ImageObject",
+  url: src.startsWith("http") ? src : `https://pennairrepair.com${src}`,
+  description: enhancedAlt,
+  name: title || enhancedAlt,
+};
+
+if (width) imageSchema.width = width;
+if (height) imageSchema.height = height;
+---
+
+<!-- Image Schema -->
+<script type="application/ld+json" set:html={JSON.stringify(imageSchema)} />
+
+<!-- Optimized Image -->
+<img
+  src={src}
+  alt={enhancedAlt}
+  title={title || enhancedAlt}
+  class={className}
+  width={width}
+  height={height}
+  loading={loading}
+  decoding={decoding}
+  fetchpriority={fetchpriority}
+/>

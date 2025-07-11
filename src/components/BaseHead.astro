@@ -32,9 +32,25 @@ const {
                  __/ |                                              
                 |___/                                               
 -->
-<meta name="viewport" content="width=device-width" />
-<link rel="icon" type="image/svg+xml" href="/penn-air-logo-250.webp" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" type="image/webp" href="/penn-air-logo-250.webp" />
+<link rel="apple-touch-icon" href="/penn-air-logo-250.webp" />
 <meta name="generator" content={Astro.generator} />
+
+<!-- Enhanced SEO Meta Tags -->
+<meta
+  name="robots"
+  content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+/>
+<meta name="googlebot" content="index, follow" />
+<meta name="theme-color" content="#7F1D1D" />
+<meta name="msapplication-TileColor" content="#7F1D1D" />
+
+<!-- Preconnect for performance -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preconnect" href="https://www.googletagmanager.com" />
+<link rel="dns-prefetch" href="//www.google-analytics.com" />
 
 <!-- Canonical URL -->
 <link rel="canonical" href={canonical} />
@@ -51,6 +67,8 @@ const {
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:image" content={new URL(image, Astro.url)} />
+<meta property="og:site_name" content="Penn Air Repair" />
+<meta property="og:locale" content="en_US" />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
@@ -58,6 +76,8 @@ const {
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
+<meta name="twitter:site" content="@pennairrepair" />
+<meta name="twitter:creator" content="@pennairrepair" />
 
 <link rel="sitemap" href="/sitemap-index.xml" />
 
@@ -228,11 +248,32 @@ const {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "url": "https://pennairrepair.com/",
+    "name": "Penn Air Repair",
+    "description": "Expert turboprop and aircraft maintenance services at Heritage Field Airport (KPTW)",
     "potentialAction": {
       "@type": "SearchAction",
       "target": "https://pennairrepair.com/search?q={search_term_string}",
       "query-input": "required name=search_term_string"
-    }
+    },
+    "sameAs": [
+      "https://www.facebook.com/pennairrepair",
+      "https://www.linkedin.com/company/penn-air-repair"
+    ]
+  }
+</script>
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://pennairrepair.com/"
+      }
+    ]
   }
 </script>
 
