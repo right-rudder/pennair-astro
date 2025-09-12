@@ -174,7 +174,7 @@ With these SEO implementations, Penn Air Repair should see improved:
 
 - **Local search visibility** for aircraft maintenance queries
 - **Geographic reach** across the 5-state service area
-- **Technical authority** for turboprop and PT6 engine services
+- **Technical authority** for PT6 engine services
 - **User experience** with better navigation and information architecture
 - **Conversion rates** through improved trust signals and clear CTAs
 

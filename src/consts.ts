@@ -1,6 +1,6 @@
 // CHANGE Default title
 export const SITE_TITLE =
-  "Premium Turboprop & Aircraft Maintenance Services | PA, NJ, NY, MD, DE | Penn Air Repair";
+  "Premium Aircraft Maintenance Services | PA, NJ, NY, MD, DE | Penn Air Repair";
 
 // CHANGE default meta description -> should only be used in homepage technically, but is there for a fallback in case a page is missed
 export const SITE_DESCRIPTION =
@@ -48,4 +48,4 @@ export const ADDRESS = "3310 W Ridge Pike, Pottstown, PA 19464";
 export const ADDRESS_CITY = "Pottstown";
 export const ADDRESS_STATE = "PA";
 export const ADDRESS_ZIP = "";
-export const GMAPS = "https://maps.app.goo.gl/"
+export const GMAPS = "https://maps.app.goo.gl/";

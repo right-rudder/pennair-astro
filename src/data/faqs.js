@@ -2,7 +2,7 @@ export const generalFAQs = [
   {
     question: "What types of aircraft does Penn Air Repair service?",
     answer:
-      "We specialize in turboprop and piston aircraft, including Beechcraft King Air 90/200/350, Pilatus PC-12/PC-24, Cessna 208/208B Caravan, TBM 700/850/900/910/940, and Twin Commander aircraft. We also service various piston aircraft models from manufacturers like Cessna, Piper, and Beechcraft.",
+      "We specialize in  piston aircraft, including Beechcraft King Air 90/200/350, Pilatus PC-12/PC-24, Cessna 208/208B Caravan, TBM 700/850/900/910/940, and Twin Commander aircraft. We also service various piston aircraft models from manufacturers like Cessna, Piper, and Beechcraft.",
   },
   {
     question: "What inspections do you perform?",
