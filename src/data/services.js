@@ -10,6 +10,7 @@ import majorRepairForm337 from "./majorRepairForm337.js";
 import maintenanceTracking from "./maintenanceTracking.js";
 import oilService from "./oilService.js";
 import dynamicPropBalancing from "./dynamicPropBalancing.js";
+import routineMaintenanceTesting from "./routineMaintenanceTesting.js";
 
 const services = [
   oneHundredHourInspection,
@@ -24,6 +25,7 @@ const services = [
   maintenanceTracking,
   oilService,
   dynamicPropBalancing,
+  routineMaintenanceTesting,
 ];
 
 export default services;
