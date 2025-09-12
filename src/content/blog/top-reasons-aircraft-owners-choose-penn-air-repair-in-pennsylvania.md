@@ -41,7 +41,7 @@ Not all repair shops are created equal. As an FAA-certified Part 145 repair stat
 
 ## 2. Turboprop Specialists in King Air, Pilatus & Cessna
 
-From Beechcraft King Air to Pilatus PC-12 and Cessna Caravan, our team specializes in the most popular and hardest-working turboprops in the Mid-Atlantic. Our technicians bring years of hands-on experience with PT6 engines, propellers, avionics, and complex systems unique to these aircraft.
+From Beechcraft King Air to Pilatus PC-12 and Cessna Caravan, our team specializes in the most popular and hardest-working turboprops in the Mid-Atlantic. Our technicians bring years of hands-on experience withengines, propellers, avionics, and complex systems unique to these aircraft.
 
 ## 3. Convenient Location at Heritage Field (KPTW)
 
@@ -65,6 +65,6 @@ Aircraft owners across Pennsylvania and the Mid-Atlantic return to Penn Air Repa
 
 When searching for **“aircraft maintenance near me”** or trusted **“Pennsylvania aircraft repair”**, Penn Air Repair stands out as the premier choice. With FAA Part 145 certification, turboprop expertise, and regional coverage across PA, NJ, NY, MD, and DE, we’re dedicated to keeping your aircraft flying safely and efficiently.
 
-Whether you need scheduled inspections, PT6 engine service, or emergency repairs, Penn Air Repair at Heritage Field (KPTW) is here to help. Visit [pennairrepair.com](/) or contact us today to schedule your next service.
+Whether you need scheduled inspections,engine service, or emergency repairs, Penn Air Repair at Heritage Field (KPTW) is here to help. Visit [pennairrepair.com](/) or contact us today to schedule your next service.
 
 ---

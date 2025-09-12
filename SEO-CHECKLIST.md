@@ -33,7 +33,7 @@
 - [x] Comprehensive FAQ content covering:
   - Aircraft types serviced
   - Inspection schedules
-  - PT6 engine expertise
+    -engine expertise
   - Service areas
   - Emergency services
 
@@ -70,7 +70,7 @@
 
 ### 🔍 **Keyword Strategy**
 
-- **Primary Keywords**: turboprop maintenance, King Air maintenance, Pilatus maintenance, PT6 engine service
+- **Primary Keywords**: turboprop maintenance, King Air maintenance, Pilatus maintenance,engine service
 - **Location Keywords**: Pottstown PA, Heritage Field KPTW, PA NJ NY MD DE
 - **Service Keywords**: aircraft maintenance, aircraft repair, annual inspection, 100-hour inspection
 - **Long-tail Keywords**: King Air 90 maintenance, Pilatus PC-12 service, Cessna Caravan repair
@@ -121,11 +121,11 @@ npm run seo-check
 - Aircraft owners in PA, NJ, NY, MD, DE
 - King Air, Pilatus, Cessna turboprop operators
 - Part 91 and Part 135 operators
-- Pilots seeking PT6 engine specialists
+- Pilots seekingengine specialists
 
 ### **Content Themes**
 
-1. **Expertise Focus**: PT6 engine specialists, turboprop maintenance
+1. **Expertise Focus**:engine specialists, turboprop maintenance
 2. **Geographic Coverage**: Multi-state service area
 3. **Quality Assurance**: Part 135 standards, FAA compliance
 4. **Convenience**: Heritage Field location benefits
@@ -174,7 +174,7 @@ With these SEO implementations, Penn Air Repair should see improved:
 
 - **Local search visibility** for aircraft maintenance queries
 - **Geographic reach** across the 5-state service area
-- **Technical authority** for PT6 engine services
+- **Technical authority** forengine services
 - **User experience** with better navigation and information architecture
 - **Conversion rates** through improved trust signals and clear CTAs
 

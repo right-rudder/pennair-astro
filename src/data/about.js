@@ -3,16 +3,16 @@ const about = {
     //SEO Header Stuff
     pageTitle: "Who We Are | Penn Air Repair LLC",
     pageDescription:
-      "Learn about Penn Air Repair, your trusted aircraft maintenance facility at Heritage Field Airport (KPTW). We specialize in King Air, Pilatus, and Cessna turboprops, offering PT6 engine maintenance, inspections, and more with a commitment to excellence and FAA compliance.",
+      "Learn about Penn Air Repair, your trusted aircraft maintenance facility at Heritage Field Airport (KPTW). We specialize in King Air, Pilatus, and Cessna turboprops, offeringengine maintenance, inspections, and more with a commitment to excellence and FAA compliance.",
     pageKeywords:
-      "Penn Air Repair, KPTW, Heritage Field Airport, aircraft maintenance, turboprop maintenance, King Air, Pilatus, Cessna, PT6 engine, 100-hour inspection, annual inspection, aircraft repair, FAA compliance, Part 91, Part 135, Pottstown PA aircraft service",
+      "Penn Air Repair, KPTW, Heritage Field Airport, aircraft maintenance, turboprop maintenance, King Air, Pilatus, Cessna,engine, 100-hour inspection, annual inspection, aircraft repair, FAA compliance, Part 91, Part 135, Pottstown PA aircraft service",
 
     //top header
     header: {
       upperHeading: "ABOUT",
       headerH1: "Penn Air Repair",
       paragraph:
-        "At Penn Air Repair, we are dedicated to delivering top-tier  aircraft maintenance services. Located at Heritage Field Airport (KPTW), our facility is a trusted destination for aircraft owners and operators seeking precision, compliance, and peace of mind. With a specialized focus on King Air, Pilatus, and Cessna turboprops, our experienced technicians provide dependable service for a broad range of aircraft models. From PT6 engine maintenance to 100-hour and annual inspections, component installation, and thorough airframe evaluations, we ensure your aircraft remains in top condition and compliant with FAA regulations. Aircraft entering our facility for regular service are invited to enroll in our automated tracking system, providing proactive oversight of inspection timelines and maintenance needs.",
+        "At Penn Air Repair, we are dedicated to delivering top-tier  aircraft maintenance services. Located at Heritage Field Airport (KPTW), our facility is a trusted destination for aircraft owners and operators seeking precision, compliance, and peace of mind. With a specialized focus on King Air, Pilatus, and Cessna turboprops, our experienced technicians provide dependable service for a broad range of aircraft models. Fromengine maintenance to 100-hour and annual inspections, component installation, and thorough airframe evaluations, we ensure your aircraft remains in top condition and compliant with FAA regulations. Aircraft entering our facility for regular service are invited to enroll in our automated tracking system, providing proactive oversight of inspection timelines and maintenance needs.",
       images: [
         {
           imagePath: "/src/assets/DG inspecting wing repair.jpg",

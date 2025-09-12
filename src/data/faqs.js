@@ -10,9 +10,9 @@ export const generalFAQs = [
       "We perform comprehensive <a href='/services/annual-inspection' class='text-red-800 hover:underline'>annual inspections</a>, <a href='/services/100-hour-inspection' class='text-red-800 hover:underline'>100-hour inspections</a>, pre-buy inspections, and routine maintenance checks. All inspections are conducted in compliance with FAA regulations and manufacturer specifications.",
   },
   {
-    question: "Do you specialize in PT6 engine maintenance?",
+    question: "Do you specialize inengine maintenance?",
     answer:
-      "Yes, we are PT6 engine specialists with extensive experience in maintaining, repairing, and overhauling Pratt & Whitney PT6A engines including PT6A-21, PT6A-42, PT6A-60A, and PT6A-67P variants commonly found in King Air, Pilatus, and Cessna turboprop aircraft.",
+      "Yes, we areengine specialists with extensive experience in maintaining, repairing, and overhauling Pratt & Whitney PT6A engines including PT6A-21, PT6A-42, PT6A-60A, and PT6A-67P variants commonly found in King Air, Pilatus, and Cessna turboprop aircraft.",
   },
   {
     question: "Where is Penn Air Repair located?",
