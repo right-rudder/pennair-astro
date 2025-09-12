@@ -12,6 +12,7 @@ import {
   ADDRESS_LINE_1,
   ADDRESS_LINE_2,
 } from "../../consts";
+import ImageComp from "../../components/ImageComp.astro";
 
 // Get all location content entries
 const allLocations = await getCollection("location");
@@ -67,7 +68,7 @@ const breadcrumbs = [
   </div>
   <Hero2 data={locationsData.hero} />
 
-  <!-- <div class="py-16 md:py-24 bg-white">
+  <div class="py-16 md:py-24 bg-white">
     <div class="container mx-auto px-4">
       <div class="max-w-4xl mx-auto">
         <div class="bg-gray-50 p-6 md:p-8 rounded-lg shadow-md mb-12">
@@ -75,10 +76,14 @@ const breadcrumbs = [
             class="text-4xl mt-4 mb-8 text-center font-bold"
             id="find-your-location"
           >
-            Find Your Location
+            Proudly Serving the Northeast
           </h2>
 
-          {
+          <ImageComp
+            imagePath="/src/assets/Heritage Field Airport  KPTW Pottstown PA Northeast USA.png"
+            imageAlt="Golden Star over Heritage Field Airport KPTW Pottstown PA,, with Northeast USA region"
+          />
+          <!-- {
             sortedStates.map((state) => (
               <div class="mb-10" id={state}>
                 <h3 class="text-2xl font-semibold mb-4 pb-2 border-b border-gray-200">
@@ -98,12 +103,12 @@ const breadcrumbs = [
                 </div>
               </div>
             ))
-          }
+          } -->
         </div>
 
         <div class="bg-gray-50 p-6 md:p-8 rounded-lg shadow-md">
           <h2 class="text-2xl font-semibold mb-4">
-            Why Choose Penn Air Repair for Your Turboprop Maintenance
+            Why Choose Penn Air Repair for Your Maintenance
           </h2>
           <ul class="list-disc pl-5 space-y-2 paragraph mb-4">
             <li>Strategic location at Heritage Field Airport (KPTW)</li>
@@ -121,21 +126,21 @@ const breadcrumbs = [
               PT6A engine maintenance specialists (PT6A-21, PT6A-42, PT6A-60A,
               PT6A-67P)
             </li>
-            <li>Comprehensive service for  piston aircraft</li>
+            <li>Comprehensive service for piston aircraft</li>
             <li>
               Annual inspections, 100-hour inspections, and routine maintenance
             </li>
             <li>Engine overhaul and component repair services</li>
           </ul>
-          <p class="paragraph">
+          <!-- <p class="paragraph">
             Don't see your specific location listed? Contact us anyway - we
             serve the entire region and can discuss your turboprop or aircraft
             maintenance needs no matter where you're based.
-          </p>
+          </p> -->
         </div>
       </div>
     </div>
-  </div> -->
+  </div>
 
   <ContactForm />
 
