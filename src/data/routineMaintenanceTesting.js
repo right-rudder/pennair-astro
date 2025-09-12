@@ -8,16 +8,14 @@ const routineMaintenanceTesting = {
   siteKeywords:
     "routine maintenance testing, aircraft inspection, preventive maintenance, airframe testing, engine testing, aircraft safety, Penn Air Repair",
   card: {
-    imagePath:
-      "/src/assets/Penn-Air-Repair-KPTW-Heritage-Field-Pottstown-PA-Maintenance.jpg",
+    imagePath: "/src/assets/pennair-repair-doing-maintenance.jpg",
     imageAlt:
       "Technician performing routine maintenance testing on an aircraft",
     description:
       "Professional routine maintenance testing services to detect potential issues early, maintain compliance, and ensure reliable aircraft performance.",
   },
   hero: {
-    imagePath:
-      "/src/assets/Penn-Air-Repair-KPTW-Heritage-Field-Pottstown-PA-Maintenance.jpg",
+    imagePath: "/src/assets/pennair-repair-doing-maintenance.jpg",
     imageAlt: "Aircraft undergoing routine maintenance checks",
     heading: "Routine Maintenance Testing",
     description:
