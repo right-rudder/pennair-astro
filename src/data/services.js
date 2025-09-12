@@ -2,7 +2,7 @@ import oneHundredHourInspection from "./oneHundredHourInspection.js";
 import annualInspection from "./annualInspection.js";
 // import ifrCertificationInspection from "./ifrCertificationInspection.js";
 import transponderVorService from "./transponderVorService.js";
-import pitotStaticInspection from "./pitotStaticInspection.js";
+// import pitotStaticInspection from "./pitotStaticInspection.js";
 import ownerAssistedMaintenance from "./ownerAssistanceMaintenance.js";
 import compressionTesting from "./compressionTesting.js";
 import preBuyingInspections from "./preBuyingInspections.js";
@@ -16,7 +16,7 @@ const services = [
   annualInspection,
   // ifrCertificationInspection,
   transponderVorService,
-  pitotStaticInspection,
+  // pitotStaticInspection,
   ownerAssistedMaintenance,
   compressionTesting,
   preBuyingInspections,
