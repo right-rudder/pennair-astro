@@ -2,7 +2,7 @@ export const generalFAQs = [
   {
     question: "What types of aircraft does Penn Air Repair service?",
     answer:
-      "We specialize in turboprop and piston aircraft, including Beechcraft King Air 90/200/350, Pilatus PC-12/PC-24, Cessna 208/208B Caravan, TBM 700/850/900/910/940, and Twin Commander aircraft. We also service various piston aircraft models from manufacturers like Cessna, Piper, and Beechcraft.",
+      "We specialize in piston aircraft, including Beechcraft King Air 90/200/350, Pilatus PC-12/PC-24, Cessna 208/208B Caravan, TBM 700/850/900/910/940, and Twin Commander aircraft. We also service various piston aircraft models from manufacturers like Cessna, Piper, Beechcraft, Mooney, and Cirrus.",
   },
   {
     question: "What inspections do you perform?",
@@ -10,9 +10,9 @@ export const generalFAQs = [
       "We perform comprehensive <a href='/services/annual-inspection' class='text-red-800 hover:underline'>annual inspections</a>, <a href='/services/100-hour-inspection' class='text-red-800 hover:underline'>100-hour inspections</a>, pre-buy inspections, and routine maintenance checks. All inspections are conducted in compliance with FAA regulations and manufacturer specifications.",
   },
   {
-    question: "Do you specialize in PT6 engine maintenance?",
+    question: "Do you specialize inengine maintenance?",
     answer:
-      "Yes, we are PT6 engine specialists with extensive experience in maintaining, repairing, and overhauling Pratt & Whitney PT6A engines including PT6A-21, PT6A-42, PT6A-60A, and PT6A-67P variants commonly found in King Air, Pilatus, and Cessna turboprop aircraft.",
+      "Yes, we areengine specialists with extensive experience in maintaining, repairing, and overhauling Pratt & Whitney PT6A engines including PT6A-21, PT6A-42, PT6A-60A, and PT6A-67P variants commonly found in King Air, Pilatus, and Cessna turboprop aircraft.",
   },
   {
     question: "Where is Penn Air Repair located?",
@@ -33,6 +33,11 @@ export const generalFAQs = [
     question: "What is your automated tracking system?",
     answer:
       "Aircraft new to our facility are encouraged to sign up for our automated tracking system (ATS), which provides proactive oversight of inspection timelines and maintenance needs, helping you stay compliant with FAA requirements.",
+  },
+  {
+    question: "How do we receive notification for maintenance?",
+    answer:
+      "Clients enrolled in our automated tracking system (ATS) receive timely reminders for upcoming inspections and maintenance. Notifications are delivered via email and phone, ensuring you never miss a required service.",
   },
   {
     question: "Do you work on Part 135 aircraft?",
@@ -77,8 +82,7 @@ export const locationFAQs = [
   },
   {
     question: "What areas do you serve?",
-    answer:
-      "We serve aircraft owners across a five-state region including Pennsylvania, New Jersey, New York, Maryland, and Delaware. Many clients find it cost-effective to fly to our Pottstown location for maintenance.",
+    answer: "We serve aircraft owners across the entire Northeast.",
   },
   {
     question: "Are there accommodations nearby?",

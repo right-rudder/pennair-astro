@@ -107,7 +107,7 @@ With reduced downtime, lower costs, and expert technicians at your disposal, Pen
 Flying to Pottstown gives you access to Penn Air Repair's expert technicians, lower operational costs, and efficient turnaround times. With minimal congestion at [Heritage Field Airport (KPTW)](https://heritagefieldairport.com), maintenance is quicker and more affordable compared to busier metropolitan airports.
 
 **2. What types of aircraft does [Penn Air Repair](https://pennairrepair.com) service?**
-[Penn Air Repair](https://pennairrepair.com) specializes in turboprop and piston aircraft, including models like the Beechcraft King Air, Pilatus PC-12, Cessna Caravan, and TBM series.
+[Penn Air Repair](https://pennairrepair.com) specializes in piston aircraft, including models like the Beechcraft King Air, Pilatus PC-12, Cessna Caravan, and TBM series.
 
 **3. How often should my aircraft undergo maintenance?**
 The FAA mandates annual and 100-hour inspections for most aircraft. Additionally, preventative maintenance is recommended to avoid emergency repairs and ensure long-term reliability.

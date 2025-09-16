@@ -60,9 +60,9 @@ As turboprop specialists at Penn Air Repair, we've seen just about everything th
 
 Whether you're a seasoned turboprop owner or considering your first purchase, understanding these common issues can save you thousands of dollars and keep your aircraft flying safely and efficiently. Let's dive into the seven most frequent problems we encounter and, more importantly, how you can avoid them.
 
-## 1. Hot Section Deterioration in PT6 Engines
+## 1. Hot Section Deterioration inengines
 
-**The Problem:** The hot section of your PT6 engine operates at extreme temperatures, causing natural wear on components like turbine blades, nozzle guide vanes, and combustion liners. This deterioration is inevitable but can accelerate dramatically under certain conditions.
+**The Problem:** The hot section of yourengine operates at extreme temperatures, causing natural wear on components like turbine blades, nozzle guide vanes, and combustion liners. This deterioration is inevitable but can accelerate dramatically under certain conditions.
 
 **Warning Signs:**
 
@@ -72,7 +72,7 @@ Whether you're a seasoned turboprop owner or considering your first purchase, un
 - Metal particles in oil analysis
 
 **Prevention Strategy:**
-The key to managing hot section wear is consistent, gentle operation. Avoid rapid throttle movements, especially during startup and shutdown sequences. Allow proper warm-up time before applying power, and resist the temptation to "firewall" the throttles during takeoff unless absolutely necessary. Regular borescope inspections can catch deterioration early, often allowing for on-condition maintenance rather than emergency repairs. Our [engine maintenance services](/services) include comprehensive hot section inspections and PT6 engine expertise.
+The key to managing hot section wear is consistent, gentle operation. Avoid rapid throttle movements, especially during startup and shutdown sequences. Allow proper warm-up time before applying power, and resist the temptation to "firewall" the throttles during takeoff unless absolutely necessary. Regular borescope inspections can catch deterioration early, often allowing for on-condition maintenance rather than emergency repairs. Our [engine maintenance services](/services) include comprehensive hot section inspections andengine expertise.
 
 **Pro Tip:** Keep detailed records of your EGT trends. A gradual increase over time is normal, but sudden spikes warrant immediate attention.
 

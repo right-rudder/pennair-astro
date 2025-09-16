@@ -1,8 +1,9 @@
 const transponderVorService = {
   slug: "transponder-vor-service",
-  name: "Transponder / VOR Service",
+  name: "Install Transponder / VOR Service",
   link: "/services/transponder-vor-service",
-  siteTitle: "Transponder / VOR Service | Our Services | Penn Air Repair",
+  siteTitle:
+    "Install Transponder / VOR Service | Our Services | Penn Air Repair",
   siteDescription:
     "Penn Air Repair provides expert transponder and VOR service for all types of aircraft. Ensure your navigation and communication equipment is performing at peak accuracy and fully compliant with FAA standards.",
   siteKeywords:
@@ -31,9 +32,9 @@ const transponderVorService = {
       "Transponder and VOR services are critical for maintaining accurate aircraft navigation and communication. These services involve the inspection, calibration, and certification of your transponder, VOR, and other related avionics systems to ensure reliable performance during every flight. Regular servicing ensures your equipment remains compliant with FAA regulations and functions accurately during ATC interactions and IFR operations.",
     list: [
       {
-        title: "What Does Transponder / VOR Service Involve?",
+        title: "What Does Install Transponder / VOR Service Involve?",
         description:
-          "Our certified technicians provide comprehensive inspections, testing, and adjustments to your transponder and VOR systems, ensuring they perform accurately and meet FAA standards. Services typically include:",
+          "Our certified technicians provide comprehensive installation, inspections, testing, and adjustments to your transponder and VOR systems, ensuring they perform accurately and meet FAA standards. Services typically include:",
         listItems: [
           {
             icon: "M11.622 1.602a.75.75 0 0 1 .756 0l2.25 1.313a.75.75 0 0 1-.756 1.295L12 3.118 10.128 4.21a.75.75 0 1 1-.756-1.295l2.25-1.313ZM5.898 5.81a.75.75 0 0 1-.27 1.025l-1.14.665 1.14.665a.75.75 0 1 1-.756 1.295L3.75 8.806v.944a.75.75 0 0 1-1.5 0V7.5a.75.75 0 0 1 .372-.648l2.25-1.312a.75.75 0 0 1 1.026.27Zm12.204 0a.75.75 0 0 1 1.026-.27l2.25 1.312a.75.75 0 0 1 .372.648v2.25a.75.75 0 0 1-1.5 0v-.944l-1.122.654a.75.75 0 1 1-.756-1.295l1.14-.665-1.14-.665a.75.75 0 0 1-.27-1.025Zm-9 5.25a.75.75 0 0 1 1.026-.27L12 11.882l1.872-1.092a.75.75 0 1 1 .756 1.295l-1.878 1.096V15a.75.75 0 0 1-1.5 0v-1.82l-1.878-1.095a.75.75 0 0 1-.27-1.025ZM3 13.5a.75.75 0 0 1 .75.75v1.82l1.878 1.095a.75.75 0 1 1-.756 1.295l-2.25-1.312a.75.75 0 0 1-.372-.648v-2.25A.75.75 0 0 1 3 13.5Zm18 0a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-.372.648l-2.25 1.312a.75.75 0 1 1-.756-1.295l1.878-1.096V14.25a.75.75 0 0 1 .75-.75Zm-9 5.25a.75.75 0 0 1 .75.75v.944l1.122-.654a.75.75 0 1 1 .756 1.295l-2.25 1.313a.75.75 0 0 1-.756 0l-2.25-1.313a.75.75 0 1 1 .756-1.295l1.122.654V19.5a.75.75 0 0 1 .75-.75Z",
