@@ -4,6 +4,7 @@ import FormattedDate from "../components/FormattedDate.astro";
 import BaseLayout from "./BaseLayout.astro";
 import Breadcrumbs from "../components/Breadcrumbs.astro";
 import { KEYWORDS } from "../consts";
+import ImageComp from "../components/ImageComp.astro";
 
 type Props = CollectionEntry<"blog">["data"];
 
@@ -85,10 +86,10 @@ const articleSchema = {
       >
         {
           heroImage && (
-            <img
-              class="object-cover h-full w-full bg-white"
-              src={heroImage}
-              alt={title}
+            <ImageComp
+              imagePath={heroImage}
+              imageAlt={title}
+              styles="object-cover h-full w-full bg-white"
             />
           )
         }
