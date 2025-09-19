@@ -3,7 +3,7 @@ pubDate: "July 11, 2025"
 author: Andy Landis
 title: "Beyond Regulations: Why Proactive Maintenance is Aviation's Ultimate Safety Net"
 description: "Beyond regulations: Discover how proactive aircraft maintenance ensures ultimate aviation safety. Learn about expert inspections, advanced diagnostics, and the crucial human element from trusted providers like PennAir Repair."
-heroImage: "/blog/Penn-Air-Repair-KPTW-Heritage-Field-Pottstown-PA-proactive-maintenance.webp"
+heroImage: "/src/assets/Penn-Air-Repair-KPTW-Heritage-Field-Pottstown-PA-proactive-maintenance.webp"
 readingTime: 3
 category: "Aircraft Maintenance"
 tags:

@@ -3,7 +3,7 @@ pubDate: "December 27, 2024"
 author: Andy Landis
 title: "Improving Aircraft Fuel Efficiency: A Guide for Pilots and Owners"
 description: "Fuel efficiency is one of the most important factors for aircraft owners and operators to consider. Improving fuel efficiency not only saves money but also reduces environmental impact. At Penn Air Repair, we’re committed to helping aircraft owners at Heritage Field (KPTW) achieve optimal performance and efficiency."
-heroImage: "/blog/penn-air-fuel-efficiency.jpg"
+heroImage: "/src/assets/penn-air-fuel-efficiency.jpg"
 readingTime: 3
 category: "Aircraft Management"
 tags: ["Safety", "Reliability", "Compliance"]

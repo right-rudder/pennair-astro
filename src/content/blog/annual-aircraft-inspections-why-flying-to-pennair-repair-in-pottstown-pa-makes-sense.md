@@ -3,7 +3,7 @@ pubDate: "March 18, 2025"
 author: Andy Landis
 title: "Annual Aircraft Inspections: Why Flying to Pennair Repair in Pottstown, PA Makes Sense"
 description: "Discover why Northeast aircraft owners trust Pennair Repair in Pottstown, PA, for annual inspections, expert maintenance, and advanced avionics upgrades. Schedule your service today!"
-heroImage: "/blog/DG inspecting wing repair.jpg"
+heroImage: "/src/assets/DG inspecting wing repair.jpg"
 readingTime: 3
 category: "Aircraft Maintenance"
 tags:

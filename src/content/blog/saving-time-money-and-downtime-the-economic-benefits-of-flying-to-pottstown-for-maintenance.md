@@ -3,7 +3,7 @@ pubDate: "May 14, 2025"
 author: Andy Landis
 title: "Saving Time, Money, and Downtime: The Economic Benefits of Flying to Pottstown for Maintenance"
 description: "Discover the economic benefits of flying to Pottstown for aircraft maintenance. Learn how Penn Air Repair at Heritage Field Airport saves you time, money, and reduces downtime with expert services and strategic location advantages. Find out why pilots across the Northeast trust Penn Air Repair for inspections, overhauls, and preventative maintenance."
-heroImage: "/blog/Penn-Air-Repair-KPTW-Heritage-Field-Pottstown-PA.webp"
+heroImage: "/src/assets/Penn-Air-Repair-KPTW-Heritage-Field-Pottstown-PA.webp"
 readingTime: 4
 category: "Aircraft Maintenance"
 tags:

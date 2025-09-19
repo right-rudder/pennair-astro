@@ -3,7 +3,7 @@ pubDate: "June 20, 2025"
 author: Andy Landis
 title: "7 Common Turboprop Maintenance Issues and How to Prevent Them"
 description: "Discover the 7 most common turboprop maintenance issues affecting King Air, Pilatus & Cessna aircraft. Learn expert prevention strategies from Penn Air Repair's turboprop specialists at Heritage Field (KPTW), Pottstown, PA. Avoid costly repairs with our proven maintenance tips."
-heroImage: "/blog/Penn-Air-Repair-Turboprop-Maintenance.webp"
+heroImage: "/src/assets/Penn-Air-Repair-Turboprop-Maintenance.webp"
 readingTime: 3
 category: "Aircraft Maintenance"
 tags:

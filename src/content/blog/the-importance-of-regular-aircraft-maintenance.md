@@ -3,7 +3,7 @@ pubDate: "November 27, 2024"
 author: Andy Landis
 title: "The Importance of Regular Aircraft Maintenance"
 description: "Owning an aircraft is a significant investment, and like any investment, it requires regular care and maintenance. Regular maintenance is not just a routine task; it's a critical factor in ensuring the safety, reliability, and longevity of your aircraft."
-heroImage: "/blog/Penn-Air-Repair-KPTW-Heritage-Field-Pottstown-PA-Private-Jet.jpg"
+heroImage: "/src/assets/Penn-Air-Repair-KPTW-Heritage-Field-Pottstown-PA-Private-Jet.jpg"
 readingTime: 4
 category: "Aircraft Maintenance"
 tags: ["Safety", "Reliability", "Performance", "Compliance"]

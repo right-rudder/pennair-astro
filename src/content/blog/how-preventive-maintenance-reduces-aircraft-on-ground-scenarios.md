@@ -3,7 +3,7 @@ pubDate: "July 25, 2025"
 author: Andy Landis
 title: "Avoiding AOG: How Preventive Maintenance Reduces Aircraft-on-Ground Scenarios"
 description: "When it comes to aircraft ownership or fleet operations, few words strike as much dread as AOG—Aircraft on Ground. An AOG event halts your mission, disrupts schedules, increases operational costs, and in many cases, damages client confidence. At Penn Air Repair, we believe that the best way to handle AOG is to prevent it from happening in the first place."
-heroImage: "/blog/planes-at-airport.jpg"
+heroImage: "/src/assets/planes-at-airport.jpg"
 readingTime: 3
 category: "Aircraft Maintenance"
 tags: ["Safety", "Reliability", "Performance", "Compliance"]

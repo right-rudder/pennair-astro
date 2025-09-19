@@ -3,7 +3,7 @@ pubDate: "January 13, 2025"
 author: Andy Landis
 title: "Our Approach to Maintenance"
 description: "At Penn Air Repair, we believe that quality and thoroughness are non-negotiable when it comes to aircraft maintenance. Our approach is simple: do the job right the first time, every time. Aircraft owners and operators rely on us not just for routine maintenance but for our unwavering commitment to safety and excellence."
-heroImage: "/blog/aircraft-maintenance.webp"
+heroImage: "/src/assets/aircraft-maintenance.webp"
 readingTime: 4
 category: "Aircraft Maintenance"
 tags: ["Safety", "Reliability", "Performance", "Compliance"]

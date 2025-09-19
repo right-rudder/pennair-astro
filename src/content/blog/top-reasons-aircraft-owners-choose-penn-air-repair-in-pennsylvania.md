@@ -3,7 +3,7 @@ pubDate: "August 18, 2025"
 author: Andy Landis
 title: "Top Reasons Aircraft Owners Choose Penn Air Repair in Pennsylvania"
 description: "Discover why aircraft owners across Pennsylvania, New Jersey, New York, Maryland, and Delaware trust Penn Air Repair at Heritage Field (KPTW). From FAA Part 145 certification to turboprop expertise, see what makes us the preferred choice for regional aircraft maintenance."
-heroImage: "/blog/Penn-Air-Repair-KPTW-Heritage-Field-Pottstown-PA-GH-repairing-wing.webp"
+heroImage: "/src/assets/Penn-Air-Repair-KPTW-Heritage-Field-Pottstown-PA-GH-repairing-wing.webp"
 readingTime: 3
 category: "Aircraft Maintenance"
 tags:
