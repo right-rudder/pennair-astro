@@ -3,7 +3,7 @@ pubDate: "September 30, 2025"
 author: Nancy Kyle
 title: "Dynamic Propeller Balancing: Why It Matters for Your Aircraft"
 description: "Discover the benefits of dynamic propeller balancing for King Air, Cessna, and Piper aircraft. Learn how Penn Air Repair at Heritage Field (KPTW), Pottstown, PA, helps reduce vibration, extend component life, and improve comfort with professional balancing services."
-heroImage: "/src/assets/Penn-Air-Repair-Dynamic-Propeller-Balancing.webp"
+heroImage: "/src/assets/Penn-Air-Repair-KPTW-Heritage-Field-Pottstown-PA-Propeller.webp"
 readingTime: 3
 category: "Aircraft Maintenance"
 tags:
