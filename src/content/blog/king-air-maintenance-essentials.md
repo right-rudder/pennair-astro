@@ -46,4 +46,4 @@ But longevity requires **dedicated upkeep**.
 
 Located in **Pottstown, PA**, Penn Air Repair provides expert service for King Air operators across Pennsylvania, New Jersey, and beyond. Our team specializes in both **routine inspections** and **major overhauls**, ensuring your aircraft stays mission-ready.
 
-👉 **Extend the life of your King Air.** [Schedule your next inspection with Penn Air Repair](#).
+👉 **Extend the life of your King Air.** [Schedule your next inspection with Penn Air Repair](#contact-us).
