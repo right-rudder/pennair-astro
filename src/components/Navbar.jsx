@@ -95,7 +95,7 @@ const Navbar = ({ pathname }) => {
                 className="hover:brightness-110 flex lg:h-24 justify-center align-middle items-center duration-200 ease-in-out w-full lg:w-1/5"
               >
                 <img
-                  src="/penn-air-logo-250.webp"
+                  src="/Penn-Air-Repair-LLC-red-gold.png"
                   alt="Penn Air Repair logo"
                   aria-label="Penn Air Repair logo"
                   title="Penn Air Repair"
@@ -263,7 +263,7 @@ const Navbar = ({ pathname }) => {
           className="z-30 relative flex justify-center items-start align-top"
         >
           <img
-            src="/penn-air-logo-250.webp"
+            src="/Penn-Air-Repair-LLC-red-gold.png"
             alt="Penn Air Repair logo"
             aria-label="Penn Air Repair logo"
             title="Penn Air Repair"

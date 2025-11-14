@@ -42,14 +42,14 @@ const articleSchema = {
     name: "Penn Air Repair",
     logo: {
       "@type": "ImageObject",
-      url: "https://pennairrepair.com/penn-air-logo-250.webp",
+      url: "https://pennairrepair.com/Penn-Air-Repair-LLC-red-gold.png",
     },
   },
   datePublished: pubDate.toISOString(),
   dateModified: (updatedDate || pubDate).toISOString(),
   image: heroImage
     ? `https://pennairrepair.com${heroImage}`
-    : "https://pennairrepair.com/penn-air-logo-250.webp",
+    : "https://pennairrepair.com/Penn-Air-Repair-LLC-red-gold.png",
   url: `https://pennairrepair.com${Astro.url.pathname}`,
   mainEntityOfPage: {
     "@type": "WebPage",
